@@ -9,7 +9,7 @@ function [ albedo, normal ] = estimate_alb_nrm( image_stack, scriptV, shadow_tri
 %   normal : the surface normal 
 
 
-[h, w, ~] = size(image_stack);
+[h, w, n] = size(image_stack);
 if nargin == 2
     shadow_trick = true;
 end
@@ -28,24 +28,31 @@ normal = zeros(h, w, 3);
 %   solve scriptI * scriptV * g = scriptI * i to obtain g for this point
 %   albedo at this point is |g|
 %   normal at this point is g / |g|
-% g = zeros(h, w, 3);
+warning('off', 'MATLAB:rankDeficientMatrix')
 for i_h = 1:h
     for i_w = 1:w
         i = reshape(image_stack(i_h, i_w, :), [] , 1);           
-        if any(i) == false
-            albedo(i_h, i_w) = 0;
-            normal(i_h, i_w, :) = [0, 0, 1];
-            continue
-        end
-        scriptI = diag(i);
-        A =  scriptI * i;
-        B = scriptI * scriptV;
-        g_tmp = squeeze(A \ B);
-        albedo(i_h, i_w) = min(norm(g_tmp), 1);
-        normal(i_h, i_w, :) = g_tmp / (norm(g_tmp));
+%         if any(i) == false
+%             albedo(i_h, i_w) = 0;
+%             normal(i_h, i_w, :) = [0, 0, 1];
+%             continue
+%         end
+        if shadow_trick == true
+            scriptI = diag(i);
+            A =  scriptI * i;
+            B = scriptI * scriptV;
+            [g, ~] = linsolve(B, A);            
+%             g = B \ A;
+        else
+            [g, ~] = linsolve(scriptV, i);
+%         g = scriptV \ i;
+        end                       
+        
+        norm_g = norm(g);
+        albedo(i_h, i_w) = norm_g;
+        normal(i_h, i_w, :) = g / norm_g;
     end
 end
-
 
 
 % =========================================================================
