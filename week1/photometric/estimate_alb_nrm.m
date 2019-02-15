@@ -39,10 +39,10 @@ for i_h = 1:h
 %         end
         if shadow_trick == true
             scriptI = diag(i);
-            A =  scriptI * i;
-            B = scriptI * scriptV;
-            [g, ~] = linsolve(B, A);            
-%             g = B \ A;
+            A = scriptI * scriptV;
+            B =  scriptI * i;            
+            [g, ~] = linsolve(A, B);            
+%             g = A \ B;
         else
             [g, ~] = linsolve(scriptV, i);
 %         g = scriptV \ i;
