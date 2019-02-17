@@ -10,7 +10,7 @@ true_r = max(albedo_r(:));
 true_g = max(albedo_g(:));
 true_b = max(albedo_b(:));
 
-[true_r, true_g, true_b]; % true colors
+[true_r, true_g, true_b] % true colors
 
 image_mask = double(albedo>0);
 
@@ -19,12 +19,18 @@ g_c = image_mask(:, :, 2);
 b_c = image_mask(:, :, 3);
 
 green_img = cat(3, r_c*0, g_c*1, b_c*0).*shading;
-
-subplot(2,2,1)
+fig=figure(1)
+subplot(1,4,1)
 imshow(albedo)
-subplot(2,2,2)
+title("albedo")
+subplot(1,4,2)
 imshow(shading)
-subplot(2,2,3)
+title("shading")
+subplot(1,4,3)
 imshow(original_img)
-subplot(2,2,4)
+title("original image")
+subplot(1,4,4)
 imshow(green_img)
+title("green image")
+
+saveas(fig, "./green_ball.eps", "epsc")

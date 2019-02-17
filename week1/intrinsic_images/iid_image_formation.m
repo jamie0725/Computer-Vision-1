@@ -14,11 +14,19 @@ max(reconstructed_img(:))
 prediff = abs(im2double(original_img)-reconstructed_img);
 diff = max(prediff(:));
 fprintf('max difference between original image and reconstructed image %f', diff)
-subplot(2,2,1)
+
+figure,
+subplot(1,4,1)
 imshow(albedo)
-subplot(2,2,2)
+title("albedo")
+subplot(1,4,2)
 imshow(shading)
-subplot(2,2,3)
+title("shading")
+subplot(1,4,3)
 imshow(uint16(original_img)*255)
-subplot(2,2,4)
+title("original image")
+subplot(1,4,4)
 imshow(uint16(reconstructed_img*255))
+title("reconstructed image")
+
+saveas(gca, "./reconstruction.eps", "epsc")
