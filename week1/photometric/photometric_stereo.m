@@ -6,10 +6,16 @@ disp('Part 1: Photometric Stereo')
 
 % obtain many images in a fixed view under different illumination
 disp('Loading images...')
-image_dir = './SphereGray5/';   % TODO: get the path of the script
+image_dir = './MonkeyColor/';   % TODO: get the path of the script
 %image_ext = '*.png';
 
-[image_stack, scriptV] = load_syn_images(image_dir);
+if contains(image_dir, "Color")
+    nc = 3;
+else
+    nc = 1;
+end
+
+[image_stack, scriptV] = load_syn_images(image_dir, nc);
 [h, w, n] = size(image_stack);
 fprintf('Finish loading %d images.\n\n', n);
 
@@ -39,7 +45,7 @@ show_model(albedo, height_map);
 [h, w, n] = size(image_stack);
 fprintf('Finish loading %d images.\n\n', n);
 disp('Computing surface albedo and normal map...')
-[albedo, normals] = estimate_alb_nrm(image_stack, scriptV);
+[albedo, normals] = estimate_alb_nrm(image_stack, scriptV, false);
 
 %% integrability check: is (dp / dy  -  dq / dx) ^ 2 small everywhere?
 disp('Integrability checking')
@@ -50,7 +56,7 @@ SE(SE <= threshold) = NaN; % for good visualization
 fprintf('Number of outliers: %d\n\n', sum(sum(SE > threshold)));
 
 %% compute the surface height
-height_map = construct_surface( p, q );
+height_map = construct_surface( p, q, 'average' );
 
 show_results(albedo, normals, SE);
 show_model(albedo, height_map);

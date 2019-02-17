@@ -25,7 +25,16 @@ switch path_type
         % for each row
         %   for each element of the row except for leftmost
         %       height_value = previous_height_value + corresponding_p_value
-        
+        for i_w = 2:w
+            height_map(1, i_w) = height_map(1, i_w - 1) + p(1, i_w);
+        end
+        for i_h = 2:h
+           height_map(i_h, 1) = height_map(i_h - 1, 1) + q(i_h, 1);
+           for i_w = 2:w
+               height_map(i_h, i_w) = height_map(i_h, i_w - 1) + p(i_h, i_w);
+           end
+        end
+       
 
        
         % =================================================================
@@ -34,7 +43,16 @@ switch path_type
         
         % =================================================================
         % YOUR CODE GOES HERE
-        
+        for i_h = 2:h
+            height_map(i_h, 1) = height_map(i_h - 1, 1) + q(i_h, 1);
+        end
+        for i_w = 2:w
+           height_map(1, i_w) = height_map(1, i_w - 1) + p(1, i_w);
+           for i_h = 2:h
+               height_map(i_h, i_w) = height_map(i_h - 1, i_w) + q(i_h, i_w);
+           end
+        end
+       
 
         % =================================================================
           
@@ -42,8 +60,28 @@ switch path_type
         
         % =================================================================
         % YOUR CODE GOES HERE
+        height_map_1 = zeros(h, w);
+        height_map_2 = zeros(h, w);
+        for i_w = 2:w
+            height_map_1(1, i_w) = height_map_1(1, i_w - 1) + p(1, i_w);
+        end
+        for i_h = 2:h
+           height_map_1(i_h, 1) = height_map_1(i_h - 1, 1) + q(i_h, 1);
+           for i_w = 2:w
+               height_map_1(i_h, i_w) = height_map_1(i_h, i_w - 1) + p(i_h, i_w);
+           end
+        end
 
-        
+        for i_h = 2:h
+            height_map_2(i_h, 1) = height_map_2(i_h - 1, 1) + q(i_h, 1);
+        end
+        for i_w = 2:w
+           height_map_2(1, i_w) = height_map_2(1, i_w - 1) + p(1, i_w);
+           for i_h = 2:h
+               height_map_2(i_h, i_w) = height_map_2(i_h - 1, i_w) + q(i_h, i_w);
+           end
+        end        
+        height_map = (height_map_1 + height_map_2) / 2;
         % =================================================================
 end
 
