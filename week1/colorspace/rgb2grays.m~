@@ -12,20 +12,15 @@ for i = 1:h
         output_image_lightness(i,j) = (max([R(i,j),G(i,j),B(i,j)]) + min([R(i,j),G(i,j),B(i,j)])) / 2;
     end
 end
-subplot(2,2,1);   
+
 imshow(output_image_lightness)
 
 % average method
-output_image_average = (R + G + B) / 3;
-subplot(2,2,2);   
-imshow(output_image_average) 
+ 
 % luminosity method
-output_image_luminosity = 0.21 * R + 0.72 * G + 0.07 * B;
-subplot(2,2,3);   
-imshow(output_image_luminosity)  
+
 % built-in MATLAB function 
-output_image = rgb2gray(input_image);
-subplot(2,2,4);   
-imshow(output_image)
+
+ 
 end
 
