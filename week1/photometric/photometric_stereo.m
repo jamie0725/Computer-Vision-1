@@ -6,7 +6,7 @@ disp('Part 1: Photometric Stereo')
 
 % obtain many images in a fixed view under different illumination
 disp('Loading images...')
-image_dir = './SphereColor/';   % TODO: get the path of the script
+image_dir = './SphereGray5/';   % TODO: get the path of the script
 %image_ext = '*.png';
 
 if contains(image_dir, "Color")
@@ -28,14 +28,14 @@ for i_c = 1:nc
     disp('Computing surface albedo and normal map...')
     [albedo_tmp, normals_tmp] = estimate_alb_nrm(image_stack, scriptV);
     albedo(:, :, i_c) = albedo_tmp;
+    normals_tmp(isnan(normals_tmp)) = 0;
     normals_sum = normals_sum + normals_tmp;
 end
-normals_sum(isnan(normals_sum)) = 0;
+albedo(isnan(albedo)) = 0;
 
 normals = normals_sum ./ nc;
-% norm_normals = (normals(:, :, 1).^2 + normals(:, :, 2).^2 + normals(:, :, 3).^2) .^0.5;
-% normals = normals ./ norm_normals;
-% albedo(isnan(albedo)) = 0;
+norm_normals = (normals(:, :, 1).^2 + normals(:, :, 2).^2 + normals(:, :, 3).^2) .^0.5;
+normals = normals ./ norm_normals;
 
 
 
@@ -60,7 +60,7 @@ show_model(albedo, height_map);
 [h, w, n] = size(image_stack);
 fprintf('Finish loading %d images.\n\n', n);
 disp('Computing surface albedo and normal map...')
-[albedo, normals] = estimate_alb_nrm(image_stack, scriptV, false);
+[albedo, normals] = estimate_alb_nrm(image_stack, scriptV, true);
 
 %% integrability check: is (dp / dy  -  dq / dx) ^ 2 small everywhere?
 disp('Integrability checking')
@@ -71,7 +71,7 @@ SE(SE <= threshold) = NaN; % for good visualization
 fprintf('Number of outliers: %d\n\n', sum(sum(SE > threshold)));
 
 %% compute the surface height
-height_map = construct_surface( p, q, 'average' );
+height_map = construct_surface( p, q, 'row' );
 
 show_results(albedo, normals, SE);
 show_model(albedo, height_map);
