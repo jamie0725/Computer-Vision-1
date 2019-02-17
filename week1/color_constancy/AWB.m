@@ -8,6 +8,7 @@ subplot(1,2,2);
 imshow(AWB_I);
 title('AWB Figure with GWA');
 saveas(out_I,'output.eps','epsc');
+saveas(out_I,'output.jpg');
 
 function awb = grey_world(image)
 %GREY_WORLD return the automatic white balanced image of the input image with grey_world assumption
