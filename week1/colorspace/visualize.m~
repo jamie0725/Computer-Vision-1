@@ -37,9 +37,9 @@ elseif size_input_image(3) == 4
 
     subplot(1,4,4);
     imshow(input_image(:,:,4));
-    title('Luminosity');
+    title('');
 
-    saveas(image,'./colorspace/images/CS_gray','epsc');
+    saveas(image,'./colorspace/images/output_image.eps','epsc');
 
 end
 
