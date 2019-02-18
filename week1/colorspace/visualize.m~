@@ -1,0 +1,23 @@
+function visualize(input_image)
+
+image = figure(1);
+subplot(1,4,1);   
+imshow(input_image);
+
+subplot(1,4,2);
+image_1 = input_image(:,:,1);
+imshow(image_1);
+
+subplot(1,4,3);
+%image_2 = zeros(size(input_image));
+image_2 = input_image(:,:,2);
+imshow(image_2);
+
+subplot(1,4,4);
+%image_3 = zeros(size(input_image));
+image_3 = input_image(:,:,3);
+imshow(image_3);
+
+saveas(image,"output_image.eps","epsc");
+end
+

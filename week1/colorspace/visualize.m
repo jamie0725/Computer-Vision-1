@@ -1,20 +1,37 @@
 function visualize(input_image)
 
-subplot(2,2,1);   
-imshow(input_image);
+size_input_image = size(input_image);
+if size_input_image(3) == 3
+    image = figure(1);
+    subplot(1,4,1);   
+    imshow(input_image);
 
-subplot(2,2,2);
-image_1 = input_image(:,:,1);
-imshow(image_1);
+    subplot(1,4,2);
+    imshow(input_image(:,:,1));
 
-subplot(2,2,3);
-%image_2 = zeros(size(input_image));
-image_2 = input_image(:,:,2);
-imshow(image_2);
+    subplot(1,4,3);
+    imshow(input_image(:,:,2));
 
-subplot(2,2,4);
-%image_3 = zeros(size(input_image));
-image_3 = input_image(:,:,3);
-imshow(image_3);
+    subplot(1,4,4);
+    imshow(input_image(:,:,3));
+
+    saveas(image,'output_image.eps','epsc');
+    
+elseif size_input_image(3) == 4
+    image = figure(1);
+    subplot(1,4,1);   
+    imshow(input_image(:,:,1));
+
+    subplot(1,4,2);
+    imshow(input_image(:,:,2));
+
+    subplot(1,4,3);
+    imshow(input_image(:,:,3));
+
+    subplot(1,4,4);
+    imshow(input_image(:,:,4));
+
+    saveas(image,'output_image.eps','epsc');      
+
 end
 
