@@ -32,11 +32,6 @@ warning('off', 'MATLAB:rankDeficientMatrix')
 for i_h = 1:h
     for i_w = 1:w
         i = reshape(image_stack(i_h, i_w, :), [] , 1);           
-%         if any(i) == false
-%             albedo(i_h, i_w) = 0;
-%             normal(i_h, i_w, :) = [0, 0, 1];
-%             continue
-%         end
         if shadow_trick == true
             scriptI = diag(i);
             A = scriptI * scriptV;

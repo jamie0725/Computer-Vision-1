@@ -1,10 +1,10 @@
-function show_results( albedo, normals, SE )
+function fig = show_results( albedo, normals, SE )
 %SHOW_RESULTS display albedo, normal and computational errors
 
 [h, w, ~] = size(normals);
 
 % plot the results
-figure
+fig = figure;
 subplot(2, 3, 1);
 [X, Y] = meshgrid(1:w, 1:h);
 surf(X, Y, SE, gradient(SE));

@@ -32,7 +32,6 @@ q(isnan(q)) = 0;
 % approximate second derivate by neighbor difference
 % and compute the Squared Errors SE of the 2 second derivatives SE
 [h, w, ~] = size(normals);
-% tmp = [diff(p, 1, 2), zeros(h, 1)] - [diff(q,1, 1); zeros(1, w)];
 [~, dpdy] = gradient(p);
 [dqdx, ~] = gradient(q);
 tmp = dpdy - dqdx;

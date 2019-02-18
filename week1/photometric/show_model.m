@@ -1,4 +1,4 @@
-function show_model(albedo, height_map)
+function fig = show_model(albedo, height_map)
 % SHOW_MODEL: display the model with texture
 %   albedo: image used as texture for the model
 %   height_map: height in z direction, describing the model geometry
@@ -12,7 +12,7 @@ function show_model(albedo, height_map)
 H = rot90(fliplr(height_map), 2);
 A = rot90(fliplr(albedo), 2);
 
-figure;
+fig = figure;
 mesh(H, X, Y, A);
 axis equal;
 xlabel('Z')

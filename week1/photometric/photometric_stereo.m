@@ -6,9 +6,19 @@ disp('Part 1: Photometric Stereo')
 
 % obtain many images in a fixed view under different illumination
 disp('Loading images...')
-image_dir = './SphereGray5/';   % TODO: get the path of the script
+image_dir = './SphereGray25/';   % TODO: get the path of the script
 %image_ext = '*.png';
 
+% Initialize parameters.
+shadow_trick_1 = true;
+path_1 = 'col';
+threshold_1 = 0.005;
+
+shadow_trick_2 = false;
+path_2 = 'column';
+threshold_2 = 0.005;
+
+% Case distinction for gray and color images.
 if contains(image_dir, "Color")
     nc = 3;
 else
@@ -17,7 +27,9 @@ end
 
 normals_sum = 0;
 for i_c = 1:nc
+    % Split the images into separate channels and treat them individually.
     [image_stack, scriptV] = load_syn_images(image_dir, i_c);
+    % Initialize albedo for the first channel.
     if i_c == 1
         [h, w, n] = size(image_stack);           
         albedo = zeros(h, w, nc);
@@ -26,13 +38,14 @@ for i_c = 1:nc
 
     % compute the surface gradient from the stack of imgs and light source mat
     disp('Computing surface albedo and normal map...')
-    [albedo_tmp, normals_tmp] = estimate_alb_nrm(image_stack, scriptV);
+    [albedo_tmp, normals_tmp] = estimate_alb_nrm(image_stack, scriptV, shadow_trick_1);
     albedo(:, :, i_c) = albedo_tmp;
+    % Get rid of NaN's and sum up the normals for computing the mean later.
     normals_tmp(isnan(normals_tmp)) = 0;
     normals_sum = normals_sum + normals_tmp;
 end
 albedo(isnan(albedo)) = 0;
-
+% Take the mean of the normal and normalize.
 normals = normals_sum ./ nc;
 norm_normals = (normals(:, :, 1).^2 + normals(:, :, 2).^2 + normals(:, :, 3).^2) .^0.5;
 normals = normals ./ norm_normals;
@@ -43,16 +56,18 @@ normals = normals ./ norm_normals;
 disp('Integrability checking')
 [p, q, SE] = check_integrability(normals);
 
-threshold = 0.005;
-SE(SE <= threshold) = NaN; % for good visualization
-fprintf('Number of outliers: %d\n\n', sum(sum(SE > threshold)));
+SE(SE <= threshold_1) = NaN; % for good visualization
+fprintf('Number of outliers: %d\n\n', sum(sum(SE > threshold_1)));
 
 %% compute the surface height
-height_map = construct_surface( p, q, 'row' );
+height_map = construct_surface( p, q, path_1 );
 
 %% Display
-show_results(albedo, normals, SE);
-show_model(albedo, height_map);
+gen_fig_1 = show_results(albedo, normals, SE);
+hm_fig_1 = show_model(albedo, height_map);
+% Save figures.
+saveas(gen_fig_1, strcat('./results/', image_dir(3:length(image_dir) - 1), '_gen_', path_1(1:3), '_',string(shadow_trick_1), '.eps'), 'epsc')
+saveas(hm_fig_1, strcat('./results/', image_dir(3:length(image_dir) - 1), '_hm_', path_1(1:3), '_',string(shadow_trick_1), '.eps'), 'epsc')
 
 
 %% Face
@@ -60,19 +75,21 @@ show_model(albedo, height_map);
 [h, w, n] = size(image_stack);
 fprintf('Finish loading %d images.\n\n', n);
 disp('Computing surface albedo and normal map...')
-[albedo, normals] = estimate_alb_nrm(image_stack, scriptV, true);
+[albedo, normals] = estimate_alb_nrm(image_stack, scriptV, shadow_trick_2);
 
 %% integrability check: is (dp / dy  -  dq / dx) ^ 2 small everywhere?
 disp('Integrability checking')
 [p, q, SE] = check_integrability(normals);
 
-threshold = 0.005;
-SE(SE <= threshold) = NaN; % for good visualization
-fprintf('Number of outliers: %d\n\n', sum(sum(SE > threshold)));
+SE(SE <= threshold_2) = NaN; % for good visualization
+fprintf('Number of outliers: %d\n\n', sum(sum(SE > threshold_2)));
 
 %% compute the surface height
-height_map = construct_surface( p, q, 'row' );
+height_map = construct_surface( p, q,  path_2 );
 
-show_results(albedo, normals, SE);
-show_model(albedo, height_map);
-
+%% Display
+gen_fig_2 = show_results(albedo, normals, SE);
+hm_fig_2 = show_model(albedo, height_map);
+% Save figures.
+saveas(gen_fig_2, strcat('./results/', 'Yale', '_gen_', path_2(1:3), '_', string(shadow_trick_2), '.eps'), 'epsc')
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '.eps'), 'epsc')
