@@ -6,7 +6,11 @@ disp('Part 1: Photometric Stereo')
 
 % obtain many images in a fixed view under different illumination
 disp('Loading images...')
+<<<<<<< HEAD
 image_dir = './SphereGray5/';   % TODO: get the path of the script
+=======
+image_dir = './MonkeyGray/';   % TODO: get the path of the script
+>>>>>>> 446d0a782eed8d82337b9d7d644a11bfe86a573e
 %image_ext = '*.png';
 
 % Initialize parameters.
@@ -28,7 +32,7 @@ end
 normals_sum = 0;
 for i_c = 1:nc
     % Split the images into separate channels and treat them individually.
-    [image_stack, scriptV] = load_syn_images(image_dir, i_c);
+    [image_stack, scriptV] = load_syn_images(image_dir, i_c, 1);
     % Initialize albedo for the first channel.
     if i_c == 1
         [h, w, n] = size(image_stack);           
