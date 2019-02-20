@@ -1,5 +1,4 @@
 close all
-clear all
 clc
  
 disp('Part 1: Photometric Stereo')
@@ -19,7 +18,7 @@ path_2 = 'column';
 threshold_2 = 0.005;
 
 % Case distinction for gray and color images.
-if contains(image_dir, "Color")
+if contains(image_dir, 'Color')
     nc = 3;
 else
     nc = 1;
