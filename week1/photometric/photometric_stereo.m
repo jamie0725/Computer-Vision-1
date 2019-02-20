@@ -90,10 +90,10 @@ height_map = construct_surface( p, q,  path_2 );
 gen_fig_2 = show_results(albedo, normals, SE);
 hm_fig_2 = show_model(albedo, height_map);
 % Save figures.
-saveas(gen_fig_2, strcat('./results/', 'Yale', '_gen_', path_2(1:3), '_', string(shadow_trick_2), '_incl', '.eps'), 'epsc')
-% saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_incl', '.eps'), 'epsc')
-saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_incl', '.png'))
+saveas(gen_fig_2, strcat('./results/', 'Yale', '_gen_', path_2(1:3), '_', string(shadow_trick_2), '_excl', '.eps'), 'epsc')
+% saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_excl', '.eps'), 'epsc')
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_excl', '.png'))
 view(0, 0)
-saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_YZ_incl', '.eps'), 'epsc')
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_YZ_excl', '.eps'), 'epsc')
 view(0, 90)
-saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_XZ_incl', '.eps'), 'epsc')
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_XZ_excl', '.eps'), 'epsc')
