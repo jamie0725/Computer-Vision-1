@@ -20,9 +20,10 @@ image_stack = 0;
 V = 0;
 Z = 0.5;
 
-n_dim = idivide(int32(nfiles-1), int32(slice), 'floor')+1
-for i = 1:slice:nfiles
+n_dim = idivide(int32(nfiles-1), int32(slice), 'floor')
 
+for j = 0:n_dim-1
+    i = j*slice+1
     % read input image
     im = imread(fullfile(image_dir, files(i).name));
     im = im(:, :, channel);
@@ -35,7 +36,7 @@ for i = 1:slice:nfiles
         V = zeros(n_dim, 3, 'double');
     end
     
-    image_stack(:, :, i) = im;
+    image_stack(:, :, j+1) = im;
     
     % read light direction from image name
     name = files(i).name(8:end);
@@ -43,7 +44,8 @@ for i = 1:slice:nfiles
     X = str2double(name(1:m));
     n = strfind(name,'.png')-1;
     Y = str2double(name(m+2:n));
-    V(i, :) = [-X, Y, Z];
+    V(j+1, :) = [-X, Y, Z];
+    fprintf("%d", i)
 end
 
 % normalization
