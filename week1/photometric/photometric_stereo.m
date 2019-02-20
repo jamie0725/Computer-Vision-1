@@ -5,16 +5,20 @@ disp('Part 1: Photometric Stereo')
 
 % obtain many images in a fixed view under different illumination
 disp('Loading images...')
-image_dir = './SphereGray25/';   % TODO: get the path of the script
+<<<<<<< HEAD
+image_dir = './SphereGray5/';   % TODO: get the path of the script
+=======
+image_dir = './MonkeyGray/';   % TODO: get the path of the script
+>>>>>>> 446d0a782eed8d82337b9d7d644a11bfe86a573e
 %image_ext = '*.png';
 
 % Initialize parameters.
 shadow_trick_1 = true;
-path_1 = 'col';
+path_1 = 'column';
 threshold_1 = 0.005;
 
 shadow_trick_2 = false;
-path_2 = 'column';
+path_2 = 'average';
 threshold_2 = 0.005;
 
 % Case distinction for gray and color images.
@@ -27,7 +31,7 @@ end
 normals_sum = 0;
 for i_c = 1:nc
     % Split the images into separate channels and treat them individually.
-    [image_stack, scriptV] = load_syn_images(image_dir, i_c);
+    [image_stack, scriptV] = load_syn_images(image_dir, i_c, 1);
     % Initialize albedo for the first channel.
     if i_c == 1
         [h, w, n] = size(image_stack);           
@@ -90,5 +94,10 @@ height_map = construct_surface( p, q,  path_2 );
 gen_fig_2 = show_results(albedo, normals, SE);
 hm_fig_2 = show_model(albedo, height_map);
 % Save figures.
-saveas(gen_fig_2, strcat('./results/', 'Yale', '_gen_', path_2(1:3), '_', string(shadow_trick_2), '.eps'), 'epsc')
-saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '.eps'), 'epsc')
+saveas(gen_fig_2, strcat('./results/', 'Yale', '_gen_', path_2(1:3), '_', string(shadow_trick_2), '_incl', '.eps'), 'epsc')
+% saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_incl', '.eps'), 'epsc')
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_incl', '.png'))
+view(0, 0)
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_YZ_incl', '.eps'), 'epsc')
+view(0, 90)
+saveas(hm_fig_2, strcat('./results/', 'Yale', '_hm_', path_2(1:3), '_', string(shadow_trick_2), '_XZ_incl', '.eps'), 'epsc')

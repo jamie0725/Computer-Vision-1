@@ -1,4 +1,4 @@
-function [ image_stack, scriptV ] = load_syn_images( image_dir, channel )
+function [ image_stack, scriptV ] = load_syn_images( image_dir, channel, slice )
 %LOAD_SYN_IMAGES read from directory image_dir all files with extension png
 %   image_dir: path to the image directory
 %   nchannel: the image channel to be loaded, default = 1
@@ -11,13 +11,17 @@ nfiles = length(files);
 
 if nargin == 1
     channel = 1;
+    slice = 1;
 end
-
+if nargin == 2
+    slice =1;
+end
 image_stack = 0;
 V = 0;
 Z = 0.5;
 
-for i = 1:nfiles
+n_dim = idivide(int32(nfiles-1), int32(slice), 'floor')+1
+for i = 1:slice:nfiles
 
     % read input image
     im = imread(fullfile(image_dir, files(i).name));
@@ -27,8 +31,8 @@ for i = 1:nfiles
     if image_stack == 0
         [h, w] = size(im);
         fprintf('Image size (HxW): %dx%d\n', h, w);
-        image_stack = zeros(h, w, nfiles, 'uint8');
-        V = zeros(nfiles, 3, 'double');
+        image_stack = zeros(h, w, n_dim, 'uint8');
+        V = zeros(n_dim, 3, 'double');
     end
     
     image_stack(:, :, i) = im;
