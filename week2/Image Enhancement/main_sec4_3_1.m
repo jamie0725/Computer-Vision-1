@@ -1,4 +1,5 @@
 image = imread('./images/image2.jpg');
+image = im2double(image); % convert the input image to double space.
 [Gx, Gy, im_mag, im_dir] = compute_gradient(image);
 output = figure(1);
 subplot(2,2,1);
