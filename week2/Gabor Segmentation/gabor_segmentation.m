@@ -1,7 +1,9 @@
+close all
+clear all
 %% Hyperparameters
 k        = 2;      % number of clusters in k-means algorithm. By default, 
                    % we consider k to be 2 in foreground-background segmentation task.
-image_id = 'Kobi'; % Identifier to switch between input images.
+image_id = 'Cows-better'; % Identifier to switch between input images.
                    % Possible ids: 'Kobi',    'Polar', 'Robin-1'
                    %               'Robin-2', 'Cows'
 padding = 'replicate'; % Padding chosen for imfilter(), e.g. 'symmetric', 'replicate', 'circular'
@@ -17,6 +19,9 @@ switch image_id
     case 'Kobi'
         img = imread('kobi.png');
         resize_factor = 0.25;
+    case 'Kobi-better'
+        img = imread('kobi.png');
+        resize_factor = 0.25;
     case 'Polar'
         img = imread('./data/polar-bear-hiding.jpg');
         resize_factor = 0.75;
@@ -27,6 +32,9 @@ switch image_id
         img = imread('./data/robin-2.jpg');
         resize_factor = 0.5;
     case 'Cows'
+        img = imread('./data/cows.jpg');
+        resize_factor = 0.5;
+    case 'Cows-better'
         img = imread('./data/cows.jpg');
         resize_factor = 0.5;
     case 'SciencePark'
@@ -72,7 +80,7 @@ orientations = 0:dTheta:(pi/2);
 
 % Define the set of sigmas for the Gaussian envelope. Sigma here defines 
 % the standard deviation, or the spread of the Gaussian. 
-sigmas = [1,2]; 
+sigmas = [0,4,0.6,8]; 
 
 % Now you can create the filterbank. We provide you with a MATLAB struct
 % called gaborFilterBank in which we will hold the filters and their
@@ -192,7 +200,8 @@ if smoothingFlag
         % ii) insert the smoothed image into features(:,:,jj)
     %END_FOR
     for jj = 1:length(featureMags)
-        features(:,:,jj) = imgaussfilt(featureMags{jj}, 'Padding', padding);
+        % features(:,:,jj) = imgaussfilt(featureMags{jj}, 5, 'Padding', padding);
+        features(:,:,jj) = imfilter(featureMags{jj}, fspecial('gaussian', 5, 1));
     end
 else
     % Don't smooth but just insert magnitude images into the matrix
@@ -215,10 +224,10 @@ features = reshape(features, numRows * numCols, []);
 %          for more information. \\
 % \\ TODO: i)  Implement standardization on matrix called features. 
 %          ii) Return the standardized data matrix.
-features_mean = mean(features);
-features_std = std(features);
-features = (features - features_mean) ./ features_std;
-
+%features_mean = mean(features);
+%features_std = std(features);
+%features = (features - features_mean) ./ features_std;
+features = zscore(features, 0, 2);
 
 % (Optional) Visualize the saliency map using the first principal component 
 % of the features matrix. It will be useful to diagnose possible problems 
@@ -260,6 +269,9 @@ Aseg1(BW) = img(BW);
 Aseg2(~BW) = img(~BW);
 figure(6)
 imshowpair(Aseg1,Aseg2,'montage')
-
-
-
+fig=figure();
+title=["result_", image_id, ".eps"];
+baseFileName =  sprintf('./result_%s.eps', image_id);
+%fullFileName = fullfile(folder, baseFileName);
+imshow(Aseg1);
+saveas(fig, baseFileName, "epsc");
