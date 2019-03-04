@@ -43,15 +43,17 @@ end
 %% If the point is a local maximum and compare whith threshold
 N_radius = (N - 1)/2;
 
-
+%compute the threshold
+Q_median = median(Q(:));
+Q_threshold = threshold * Q_median;
+        
 result = zeros(height,width);
 for i = 1+N_radius:height-N_radius
     for j = 1+N_radius:width-N_radius
         %compute the local maximum
         Q_local = Q(i-N_radius:i+N_radius,j-N_radius:j+N_radius);
         local_max = max(max(Q_local)); 
-        %judge the threshold
-        if Q(i,j) > threshold && Q(i,j) == local_max
+        if Q(i,j) > Q_threshold && Q(i,j) == local_max
             result(i,j) = 1;
         end
     end
