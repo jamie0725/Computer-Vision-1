@@ -1,8 +1,6 @@
-function [ Vx, Vy ] = lucas_kanade( path_1, path_2 )
+function [ Vx, Vy, plot ] = lucas_kanade( im_1, im_2 )
 %LUCAS_KANADE The Lucas-Kanade method for Optical Flow estimation.
 
-im_1 = imread(path_1); % read input image_1.
-im_2 = imread(path_2); % read input image_2;
 
 if length(size(im_1)) == 3 % convert rgb images to greyscale images if necessary.
     image_1 = im2double(rgb2gray(im_1));
@@ -47,8 +45,5 @@ title('Lucas-Kanade method for Optical Flow estimation.');
 hold on;
 quiver(X, Y, Vx, Vy); % plotting.
 hold off;
-filename = path_1(3:end-5);
-savename =  sprintf('./results/lucas-kanade-%s.eps', filename);
-saveas(plot, savename,'epsc');
 end
 
