@@ -1,5 +1,8 @@
-function [ Vx, Vy, plot ] = lucas_kanade( im_1, im_2 )
+function [ Vx, Vy, plot ] = lucas_kanade( im_1, im_2, pChoice )
 %LUCAS_KANADE The Lucas-Kanade method for Optical Flow estimation.
+% im_1: input image of the previous frame.
+% im_2: input image of the current frame.
+% pChoice: choose whether to show the output plot ('T'/'F').
 
 
 if length(size(im_1)) == 3 % convert rgb images to greyscale images if necessary.
@@ -38,12 +41,17 @@ for i=center:winSize:h_1-side
         Vy(index_x, index_y) = v(2); % store the v_y of the current region.
     end
 end
-[X, Y] = meshgrid(center:winSize:w_1-side, center:winSize:h_1-side);
-plot = figure();
-imshow(im_2);
-title('Lucas-Kanade method for Optical Flow estimation.');
-hold on;
-quiver(X, Y, Vx, Vy); % plotting.
-hold off;
+
+if pChoice == 'T' % show the output plot if is needed.
+    [X, Y] = meshgrid(center:winSize:w_1-side, center:winSize:h_1-side);
+    plot = figure();
+    imshow(im_2);
+    title('Lucas-Kanade method for Optical Flow estimation.');
+    hold on;
+    quiver(X, Y, Vx, Vy); % plotting.
+    hold off;
+else
+    plot = 'None';
+end
 end
 
