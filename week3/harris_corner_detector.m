@@ -1,9 +1,10 @@
-function [H,r,c] = harris_corner_detector( image, threshold, N)
+function [H,r,c] = harris_corner_detector( image, threshold, N, pChoice)
 %%HARRIS_CORNER_DETECTOR1
 %Input:--------------
 %image:original image
 %threshold
 %N:the size of the window
+%pChoice:judge whether plot the figure('All';'IxIy';'One';'F':do not plot)
 %Outpot:--------------
 %The Matrix H and the row and column of the corner(r and c)
 %sigma = 1 and kernel size = 3*3 for the Gaussian and its first order derivative filter.
@@ -25,17 +26,9 @@ kernel_radius = (kernel_size - 1)/2;
 Gx = xx .* exp(-(xx .^ 2 + yy .^ 2) / (2 * sigma ^ 2));
 Gy = yy .* exp(-(xx .^ 2 + yy .^ 2) / (2 * sigma ^ 2));
 
-%%compute the gradient and plot the images
-three_figures = figure;
+%%compute the gradient
 Ix = conv2(I,Gx,'same');
-subplot(1,3,1);   
-imshow(Ix);
-title('Ix');
-
 Iy = conv2(I,Gy,'same');
-subplot(1,3,2);   
-imshow(Iy);
-title('Iy');
 %%compute Ix2, Iy2,Ixy
 Ix2 = Ix.*Ix;
 Iy2 = Iy.*Iy;
@@ -79,13 +72,28 @@ end
  
 [c,r] = find(result == 1);
 
+if pChoice == 'All'%plot all the images
+    three_figures = figure;
+    subplot(1,3,1);imshow(Ix);title('Ix');
+    subplot(1,3,2);imshow(Iy);title('Iy');
+    subplot(1,3,3);imshow(image);hold on;
+    plot(r,c,'r.','MarkerSize',10)
+    title('original image with conrner points');
+    saveas(three_figures,'harris.eps','epsc');
+elseif pChoice == 'IxIy'%plot IxIy
+    two_figures = figure;
+    subplot(1,2,1);imshow(Ix);title('Ix');
+    subplot(1,2,2);imshow(Iy);title('Iy');
+    saveas(two_figures,'harris_IxIy.eps','epsc');
+elseif pChoice == 'One'
+    one_figure = figure;imshow(image);hold on;
+    plot(r,c,'r.','MarkerSize',10)
+    title('original image with conrner points');
+    saveas(one_figure,'harris_one.eps','epsc');
+else
+end
 %plot the final image
-subplot(1,3,3);   
-imshow(image);
-hold on;
-plot(r,c,'r.')
-title('original image with conrner points');
-saveas(three_figures,'harris.eps','epsc');
+
 end
 
 
