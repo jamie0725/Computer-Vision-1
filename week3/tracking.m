@@ -4,10 +4,10 @@ function tracking(base_dir, fmt, threshold, N)
 % Syntax: tracking(input)
 %
 % Long description
-    videoObject = VideoWriter(sprintf('results/%s.avi', base_dir));
+    videoObject = VideoWriter(sprintf('results_tracking/%s.avi', base_dir));
     videoObject.FrameRate = 10;
     open(videoObject);
-    time_inteval = 30;
+    time_inteval = 10;
     winSize = 15;
     % filename_base = 'pingpong/-%04d.jpeg'
     files = dir(fullfile(base_dir, sprintf('*.%s', fmt)));
@@ -32,12 +32,12 @@ function tracking(base_dir, fmt, threshold, N)
         fr = getframe(fig);
         writeVideo(videoObject, fr);
         new_img = imread(fullfile(base_dir, files(i).name));
-        [Vx1, Vy1, ~] = lucas_kanade(prev_img, new_img);
+        [Vx1, Vy1, ~] = lucas_kanade(prev_img, new_img, 'F');
         prev_img = new_img;
         ind_x = min(ceil(r/winSize), size(Vx1, 2));
         ind_y = min(ceil(c/winSize), size(Vx1, 1));
-        v_c = Vx1(sub2ind(size(Vx1), ind_y, ind_x));
-        v_r = Vy1(sub2ind(size(Vy1), ind_y, ind_x));
+        v_r = Vx1(sub2ind(size(Vx1), ind_y, ind_x));
+        v_c = Vy1(sub2ind(size(Vy1), ind_y, ind_x));
         r = r+v_r*time_inteval;
         c = c+v_c*time_inteval;
         r = min(h, max(1, r));
