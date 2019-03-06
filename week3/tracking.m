@@ -1,8 +1,10 @@
 function tracking(base_dir, fmt, threshold, N)
-%myFun - Description
+% tracking - This is a function takes all the consecutive images in a directory, and track the edge point using `harris_corner_detector` in the first frame then track these points using optical flow estimated by `lucas_kanade`. The result videos will be stored in `results_tracking`.
 %
-% Syntax: tracking(input)
-%
+% Syntax: tracking(base_dir, fmt, threshold, N)
+% base_dir: the directory that all the input images are in.
+% fmt: the file extension of the input images.
+% threshold, N: parameters used in the detector function
 % Long description
     videoObject = VideoWriter(sprintf('result_tracking/%s.avi', base_dir));
     videoObject.FrameRate = 10;
@@ -29,7 +31,7 @@ function tracking(base_dir, fmt, threshold, N)
         % set(s, 'Visible', 'off');
         s.MarkerEdgeColor = 'r';
         new_img = imread(fullfile(base_dir, files(i).name));
-        [Vx1, Vy1, ~] = lucas_kanade(prev_img, new_img, 'F');
+        [Vx1, Vy1] = lucas_kanade(prev_img, new_img, 'F');
         prev_img = new_img;
         ind_x = min(ceil(r/winSize), size(Vx1, 2));
         ind_y = min(ceil(c/winSize), size(Vx1, 1));
