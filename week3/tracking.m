@@ -13,7 +13,7 @@ function tracking(base_dir, fmt, threshold, N)
     files = dir(fullfile(base_dir, sprintf('*.%s', fmt)));
     first_img_name = fullfile(base_dir, files(1).name);
     prev_img = imread(first_img_name);
-    [~,r,c] = harris_corner_detector(prev_img, threshold, N, 'one');
+    [~,r,c] = harris_corner_detector(prev_img, threshold, N, 'F');
     h = size(prev_img, 1);
     w = size(prev_img, 2);
     for i = 2:length(files)
@@ -45,7 +45,7 @@ function tracking(base_dir, fmt, threshold, N)
         % fr = getframe;
         drawnow;
         [~,name,~] = fileparts(files(i).name);
-        saveas(fig, fullfile('result_img', sprintf('%s.eps', name)), 'epsc');
+%         saveas(fig, fullfile('result_img', sprintf('%s.eps', name)), 'epsc');
         fr = getframe(fig);
         writeVideo(videoObject, fr);
         hold off
