@@ -4,7 +4,7 @@ function tracking(base_dir, fmt, threshold, N)
 % Syntax: tracking(input)
 %
 % Long description
-    videoObject = VideoWriter(sprintf('results_tracking/%s.avi', base_dir));
+    videoObject = VideoWriter(sprintf('result_tracking/%s.avi', base_dir));
     videoObject.FrameRate = 10;
     open(videoObject);
     time_inteval = 10;

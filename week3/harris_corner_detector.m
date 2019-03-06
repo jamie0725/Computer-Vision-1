@@ -1,4 +1,4 @@
-function [H,r,c] = harris_corner_detector( image, threshold, N, pChoice)
+function [H,r,c] = harris_corner_detector( image, threshold, N, pChoice )
 %%HARRIS_CORNER_DETECTOR1
 %Input:--------------
 %image:original image
@@ -79,7 +79,7 @@ if pChoice == 'All'%plot all the images
     subplot(1,3,3);imshow(image);hold on;
     plot(r,c,'r.','MarkerSize',10)
     title('original image with conrner points');
-    saveas(three_figures,'harris.eps','epsc');
+    saveas(three_figures,'./result_harris/harris.eps','epsc');
 elseif pChoice == 'IxIy'%plot IxIy
     two_figures = figure;
     subplot(1,2,1);imshow(Ix);title('Ix');

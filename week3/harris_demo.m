@@ -23,7 +23,7 @@ title('threshold:400, window size:3*3');
 subplot(2,2,4);plot_image_and_corners(image,r,c);
 title('threshold:400, window size:5*5');
 %plot the final image
-saveas(pingpong_different,'pingpong_different.eps','epsc');
+saveas(pingpong_different,'./result_harris/pingpong_different.eps','epsc');
 %%
 %%Image "pingpong.jpg" with corners under different threshold and window size values.
 %%
@@ -44,7 +44,7 @@ title('threshold:500000, window size:3*3');
 subplot(2,2,4);plot_image_and_corners(image,r,c);
 title('threshold:500000, window size:5*5');
 %plot the final image
-saveas(toy_different,'toy_different.eps','epsc');
+saveas(toy_different,'./result_harris/toy_different.eps','epsc');
 %%
 %%Image ¡±persontoy.jpg¡± with corners with different rotations
 %%
@@ -65,7 +65,7 @@ image = rot90(image,1);
 subplot(1,3,3);plot_image_and_corners(image,r,c);
 title('rotate the image 90 degrees');
 %plot the final image
-saveas(rotate_toy,'rotate_toy.eps','epsc');
+saveas(rotate_toy,'./result_harris/rotate_toy.eps','epsc');
 %%
 function plot_image_and_corners(image,r,c)
     imshow(image);hold on;
