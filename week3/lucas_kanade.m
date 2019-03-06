@@ -43,9 +43,10 @@ for i=center:winSize:h_1-side
 end
 
 [X, Y] = meshgrid(center:winSize:w_1-side, center:winSize:h_1-side);
-plot = figure();
 if pChoice == 'F' % don't show the output plot if is not needed.
-    set(plot,'visible','off');
+    plot = figure('visible','off');
+else
+    plot = figure();
 end
 imshow(im_2);
 title('Lucas-Kanade method for Optical Flow estimation');
