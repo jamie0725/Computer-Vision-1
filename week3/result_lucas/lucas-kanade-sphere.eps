@@ -1,9 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Creator: (MATLAB, The Mathworks, Inc. Version 9.5.0.1033004 \(R2018b\) Update 2. Operating System: Windows 10)
+%%Creator: (MATLAB, The Mathworks, Inc. Version 9.1.0.441655 \(R2016b\). Operating System: Mac OS X)
 %%Title: ./result_lucas/lucas-kanade-sphere.eps
-%%CreationDate: 2019-03-06T16:37:57
+%%CreationDate: 2019-03-06T20:06:12
 %%Pages: (atend)
-%%BoundingBox:    30    48   246   210
+%%BoundingBox:   -27    47   239   160
 %%LanguageLevel: 3
 %%EndComments
 %%BeginProlog
@@ -13,24 +13,24 @@
 /bd{bind def}bind def
 /ld{load def}bd
 /GR/grestore ld
-/GS/gsave ld
-/RM/rmoveto ld
+/M/moveto ld
+/LJ/setlinejoin ld
 /C/curveto ld
-/t/show ld
-/L/lineto ld
-/ML/setmiterlimit ld
-/CT/concat ld
 /f/fill ld
+/LW/setlinewidth ld
+/GC/setgray ld
+/t/show ld
 /N/newpath ld
+/CT/concat ld
+/cp/closepath ld
 /S/stroke ld
+/L/lineto ld
 /CC/setcmykcolor ld
 /A/ashow ld
-/cp/closepath ld
+/GS/gsave ld
 /RC/setrgbcolor ld
-/LJ/setlinejoin ld
-/GC/setgray ld
-/LW/setlinewidth ld
-/M/moveto ld
+/RM/rmoveto ld
+/ML/setmiterlimit ld
 /re {4 2 roll M
 1 index 0 rlineto
 0 exch rlineto
@@ -197,20 +197,20 @@ b4_Inc_state restore
 } bd
 %%EndResource
 %FOPBeginFontDict
-%%IncludeResource: font Courier-Oblique
-%%IncludeResource: font Courier-BoldOblique
 %%IncludeResource: font Courier-Bold
-%%IncludeResource: font ZapfDingbats
-%%IncludeResource: font Symbol
 %%IncludeResource: font Helvetica
-%%IncludeResource: font Helvetica-Oblique
-%%IncludeResource: font Helvetica-Bold
-%%IncludeResource: font Helvetica-BoldOblique
+%%IncludeResource: font Courier-BoldOblique
+%%IncludeResource: font Courier-Oblique
 %%IncludeResource: font Times-Roman
-%%IncludeResource: font Times-Italic
-%%IncludeResource: font Times-Bold
+%%IncludeResource: font Helvetica-BoldOblique
+%%IncludeResource: font Helvetica-Bold
+%%IncludeResource: font Helvetica-Oblique
 %%IncludeResource: font Times-BoldItalic
 %%IncludeResource: font Courier
+%%IncludeResource: font Times-Italic
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Symbol
+%%IncludeResource: font ZapfDingbats
 %FOPEndFontDict
 %%BeginResource: encoding WinAnsiEncoding
 /WinAnsiEncoding [
@@ -269,20 +269,6 @@ b4_Inc_state restore
 ] def
 %%EndResource
 %FOPBeginFontReencode
-/Courier-Oblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-Oblique exch definefont pop
-/Courier-BoldOblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Courier-BoldOblique exch definefont pop
 /Courier-Bold findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
@@ -297,27 +283,20 @@ dup length dict begin
   currentdict
 end
 /Helvetica exch definefont pop
-/Helvetica-Oblique findfont
+/Courier-BoldOblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
   /Encoding WinAnsiEncoding def
   currentdict
 end
-/Helvetica-Oblique exch definefont pop
-/Helvetica-Bold findfont
+/Courier-BoldOblique exch definefont pop
+/Courier-Oblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
   /Encoding WinAnsiEncoding def
   currentdict
 end
-/Helvetica-Bold exch definefont pop
-/Helvetica-BoldOblique findfont
-dup length dict begin
-  {1 index /FID ne {def} {pop pop} ifelse} forall
-  /Encoding WinAnsiEncoding def
-  currentdict
-end
-/Helvetica-BoldOblique exch definefont pop
+/Courier-Oblique exch definefont pop
 /Times-Roman findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
@@ -325,20 +304,27 @@ dup length dict begin
   currentdict
 end
 /Times-Roman exch definefont pop
-/Times-Italic findfont
+/Helvetica-BoldOblique findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
   /Encoding WinAnsiEncoding def
   currentdict
 end
-/Times-Italic exch definefont pop
-/Times-Bold findfont
+/Helvetica-BoldOblique exch definefont pop
+/Helvetica-Bold findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
   /Encoding WinAnsiEncoding def
   currentdict
 end
-/Times-Bold exch definefont pop
+/Helvetica-Bold exch definefont pop
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Oblique exch definefont pop
 /Times-BoldItalic findfont
 dup length dict begin
   {1 index /FID ne {def} {pop pop} ifelse} forall
@@ -353,39 +339,51 @@ dup length dict begin
   currentdict
 end
 /Courier exch definefont pop
+/Times-Italic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Italic exch definefont pop
+/Times-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Bold exch definefont pop
 %FOPEndFontReencode
 %%EndProlog
 %%Page: 1 1
-%%PageBoundingBox: 0 0 281 220
+%%PageBoundingBox: 0 0 208 165
 %%BeginPageSetup
-[1 0 0 -1 0 220] CT
+[1 0 0 -1 0 165] CT
 %%EndPageSetup
 GS
-[0.75 0 0 0.75 0 0.25] CT
 1 GC
 N
-0 0 374 293 re
+0 0 208 165 re
 f
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 1 GC
 N
-0 0 374 293 re
+0 0 208 165 re
 f
 GR
 GS
-[0.75 0 0 0.75 139.50014 20.14375] CT
-/Helvetica 13.2 F
+[1 0 0 1 104.0001 16.625] CT
+/Helvetica-Bold 11 F
 GS
 [1 0 0 1 0 0] CT
--146 -3 moveto 
+-132 -3 moveto 
 1 -1 scale
 (Lucas-Kanade method for Optical Flow estimation) t 
 GR
 GR
 GS
-[0.75 0 0 0.75 64.5 22] CT
+[0.5 0 0 0.5 54 18] CT
 [1 0 0 1 0 0] CT
 N
 0 0 M
@@ -403,3828 +401,3490 @@ GS
 /Data RawData /FlateDecode filter def
 /DeviceRGB setcolorspace
 <<
-  /ImageType 1
   /Decode [0 1 0 1 0 1]
-  /DataSource Data
-  /Height 200
-  /ImageMatrix [200 0 0 200 0 0]
-  /Width 200
   /BitsPerComponent 8
+  /Width 200
+  /ImageType 1
+  /DataSource Data
+  /ImageMatrix [200 0 0 200 0 0]
+  /Height 200
 >> image
 } stopped {handleerror} if
   RawData flushfile
 } exec
-Gb"/L$YYk%RIBGn1&$'P\_dZ9KHLmqJqP6YPsge.@RPj2M&7sV"qsspW/MN4Ds1G:/p96lG=jl,9=LH@
-Vpj,#SF2^:Zo`At[[`oA/Z1D\Z9-Mk/A!^7m9\FNcL8=ADt!EHRcID2p^Vd!PC0k6s8KaqH2c.]H[\a)
-7;LIBKnWB,=]A<52)Rg>D:+(IdABW8='*o#'D;#eK7hRu:c(9SNK-KKN^XTpdF;,P4WRh@(gXfnh7+'1
-n3V6c?M+*[d20M.IHaDP=2#=Gl(:F`^)=W_G4aVZ7c4)Lo_n5K5Pe7Lc9'Fcmm]PAH1_+5dGOq?oZLT2
-^\Ut&pO=95oMP7MhaIM>O3p2j;tSE9*.@N`oXj!LJ+uD'0E2[`lb>php2A?ns*OA[rt54mIn'J2?PsW.
-O2'[/GU+>kBApCGL#;lq?4F)p=2sQUr%Yl$hXQ4/khYbHn4E+pIe"0KCd7[qI85/nI-.opU<en$^pW*X
-mba(3H%iEkk"WEn>W&\_e1')Vlj!1Ei'H'=lk9#,lW2^ullPj345&C_]38N94.MKJ7D.@Y"gm%7e[4)5
-XheoLp'/-WoOtJ`=0Bnfhn?)&rV=c0DnJB.o4q^^h>Y]D1@4^]n*+_>pgNg\?gDTZo#ZK,)p@.+huB9k
-qpS>`\$9n?;$*j&>$6Op(+qLr<W]Di6440fQ9ZsO<d(0jKo8ZuPs?k3d)*Z],g]/VQ!J'3iF3I6-.'de
-['8V#'5/]=as+3sm):<u8t_G$BOU]QRm8KT<`YlIKb'\=.tLaPTnSD!TTqbm]?nEXMbTk05V%c>_QjuI
-5V%Cd(86EmQ9ZsO<n<suO-Dm[JQC?q,o<%9lVTq5`m*`,j_4KWFF$!:HHMml0/eC4r1N_B2l"!gXupc:
-e`c(_SYN`d]@UrQ?-kW/e1a^(1RP2q?!`"g?2\_2dqD1n89sO[F_rA&NME>>L'opNj`M$pFSDokZ5fQl
-&!0%l:=/jjc_@WCc]o;Rar*1M[XFgAFCTc&=4+UNP02Y0lG9d;Tlgeh'oeuR9qt\t,F/&]WrCMZXX/3c
-C3*g`ZOf?cD^hjA?<X`m<BX/Z4cik!;dA!U:u@\qZ>"H.a,8sZ/\H3-XbVJYHbW[&s6[I]];9A"b8[(Q
-'[5(n.KaK(+`*U%/"2N!\"0L*J#-ksNTTq-9eF]Bf'QZHe<Oi$-u.'YCsOWgOC-^E=L"t2O)I-[ffW<k
-I'aeOXP:Kb0NQni?b%>h\oh"qrDJ=bQ3<K[Zt=p@hgHJmq8\2E^0K-,X*OZoVUijm@%_[=H"C>30EC,8
-OHaW4^k+Ru+TaQP]!gl"NYbnXh/D+gX1@>:9iYO-\12<!>L9qs\16r"XrStsj9U4DRgFYl27?91!FQ?A
-/+=q=0t_t8Z_1cK6,i\jU=9g.(7%+i,g_E7lc4L]qU3tg[X=bPfP$hWK3s8m+Tp8]K!bW4#ZR9#M`^Kf
-f&mdV@BIM`J.2J_F9,-]il9SS@C9L$huWX.H,*k5m]tEmFWE-CD#.Bei7EFOZ$F!Zr]gYB.,\(0]`bBV
-#<>Dh*FMpWYIo0OEDb2RV#i5"]MS_^+'QGV6hL$njrV$:[c(gSS<RCf32&33#"ZO3eaB7;7j^cWRnITN
-&l/ajKE\.PFbn[YLgZ>F)rM:B"R6PQ_<:np=DcLrn>CL74;^l7?]3La_@QEK5S;>Zj7/-`P-AjV'/]c,
-:>TH8()@pG'50,-nAm8341B""'W+IW*,_e]j9&rn(`ZfPGVs:Rn,U8>/ZuiXcB5cll$E762M_4^js!,_
-HQKBlj$o(o;bsR#US+^#W9Hk'qTDTX4Mim67$p%Q0gR$"IMV_;_;\\h'SQFh?2+E8H/&.Lp!5QspQcMZ
-/m`4"iPcIDiKmpMmcr';;n2_o;nrL'Mp5uh@&!^hVScCc-Ycg\e[:r`BYW%&7)>O5\3jk@j1Ub<YI8=r
-X``YSXW;Ui-sWCCJcEU9nN+H5ffcj^c%WAa/LP=b-l=A;:;@U7WLbM^kTLNRP)SHEfh"1?i.Ktn3c>YB
-WpglemP`\a/1Ff4(nlY;Q[R#Mot>QMoc,R%h8`g@Gn&n&5Xi`n^/E`n^]5Db&N(>!I/"So!CD;qGO,,@
-&+GX)!8J@6(H`Kr+P\7CL?Ba1_nQnQFVj#%nLtq(&SSRZCg@"Q652^%rVJnhJpBcW^^nX0?4*PBa<]*T
-W<p3p?4)0sT<>BSR(M"DKn\:Ue3`K]:SJM(Em(p+'lmP);0OHZ2(lWha?coAh8JSpd)=D$E8<(\Z9?Hj
-p#+@mn-[/<Q-%3IW4'/TBL.FXkD2)>7m]+g:$\uAdlHqn$i\,k0TY_!Ya1N6(g9G-`>tcfgZ(/BbduZj
-lGaQs#?k5-H?e/:L%XOd=1.BGKQU0\FlZaG-'eeF*mau(1nUF25I,"soHu$gK^\u/,<SCm=Kj',TNW[W
-iBRtq!<ZkLG*V#@0Q_8EE+eq`OZ@d+4C6#TFr0--/ttF2%BkYU_S;?"3i';e4<9JN/4XWl]qjW&]%Tlh
-NJdmB=LP7&oKWdrlHo0,g_9bnN"9fcI.qX(!!#%^mOkDa\%NJ6$MP%>Rt@dQ??/s0-CY4/K,Y8L-g*\'
-0_d<R(@c]q(*6%4)R!apPp4Sl%sUD<;QLPU'W`(CX,5:`'>Q,-oo/r-"Dh$M3`$t0&I&fmP&mRLWk//j
-[9F"X>FmsaYl'+;df?L7s3$ZJHO@^^^s5It;^8$A.ek6U#lH=Uj761*A.unV&c<3pN)[SCiFiEHD1'$^
-dSMU+!*Xm^?4D&gOHBAf:tKm!*\Sp5",'m30qbIt^^L4P:"P<0K8IL`@!T\H=V#:A,29A>F>+s^8uW=m
-E<'0rGVudOm::@?[hh!1YBmM$_SQtY*b`7^V)?dba>+l-K&*(lb%N)+$r2)(;K,Nd$PQ#t:68p7KJB<l
-U>0#a.g/gJRH@[/!c/td#='+S4<<i#O8r*'ked9ElSMq-fGcK%5I$h4!b`I#<Lh>Yli@rZYOG2t'G`k2
-"J$jh96NiqMnC=SCn1c9I@O(P;".-SMpo!87<6!\3DU2i=Er!;!3LbG-lRS!YHjLX90a0r3B2rI;o[a1
-'*ZD)ol+QJ=)^"k/)@L[Y57OK;DMmfE-AkC.-Umb^0Dd6L;2^OJLDK8j(HNDT<'>+FJT;*K1WmRLWtC$
-U9OQ1'4)5XOGY2&%sS*&3#*',?Z3nf!3:@'<"/;=4GLQ[Ru@^jBQ<Mp?NJ<o)FI#Og%N)D9l$@8['53L
-[(N+*r\(!sZP96tNS7A:n<!CTd;2VNKFf!$Yps,]d>jgP"t?r4/s6][Vs<48g+PAD_,SSsX26)1M!ELJ
-?de;V/X:%Il6N.]3`ui/--8p_"0^B9h#LZ7f)Zup(dXoV:&G4P:oZ`j]:LBliSF$U''YN?mOH'uD73J?
-PZ[^Z0WK@+cta+9CF_L<>2#PJ['2)AD7N"!a7$1pSg_S&`O8FbLWmUup1!bUbWana=%Gi+$J.-W,rm.m
-]`:Cg9`Q6:j)iqoh1TjFgh''j0iN`73%=b3@$%*=N"qoo(l3saKCL\c,*\mL\HNKGbQ%`\@/s.e!3Zq"
-!F9dS\-:)8iZnfa"\1,o6TP9b1Un>ImnC*Y_c;"^lq?:Xbpad=ZFfVr6OO84=N8_amLNBB*$LgP,a>/i
-hZ*b44&1q39.e(X3*hT_43SBBl8qp0$a!a;q%BjS?"6&5OU]ekLst=0-\k=l;@H=@h3Lcbe1/HF\)&;6
-Ns?`aJ)TPZ!N?!BX;XoDW^EAJ!BEAOK%E;A:F2L2j>=tF:5Y*=-_HUNmi9+VXt9.SJ;B!>$R-X!C>oAu
-p(`W%>$1RKEeW)R^:1E.Ge&4$&KN#QVO@n:e>o]f#9'ZaOQb:1"=\YZ//F``mL^btiFqr599DI(0"*S@
-WTE)g@7(#!U:sl60*Y4--ljt[:/Df`)PpeUUrU.!$<r2``H)>hm1*<I9'$K$6nOF_0OL=ZWr]jjr8VUq
-HKsGr8ups6BBfLd8^ZQWp_*g[*;nF\QTe/X@H!Qr&mB4&B4],?Fn1M=:gIb164"VCfC':Ni#\$NiJ:PJ
-N07\8kXG+1'Gr?=JTIV5phNLmm2_G2jGFJE-2Ch]'Y4R0XuGB1j3HYL!@N`<.#<ILgU@Xm&;1]YlX[+u
-&j+Ta8KeC9`+K1D#r<qg07'>s[Z:-9qeSQrbT/3o<Pu(68Vg::cSYc05UL<THkC+>Md+mWP=*:*s"6NL
-^%Lb-RuU@),fsnNjf(p)'t6!l\-4QPFOXcGYRpEmBo>X">fZ)-D@E'F]u59?&GbtJ^V/.1bOoK*Q=@;/
-oe9Ek"[37T>A=op%nOM,8;tUMWs0[ODh1,mXruWS^]NF[82;fL)Qgs(/e6[9`FpBXN8*k@\PdeZ':Ul;
-4!j%tI.G:N<9n%F(7$cY/15,EorY1iUi:t0n3r(MP&hUS&gh@ts*VI/OjXZ>K]Fi;piK+scVY(Gc7AQR
-Eg5Ag/[9+r,Y_IF.JF2Z7%:_V#6EI0Qk;p#1Tm*rgd/FO$ma8raS]r!qTHfW(4qOOYWCeA.pMnJAGa)`
-RKi"LEKuW\_1)4b;4rWA9TH\;P<Hk!pcOAWi%$*<h`+I'(m5CBgb'sfIJk*^mj-HYYik):`i?;EE"J2%
-_G-`a&kCcJUSca"/Zm9[;raTnM=OYiRflT<$Fc(+YS)f/@-cm6j'M>hE67kVd+a*F!n-Qh3V?%!RM)+L
-h>1(F.ibhDQ^Nc.iK-ER?p$=!"+Ze-ThZIALsJ>Y`-`E%:**eprE4^fgbDP/LuKh(H^]>V`.s=6$6M.4
-Yl+3kAH8ibVq9'-PH$FVFN:A&6=EH>2,h@]0]h?-6?CUMeZXY4l^Sk3=pK#ph;nP@JZED@3A"rT)dnMc
-p&OT8#@J5(Mb+W7L>UJ9+"*]"fs!s$FEYnDFPjR\@'>Zn@^g@"Na1O.mV5E.((1"YL^71/9l[QD/P3=@
-Y,>7OXtm"apZ+P:BON'+?T-7lI;O*AHP>XeOa\h'lKmPC.q/m%.F"-%,u3S8M1CJX1?MCFiG+$+<sK":
-*7ANpNO#[0/'A+jOk<^TCOd2C#&r,pfX!lXX&a-^>DcW\/A[0HgjR+f_Q^oCi-d&9A&.$5['m1jg/2Sm
-2\K/RZ0L:8`+Fi:$h:D;>BS2cPq^]AL3,\*NA>WUJilJ&Ml8Ls[7qUl4?@.arT[J-"BsDq7h*.#_S*n$
-@r*hEp68e=8'(e(1E]]RNdLjBmYDE0M%Fg>MU4+JBe.sH$>bIJM%?ls0uDHPopk"BGaOJkV4knK+j>A$
-'*3M>M1rsLrI^^"hpj$^;=[X).*MuaffT.i/%08?kRcr-olOsUa-IGo9lpr\aXPe&3!_GUF_@'[1g5o?
-2RP^ujo^o+>qU85h7=VLm)kNr"SY[N=DD^*<<ef[?r1"?nM'Km@<Rn+FFr]]p^Ne^3JAbI!XgSPE&"bT
-0s">P8mV.[o-=,]Qbh<XU)_\]%_Y9)E!O's3@9j6m45U:@gT;SZ\Bei[V4o%>]$S$!fnKsl8XK%l`X2N
-,Q>[.7#E=3?j\Xd,N<KIIItp-JC_MLN^QUoB-G5c]IffIgg=C3rTPot,N#D]dReUXBC!Z,:"<)t_T%7&
-T9]u?'rj2$RrnS<g5GQ6Bj-Gt1M)H$WuW@0Zf9PTS(6g2U5$f.\k9[\Vn@pZ10[D!_P&uB39$8!>RIrZ
-9Xm@$*d"KVCbV8.5d#!7m\=0X@f>FJ9-.8,-<?p#k1a@&S=U-PaT^rul%(l/6m^Dq_FtCn*-hKt?"bAS
-n$BFEdbLaTaH,0Y*iV8*(td3(Ceh/rZGa0SRKjc[%[j'm)^5BaOJogQ>V.X*Yp'sk>$"8h).$\G=(s#o
-0jMRs`/?#akVTVJEAS`=P1J>V!:1:/R'EGeI-Eu`jCHcG:"%O-XL=Bb:`Z@PK9UuU3>#kLkeW_:5$?W`
-XoX)+EQ`8s)N)8bB8K9?mlNs4<6&Dt7#<I9_!dC685"j2f%r1<1cn&<B+[+:JY^O,Tc#]WgG;6JLFn46
-Tf#lQjMP8N3j;pSDNGT:b\K)eR%6>:YFJ_ZJ?u@+lYRG?<eXq<6>P>IeZtebN7HK%q'k9XjJbglb7P$8
-`$F,+,9c=^1M;AI`Ee$_@!G-cC9e@S!sY_Gfm;9jor@!1OBr;[hX\:fJd*h^CVC8=5b2m`LBn4^#SNA[
-S#hf3+0H@,Vo#e08LV_ZPI5Q<BUS((XI=IEpZi^-Brn>IGu]$]L#i\I/3.Aa3#Iotd*eE9I&4E":9_)]
-TVbr9,p'ssWi"G/3B]22C%EB3Mb7g0+s9e7!R;W<:eeZpM!HKRg.UF2kj&uph#&c:Od<*u:G/V#P@uf[
-o+Ff:"pWF4d6")J"F'0N%D$DfT%L.Yb&G_/QVp<5?*;o4_=]/#imN*<MMt4IUaOacQ)(_>iemE^B1j(F
-)n)g[%Y,t7#gZ5frJIXn.Ha8kYE2p^2+^fFQHFf:$Qhtm^-gus$EfCfh+,mcAGu.*YDoS\,4q>7S>$)B
-50?*75uAp3k?N_g/?9!K`I<,sCnSmQ8LBG<cXW.)in3]t'.kY+S`CdWI][a-07Vmh%6\%C]K9@i8G^<d
-=d7QWccoqn1tM,E[oB'Oe%;?aS[K#_8D50PNk):tCL2s.Okpk1WF1`7]jn'VP+(f`aY?=4%`'Z2)Vg]D
-,r8X*BI0c?^EGL$4:VN`a%2%X4#2O@o]'X/45BlP`\J0O2,9ms!9_kEs#c!b[VJm:Kj\UB1R:,Yak(Vl
-#)<n<:&XeUFU8uVF$W[S)Y:4%4(Tj-X0FH^=diVb,$uH.??;eeK1%XnN'NF@!Qod6^`^MBF9?EE:f[Rr
-:&!=Ch53B_el-_6pY077S<b4+6T'o(9c&2^^,UHl$F@c5""#SJM-;MZ8W&eF[!'#M=)1Yr)edBY!9t-;
-D%RAKg%b1k\B@1rD67gDq/2#6GOdaOL2XPVh`TMYa;mDV!>;R5_H(_Q[cBi\X=V]GK%@rd.nVe1J8Ks,
-Tb^C;e2j\4:("7"#0@'$jB7jJK"K79WJS^WpP]?)Q.-NsGrX'n`J7FU8i'jUn&7LmFqcoYKg&@S+OCb"
-C`_poKgQQS8[(?_@:3FTCJJt0E0K!@ajuV*4Nd;rk8K&?:S7G(EQJJiS<@?Q7_'4od]2U3&X`&@\Q1cJ
-o&D#M_rk0dRiS=D/77p]#skV0;m,WIW4?MY3I-MB23].HC8D?Gkc_[']qn'9iaT::.POjo<BDI2J)49-
-3Je[]7lbEH,LGSZ+LH6B\)ZO!@=V[VfpbrD7P&Z<V8B/@3+R!YD%LJte'8B-H^1rE)-C,d'7Pbs,pbeQ
-71`AM3,,[TFf",,BD`H[PtW`56dd<YeUl)0\Q,]:U9B7c',+R_ct[9Q@'$S6\1c?=1KpVs!h@)&G[t)'
-.J7D'NVXdkMq/Fsf2,qmWbl_N%0&ueK#p'l7A=g7mucd94=LKLVpBJ!dt]q,q:.sWL+sn\L(TLih`B%c
-$SJ1Wm*i`_RW=?#Zn^@9Z_T9HhhBZEa*l.PrJeqh:cf"WI9p]E;\V(ULWW]Zcs7U/n<C"F[pc-!e1H,_
-<OV)3[UXfC\Ta2\-"dl:NB&8l4O[O[a0]8"2ftL.`Dn_L(Rt`pmU+nV8uMo-*\^7s3F&EI;2Z)U_Y><b
-Gf@>j/Yh-AQ9"6*Ee7fLNc/%0QVa!)Lg6M\:XM;Z768*p!TnjsVEa'm`f$&rTbsB5MPRRGQ#\s=Yg&[k
-_PZQ<V*\/sK)OEQb(W1j/#*7,@YRp`/1Ts:OMh3DRgr'R.8N\si>cL#aOfX\9<>hhY4lWuXYNr?)l+pJ
-qbjufj`I'#EB.G:WP33T;V;geeuDP$Lb"E:EdQ(7fIn^#R)6:QVFseXR1<:Q3K\h)AgR<a<DrGf1c(+u
-#Yc)*24B3=7G`!-\P'8J)F7;=h(HF)6BX_EGU.K!&eD`fIGViK9X/2-f3G]0.W/Q;oH\h?8AFR4KcFWB
-SsN,_?%AtA>ANhLKsT;T8(?^YiCS1-Bl[+kLV!><3%8ptfD<#JQ"2;QOsnBm1LUUY:m5:SBJiQ9*](JH
-gV-*gV&GiB'pEcm)u3jiKUWdnF(Df<<!Q)<_e-oqeS%c^Mm?!#,ak_D;V&f3$Pt@XM`$E3lf*Ru)<Wo_
-'`a)p,/(GH7a@*rWj&a0AO3G8<6A`//1!],=?3G`Ck*KgEKB]9^+?AiPuDI/NfBj?PliT3rIR&;^"Ot7
->a,o6a\gD6CJr;aB/_PGEBe66/7t,D_VkVf=dM]NR@s3[Ok9tAK%h`'r=MuQgnBELa.67@V<)MbeOkGC
-2K"j<X^7[12qI>a^l&Y*\HS*05"JN?GRYX\gce;Al;?u*CU,`gH7>njV]!ZfL/Z.+S4'YD;C,AhUZBDe
-dpg<H;eU#)*,Yqj<be_M`G)U+'#.G&Pu*[sOjPH"!aRu,?6ehpI%eX-hI^hWZ-g+&s$SCP_6?$Ij_Wq)
-nQ!Jf;bJ%<3i4g:?(c'tecY$2(DX=">'#@36M`oZl7)W&RO6-*73HlRB,mh'G]A.4[pLU9`&XM*'+=A0
-17[[78j;3%]p<JHdcHD+eNKF2(^c8E*O6q'>#P^&\Dm5InJ]DI\`8EUG-ulO%,U)jGj`)@l$&iDX#Dt(
-'<\KTb1XY-V/u0/(%&e=Pr.Z-XU/_\C07_PBOO&_P54*g<mB2>iUKgH.?)eMg)!"eU<?8o,SsfW?6Ih]
-i1S'.]4\e9h8'G\c;<EG'C%`,BraQbc0-SGA[10N;?;A"q04R5E9/DS8/]C>2a[k;5sa+E2eslF7uo0r
-a\9_jM%Yg8F_um0jU+!CPjoD)5S!UcK9`14p:T\a2%(:tK(Y3Lq258Wbq5&gWj)l+]5jZLc:"fgSgt`%
-Be^5<U67h+lJp6#QQaNmW/q!H8XSYpSO#cqAsNk(r2).sk3D>_Q88ph[(A0/NN^hBenBt0T@+$Nd^:Yo
-kT0em.>Wa1YI0skb@oi>DSa]$^+mBWi+chG-.u`X![@Og9lNJcYY-0`<4Q`16>#jt4oG53-P!90XrQCl
-@Tu7_:2V%3_/%<Da=O6*f1$ZtJ4l\lduf!4LqZ379d'KIGl:Qi?I?je#J'.qUTE<b-KC%bCE!51$*$FA
-gR\X'HMOhZ_<Jb$?%RC-Q,&Bmf)Yo,BeH0ULH0cR`F773\331XTZU!-Z''!tF.Du7qP#e`8m/'4HV*N)
-`]mnVBsbpEKiZqnTi`8l#;1OSc)W15\^3n'TJlJM4m9"(WXHcin)O)2.O/5G\9>FcPb1qIM_(13&<qqD
-Rf45Ncr,76K-P-^,BEU\o*sip`jk:EBG/VLqUn`LVF.=1De,4Yqlu(gSNc7.9>h/)no29V?3?=)J3Uq\
-%[6N^.>)i@8TM7-GMgFfMaP4eN@X0T=U])K;e)CAZs&4-,a+jbi'jR(JXrLEjd>1aCk*3ET.!?IS*c?i
-S?l/Pn'faL@+)Dq'aWR:/rt'Ric,fK1)Kc&Z\H_FMi0uIX]BTYA]Z:J8qc`+)Wu'V6)W46NQ=Z0)4(G]
-Laf0EV>8j9S8$AC<eJIonE;UL;;b5\ZFFArg7>QY^@Mo@jtVt]aZsWGe9n&iR)@Dha5m^i?`Pm71I9CI
-dJ4,;Qe8\VMq.+aW91PGe'Q^sA9"nY)ZY0Z*)S/ldBS+l_3N'TF%!"jWEGhaq1^K)N/Np#iCipUei_Z@
-H<YtUe3RuLG_TE=8#rEffB]/*CE<!,#Iu6ZkDB<oBU4B`-.lbem@*nZ?"?#eBOT/(f%&f9es:m;ghBMX
-k_LFaa9Df";c5&&N8/=6_ArO,hOX'o*BiV+Yh\.Xk=JBL]->C1F%OEc$X-;=-D.!NLG^P826q*%oejAJ
-/$!B<mA0htd-&XJo*)3rK.;E\<s4.0p:2M?qO2@:U/uUnGEmBIPtH$=/)-0.gm#l>:`F>j5\Y1NRL?L,
-jul3$0gi!WBW^pgEN^[Ra[FoLfYT,%k[fDKk"/(W]0XHd8Ff&.BM8tHqm-^u]NAo<"L.=$7L?ZFWH`Uh
-a3mp4nkX"5lUAC9oThM9<a>=;_R[P!i>PATi^<U?]1e^H^3.$Bkp'k2itaFf(\._UPg*e(B?Z:L7tmEJ
-"d6mCQ!:]#Qli]>(,DTPEC+I$:k:SZWpCh(Ad<2qW7Qo/N%8ILQ1Zaci,aVTd/t%n\Njr.]e:[d)-C_P
-)J";MH+Kt;Z:'u!N"E?Clb\ih?&UP=\<:BYP<WNKC\8IUaO%A-8@Cq?6aR/GO6\sQe;iMROetN@bLIJK
-2G9W9Ee)qY:Ql?D`SE\]H@BAKYnf=snZbAqr;fpY_3\+i1Sj'qW)mjmAJ(PXiY*ZlA/Y*N5<R-E+=Zi]
-*sm6d?$iPoA%DIe0$-cHO*a;>3N7!_5(Q>k-Ba!=;@HaG1Bh5b%TK(T'jA]*`qk[)1KdoQFKIMq$bp6Z
-;@`2f$EfOMaL,W&KnHb)h*\`/D!(gNXG+t8I6>kkfi')GX,]V4`qh:-WeDcY$aDLXKbWOHIg1\f2.X8-
-bJYk[S$:@aO(t<!kt3:C].FY8dfbqn7"c^GXLXN]$jd+K[U'r^9*a:VdYGo@YLL:HT4@EHBW2X,7GLZe
-2hp0B1CastO?t:PV0%\2aJ!=Nd)*rJaP',nXlC'l<I_!4a^hiB-tZ;WEaZ<oY"^UiQ.*1d*WVZH2uo>t
-Q0bn1]8h-]iNqT3V(E>E8WEV[pomemU%N:TM['aDH7mNn3V1nd]l38=@DM,u2%'"%CWKSWqVGl[LI.BC
-`2/#d9nV10Wj,`9ONo'sp,kMdBOUl5[n?^)j3Omd3SGsH,)JTG<pP<bRqJhV1N;iJ1VCiQB4gH%ZS8$g
-+41^^$&QiX6#W'?A%J//GtRFpdHJq<OTk%L9ZBn<3Tk5g+lA/A=PK4Jqd(kGCW+fZa<m7!MtQjA0hA=4
-XBhf)Y#i/i8[rMcN>4oua(X_RK@)fSK`s.]IV=^9XQ!b2$X#/4`JSMI-aHgh:$:I1\FOsO.#?t/Cdm-)
-EL!0gXDC,cK?t>5bRB"K#hcW;$-q07/s'Ysl.?e,-&8kIHmaSYF1J$%A3a-K;kKhP//I0<C]hrYOfHlg
-VJTkT??%i)[c)H7,27B.$VL[:/TPMFRTM.*:.24b=d!'FQ9)V,K=IJ$;9o_=KuGjaG)Z^\>iI])G-sV;
-i54J/$\<@mq-`e)S,05&1g&%6!;AHl$F_f&T@mcZFWXG,ZK3I_mTo,3]dHPSLlhO[n?bjuVNECL.cer5
-=(l$q=]^M!=pN)LM_1Y`>WkRVe'PFtYpGsf)kY(92`bY16tf-A18Y1E+fXpGCX:,t3DMp/QksfeIBQe&
-Gi'<na`uH2"[Ir*;^mN,\[Ikih<1W7qHVpb'V<1S]iPa8=rh++0c=';K.S!QVL\.TgF'#fH$iB6_LMP%
-[7(J*rSq[(UL[i,0XU3q/'5&/`0GIshKWqQHE/kJdV1^I%i7Jk9Ndl*1O1@&QDJ;@l,S#m@U$A?]L3Si
-3AD_IjVW$dJ"jDA+eL';`M1(p@AZA^+<)hJ)pHKmBi-A3%PN.#XJ5j(oJo[u]8B^?Wb&hhnl.FVBOQ>e
-nIgB'Jaq8W,8$ni[cF;q=7h<[B,\DK=A1NT9aF_$L\+Ih$Z!7a;O6[E4F*GE0OV3iV1.j^136]d^n'gK
-p$L02juDT:APWjeE6?#Rd1",(Bk28e$S3sJB_T&2M`DARPJrLu-@2$H,jELD2"Z.G")JmV3].qKRQIm\
-E4ZoNZpmflQAq%^UHuq<?`E79A7V0?dUq*KHG<A%4^Umq]M@5aWYEWQ_XgBcUKlK>N)I&()=`rRQ@$3[
-AP,1MgXJnrD^ZUjV8#"B@sYB!HX=d;>XL]E>SStk=(LrZLkY51/3u)36FuE\1!Rl(EfsSh>>FHo4&$K[
-^-LlO\O$Zs-M/m1BH_8[mi@C(kVD13]h&c)kTFE*A>#ANOVTP7gC`r$2[_o<VSG:84sBYqe69SV)N%3T
-6X$2OFSqZ9C3@0/@n&QUl$A*58QuV_J#E(UCGDbk&T3McEEqVMG'M^,1lHGt36BD%SSH?]a6.8$<,pm&
-VL%A-/Z]IH=9?hfSJ5>2AS#$e=,)[cPC[Q`:e`j;0r$gINQeWF02g:l*AlR+6Cb1p<O.[T&PO/:0o%84
-YfXtb.I`WOX*Y1i5/#;MfT(XH`MknXpSMf?a-Q=]&aQb3Ft6r>_c>I8aVJ6_T#]'SLu4=EebU=`%Jcl`
-Fk=;Xikn+k$TE;"6YgLQ[2n4=EMY%,WSVO9TZrXc\oCV7;@/NF,ECXV12!1I"2m)nZ-"Kd`i3gq;%`X+
-#%559kj[.m_f[[:0N[p*\0@\fL_FGgLR9h[Z[TP73kEf5c?MP58KMa?,Xc7K=7Pn*<]O2278OHt1>boc
-(O/Ws:allK2fHtZ>$*O]FHJq+o&?YdY(WIB8,e'="sQtseLY2o-t67,+kJ;gX]_U#g-.'Y%^t'^P#/%^
-=&Ls)[[fCs`CiX;#UqeT%U-[g\iq.Rjek0AqUX1D)>Zg\`C#FtFOork9J]`uGuW]pPg"l_*gago<!KZ[
-Co%l=G/Hl8/$DA4J/4Fk=hC&pFlE0hBnK;gD-+hL90*E?7Fic=\cc2ZAS"<^.OCV,(V&F0eC?`qRa\*g
-g@C"6=)9)WA#K4r%LX*/3ECOKcuZ^["rS;aUPFXpAI.2QORG(T/[*3>V`]m!'2?@*88l>3'j&@8a`ifC
-bG6B)dR!r]NM@fommlu"(7%/oH-ntEf"I>(`R!hu$;4;FQ%UN&43Gg-WncS\?3OU+BpMdU4mt]Rab21Q
-=2tARX]RZP'q94Hob^Cd`[J8V#s=k`L0RQpK820Q_l8n1;5&ME`\5@rcRomBGKl@g8aGg7MHO+A(Y)HP
-CX3_M4L/b0&;R-.5RZm*5?S'7HK2b1X@f2L6.&brK=TS%3.c:ISQh!#kad_iD#<Z&>fH'[4jOY1-&#G[
-*FMs:95^,QcF+Ve=eij<jY1B/0t=O#OlQZ4iUj\gEtOi3Pu\W.GX7B',,I`2E7@R/:@HS:n'+-hCSt/s
-BUD+aE"jNJPmak1"3:#o4?ch[@H$o3IV?Fnm0L=$,l&r.:s6+&NUsTrAIPs4?p:'GPa%;`A7;6s;=&\H
-CEp6XUnY5>Of?XkG?DXhco]s:.IP&0/)aSkl,5n!=/r'ERX8SJ1o]^54YPk0%>rn0Vb>#m+#0dYiOBjl
-jdrHB[ST2=l)&P?jrQ%Q9ZS2:RqkqcF+P1Y%t:`>T[hUp+SmQUQ0D)$8heRui24'4WW659?<+u)%(ht$
-fIP^?Fk`97s#bO)o*d*pE5\5,Z,=iI%8u!GVgI<%GSuRh03_]3X6RPR-V'pU=2"uhc9hJ<>'ir1(G`87
-@+kW!@d8)X`<P_u5').3T1+-PBOTkc/I?+`*7D#095:MlWsT>X$'4@&#E=U`^EYW3S7*djERaYlM6NQU
-1G>0oeSQP:2pIdpj5P0^jD9&S6Xpi\)S+M?RLALGN8pp=E@!q+Hp1QlOEek0>dFgoHfL=MB':3@&#9<1
-Ca$ha4'VcPF8,[6\)*#)!A,i?[(Z7.Fl9WcJKo.s(aTctUVbTM5],.?bNW;74dfS.=en2`;d=?kc5aPD
-fm\]#A?4'DQJnVDalsGk?>pWDg;e0ob"8.F`0DG8=^4[6#l/!N7aOmLbFsXg@a8(qm6E[J3)9$ui,ems
-bfcS>['8m*pI,Ro$SUU4M$1GGRnF&9$,!+$8nt5><BOr[H-@[Rpm'pKlcEUq!eT!gY`n^:b]Jpj:5t)*
-a;rce"#^VCYlJ#`OXqP\=[+<)M>M!9[HEL^3l\\`Drr0E628^0b^V2$;IU*F5:BI<h`'aEPkJC:p,kN?
-BOTjK9*/:8I!q951q9H&7Pl]+MR/aQN(T/']c8r\iE.?#*n@5'od;5HM(6\*$USTKgN8UMj%RkB^_5pc
-Pc`eN0J-t!j/RN>5A5#tX.I?&s0!=1&CGd5Ar[LIJDGZKWTeA.>?BNpCQs;6K^1m&p8NNSga'D(:YpSC
-/atGYBOTl99*/9]r)$EL:b%@R,lKGuXht&rN4>g6Mb+H4NM0%8kbmJBg[:ud@XkDPb3(AVasaWmf6OjN
-OCWUG\35j&c<jHJ?i9I@GEbqcOI*YDj^iLtR*[@+`!0ENmuD1TUeQRnZV4>DY);F\.M+%"XE1l%!"&7L
-()@t"<1pX1Z;f97Jh'a=];BipVnR$OlX[*!V#)^d=%RMB=(9[<r15TidF2]%0jf$s`\O`fn60`Aa^h,.
-H$P/<RI^i=X1_8i9(ScnKI,IgnH9F7O[6QnRA]<enGWYCMt;*IBf%iFD$H!aTH#c7UkmR0n_q7Zed>em
-IaGsK"-s;$:;0[Mge3F'lPbOT0?J(V),<-CJ6#Cq0'`kXcE+]OH'0FTcqN`rSW9Pk9Bm$;KCNKa<>g*Z
-?8TIJ!McM2MtaAi]LRdhhX!Z+:(++r>4p>QY0;8&dk\?hSn;soZj0l/fh=C:E7MJ#i28f9]0AMn@Gt!T
-"^6ERXW7.;Oq-PT(%m_p2tPj3UGd'P/$X8ck+[X%.^JAcl1\X=mMmLEGfV,Zq9>^j/[KkrUKthrZI8;4
-5nPItZSIJR@._r4:#4Kb=.:I]FQ+G`ni?1*:E(C7aYNX[U+-,d64u,1WS9s3NC4:[EM\H,]KIY6Ch,U<
-BOTkd9*JK`rBF0Fi<j!*@o$'7qdjXI^[KDV4KH$V+Qq*a10Uh*00kkI.mKe7KMM=j`[B[.C&3N%=Z0Vt
-`Vne=B-Wo]i6$p[*AKoYVd-GRVd1Ykied4D?F8<Ih=(2"r/PUnZpO5%e=5XEQ#mpB+9UX,=7(8dI;uZE
-BUUHYYjfD##[/H3KHW_Y/*nrd">^cdoXNIg`]@('k$&%<'sB"@#$i-iR)\;Sr5U3XGoBhZ=@YiP9S^3o
-9KX2JX12u%bhI9G+n_^$-kPJb7mC8;H?3oGIt'-qg'!UUOH6]NJ!Q;?c`1M=22q"pE4%m5U8ReLn'PF4
-2mfgY_\.RPlefo"]7DPF'eE8M;tX<M.7WL`g0F9CP;/+iXJgZ1URJe4nX8JWN2T]LXM`@#`Ph]p#;"s/
-q*TKTjtXS09fD'8NVBA\Fj)b7Bt(/DhX>+L]DMQ&9#*j&eC--."j@Cb`7L]4U-NmKhTumW/Kng+r;ER>
-ZpHaE/p*/.=>DMIa=TGij;sl)&4gQ'd=ebGR8@<=&=Ke\$Mo?L#Gs0iMYgtN)[`r#b=)22;]cFM\86uY
-Im%Oh*bOcR<qErT9;`d&,.DW:FA'u/@rV[9osq9._*)'0['8HqQPQq<gsB8$V4<aW7*N:!/:8(c.k;,l
-'Zuc=ougGT+)PZSbod-'QNQg.Yqe5t=R)7')TqtI4'a<bM"(t/RNXE=O9b&>R+&2?eHBMiV.(`sn!A0Q
-J.=$\<FuCeRWb$Hpij+"$\9'/6MI;[XZuf.Y,#<1jKWE@.[2)H/rShg0,^4]chE>(XTXq8V?g]_BQ4=p
-,M""=RiNpGlsWAoTq4+(l^O679S+EoO0aJfbka4`9u.(b3D]5<VCAL:i?8@0.jT#!j6_]8"a7B<%4s+K
-m'VM>Kl9oQa`SdE$fo[)31bM4a*A6`D6h_&SsX5TZ4U:4JtK3?%(9qa\iPp?QT\qAiAHf\ns=,ah;S3.
-4^;Pp@rQ0+Hd]-/lKLUDI_YKSn_1S=%FH>j0=6NLKA[(BX>[Yk=F^%iC4E_U#;*#UVj8C2Y.TlM]1N`]
-8#p_Ad:HB-eFT?(&J/tE1MOaq,_.78S&'%QVC`m")7:B/"5O0ZfFX7);085fH/=pBN6)rkB3RM&W0k\O
-S@^1jlWapf-RjiiY[gN*09kI^@4`$o=;)?@%pD3pRh\Xb.I$OMD`Cdo.efIr;:/8';@9QX8(Vc1j%JW.
-"i70T-L&K71<;lVEA6#Rs%Fr<SkR9sBaCM._J;<&1?rbOKP<DlhMe^gh<:cmC!er./0,rU4a<qjq=@kE
-m0,fale&Hg$*@iI/.dR_b1e];5tcQgQMXrre?Ql9a&^Ws4l/&+qnh>jYrdS?.%Z>N)2Z.Y3>Y_f_%7&f
-_GX`sV/6a'h#%@k;=mb\ohd%)P6\b>CbA@DPmJHIBiZI%8`oa+*P81!J+j2WgC&QJf')=\K[u36]!?@'
-Z06F'3_R<r:%`IDZIc,ikB?^>P_7DgJ_!Mi:V6\>68PPbiJNI`mcV"(8QRodgb<&TRG2Qh5%_f\o6n/Z
-2c4$V-VCo-@Xhq.$-><n'<4h\+5i',Q5A<CGs_u*i5)5sXc^dF&Q,#Ic[:tA18Ub,3#\C+eYZ.mg!cH_
-@iZ7cV>!583@7W#N!d>Xm=KJj.]+RB.=tC&[(I_b?+.=$@[^bX%l:$#_Cda!.lSFGU7'ddeC4:Wqi%R]
-j91NE9<oS1TmOB1?iDq#DU/hs=@5GK'j?+[f.3l1'^>h^m3ScAEQB(Jk^$miE0X;7^p#k*ImLQ5.hNKL
-C][OND+&gqCFSR/kJkP:54_<IC><a#j\:F_T^i[pR$p$jT3`A?b*KuWTrqVJGgqQ*:'?$r+'q_F5UF1#
-97-96nn-VCGsDa1#(%q!BUul..gJ+d(=C+qBn9%s#d,PU981tQi_!b[Je;1k(5&1:,[\=Engp.!-L4Y!
-Db@BDKYAaiIl1\%?2__Ygp8l8R"U9np+T]h^8%bcY4d1)->-V.,b5'lE@R1`)IKZ;-U,G`[IX@mce3Jg
-Y0b&NlW_6QqSe4ee(+Rd!^fVK-PAscA,&F4Xi*_$#/nerM^pk)=j(Y+)g.T\3de%oVOK(6?n.qCU_RMM
-"[ZiH8E?WAk$-h>#$f8\YtL'EiaRA0cqS4t\X>0(X=aAJQQP?PE4>!5/Zc'YQSu37s4,Z*gV/oE*@tlX
-,"#Ll\-D3!%1XlS@-/sW/VT%ciq=A@V0((IVtfHI,]u/YndpNaGrR_),QsAQeJ]J`1/);"\/GZ"R'%o'
-OLV/([<@2KTH8%pFnX"T&%UF*%kXlcY,)RZ][ZXPDCZLqd;B$gF/!lA+;ro3B#KtdDf0P09L`&Sde!!8
-*_5\3`a&.o+W9`^8B)#b[&-ENj;#WPo@&a;1ZO?$.=XIs\I_K5aANmPOf@]7XSh.c'bA(6%gag=)=4c,
-U%Rh\7qE]V72;W*;oRt-6[ZZUlcmeE'qPd2IWK#&jOILMBIp7Gb#%k;L5R[<&oL$XjPf>3jC*rsT7-"0
-RY-Zf\Il`sQ,`3?GL*)D#KhQHR3cBYVKb3UkGpgP44i;;(hd@2R;kk<>*iT&,I'08)&8#7O/X%qN2E5)
-O(B"7%Wm>5NAEZ5e;t7VU?p7g-4O?VCeRQQpIkh:D6L_IXOAV`Ar!$>lQNid17p3daZ*(eVHWeHP=FR#
-YU_t0G(&BCP54M="/1G!f!ZQk7G_u/QaU0VPIjflhtDoIFjA5P9\2<!LD:"`GW3R,;qYfBQGQA"f?[A*
-E?0NY0%=9uB[WCLS;u1%h2!,Tnq0L=?ItQ")9+K6U?;[lGT89@4bfNfV4[\Wr4g=Z6OTs*H'pq`rVmhe
-FjeQVTN,Y-/a_gt)[ftebCpt)NprUG1h9TJTdgX$om2g-g\\$@PX^BhT<kZK5r7b!lKbd#:M3K90ksmX
-HE-5_6^:DI_?=n%]2Clgfr>5PLfpC)<E$5OT_1PKf?0hr>`m-;DlB+L[RfSR^LioCY)VV61H!Gp>cAK5
-3j([0a`NoqG84b[*EQN4=ZiIm$;MB,T\ZRHmBu$U:%EX&4FJ$I=8jI(/)eNBd)%7c?WPObqKe08Q-7jB
->hG\ul<2NUrch4uAbu45^Td5j^!Y0TU(KWbRP@t>NVn^<9676ZBI;PJFoO5Wb#:`e8SMal!+"`1O"6$5
-158Q]*c([W*d7Feca"5;AqUq#@H"MD(7m^=.@3.cLJt_5SeTX\,<<k2JDG1o"$QZ9Ttmbek\&4oQZQo'
-AN-T?egoeaa]RBK`)/3II&%sH.po4(lU-W%.;"g/m'Xu_L6KBqb5#c]9AFsa=T1O4XLnGpTS8YpZeV5H
-l)2qs':a-r`:F?51^d%6F/CJ7[,$#!0l0)K>:NltE5-8^1P-e5]pSqG9V0(t)FQRE&lVn466n/akKE8h
-h:&V27J`FHCkb7+<d`5h<a<dbe)(#sIhD&@,D$[Hr`aiuqLAM^D)mtrM`^\LMZts0[Z#PZ'pkO$L>@)Q
-P778%0])$6#pP+)R`pmLU9El:'J#s>,XdAsdqq^iA:)C2N>D^"k+TZ+cfa9!Ul*A)ZEi5e^%jnh/)'BO
-5'l;:_HO9XGs^i7^Q1GMC\1q-j7\GOe>/K9j"rpCPV+c>cOl$2ie)&80LY3O:5_SPr(T&h;t=kV3>#jU
-QlFnhf6"RkQu1>e"qnYrAaPJ:Ha`/QnU5;tB?Ra]5Pp?R^\jqrp7m?X<^FQBL=YL>3`cf?8#P"GL#L/p
-kJ0mIYoqo)Y4UT0R&#?TZ$OVl)RocqVHsI:d5hrlSUCeV^FOfS$q#3nEq>cPnN*Q%d0e33";ME0c!0er
-rpC-HmDf;\XKo-C%BY,9HB&d#`c:U1)<8fW(Nr\;r^LHE"*CA^kP5S7G,F"MSfH#FRS]-D<k2>QN.f7q
-1VlmfVrEp&16@Ktd*O\clS*"DFeTs>6;XrR?L,&-hfsL%^Y=eM>$0>*b8a]A[J!<2Lbq&5=IcN-[[TmG
-hDB:?:[;sG<a!PsU@-ACFSlT[)3gSL9IGkG7-aBcU7'#1>"tB/Vn_-O^F,ZVWTG7+Wf7*r^\Ma#m<@ED
-*[e>!R[TO,Zp+F>R^ePW;&62n^^hoQnm76<e@s_6.Al-F_rWqM6dIa0Zr>FXlBY?'h.YqQ1Z6QcB#'sO
-?)q"iA438p#cPXAr$l95>Z7<@0icQhg2DFuG5M0oJ)&DfC2JAKTS9<$pekGcmM'raB=[p=Nm99)*9Q&m
-,J!9KQ_#t%\bd7K![$&*3+Fa>`hD@?qm5h$^2ASMRn(0g[5WT2BK_nep7KG%`])[j5A"S;!AI:U[.)jh
-s6nKT_kd^B99%H"nsZQA]h7SR.OKG`$j%8c6n&2fNZ%]gd[Q\LUc"n79J^m!6_ZD!H]GL3cNQh`QqM!P
-dh7K\XTri'fr<8?jOa&=9OD!M]D^l]:Bk!)1>(pWJ_']?XQZ9+KH4HgUP95eR\dA=!pNZ2^<-q*dV6.:
-lCB4rSg]$JDE)dj2>;f!oY0<fE"F^BZBD,[JsAVupJd]Sk=&o2A#s>Ff:Mop0*]&e7%f6FB?!(td),*R
-qes#>6Y.OoICa=pPpW6dM<qGY8.PpOU^aU<26SbC'3R&XY^s/,ct;'C"@'$VR7_t\)<pT:2hb'6W#'Q3
-M+F@D@oY<]]),UTS\$^jrUnd70XS'1HCdT>&^0g['n$`!0GH2NUn]6Y(cUH;h,^$tD3/>k`44'O9>Mo,
-qr%,o)i]jb1G%([%5gapaGl((_9?h?qEiJ0Xl!2BEFpM?qo0*!m3`AqXPVg3(Ku'_c[U([l^hS.`fF1O
-+oHqPU%\eGA/GP*X&a(>c?$\pg7,1R$4;doVsCeOhRNAj.eq6-C/h+N2ssBL*6FcBG'br/$O`&@R\<0p
-@NS"9Y34=-Qf'Jh7jhlh:E%L:6e[SSqB;8pbQ4C`XateA-"KY6Q%\OIVpV2SY5@@kHBhLK%B'j5D'$h=
-3NThU27875KdDAbSoSN'e_YR1g@oD9%C=\c/epWDCq?scRuobpYrE\7RqS481<uqoV7K5,0"=GddAkr&
-hS-%pDsp<bp@,<@m6q11I'<`W<qG9'IM<edP>eg$=BJe-g0o@,//N`cZ%HKF9K6a<E@%>u3k=o3:B^CE
-ng:6^:/VkYKCOV+X5.(4Z9>s<qb#Wm]A&5W>51VpZsk4Mn,=k!Iqs3(@"C#d-*'TdpHFWj`Ulp[ka-RH
-M:Y"]nf%IO,-WFC1gplE(U^g(Nh/0s"tQ]sPgjp>[Wf7;?KBHoH8L1RAlZWRILs3jKiL3pjAg(Nn`Pc6
-SYYN;aYQTna<^]CNs"=Xi+/r"j^J!-U9A^o8lCJiRTH\nUts&(n99466OOt\J_'/pbjYNnHLZooLJHqi
-m7F;E)Dj;5E'QZ<>tl_@1'HrBDcD]3VMCG/>h2oBg9<KMH<%>0FrPdgh8]FI+_]g:,g^i[Zt.n0:Yq'p
-pF!!hmc=+9V4%lo=<7(AnMKdX7m_2%,iVN!d8Hl?RgU]-o4g5Fe?uH\XeT1@DI\H5\!J)AnC@oQ*ZeLn
-<W(0m(k(qVS4d3=3;cB`n5`!0V&Jl2Z$?m]VCsi4!#DYbHXY++r:Z`;N\.:n]2rChlu$;\Z.hnf>$*Q4
-.tQ86T]M4la63B_gX2A%Z0I%HXM+I"rq,@\-=/;cI]%/OHGSgAr/l&G#>XFk:ZdU0X<&6dFnf&q2Pq^7
-m;?F;r7t]-d)*A7-%T+JTI&ll\4s\.5&MQ^-*@iheP>=lh-R82_SR6<cq9sr?"d[&]ph8;JQA)1KnU==
-TTqbm]?nEXMbTk05V%c>_YX2n'5/]=atg?.hKU8r<W]BS6OO8TP!COK<d(0josLtLcq9srAS>N2M$^O%
-BOqu`=E:YQZk@%`&R&;oq+_!n"Bnr_()@sW5V%CdG+jU9(RmZ?JQ<P[Kk2nqJQ;iSCdAHP^XrZm$+-u>
-/ZdUD-I>AX[;]ej]\!?j$+(HR/Ze^'9;%P8/'H;V_SmkK8t_GTBOT$%-I>AXPso@pIJ@4PXTVg1L)/@D
-J"8hTJQA)1KnYFZTTqbm]?nEXMbTk05V%c>_YW>W"Bl,=Z4&<9>\jJD"BsK4(7&3A!j)T/=bIQV^"<Hk
-$+-uA/M-p2'5/]=apPM[@MbM!.tQ9gTnSb\YmIcMBIsd!=;`bMJQ;iSKg6#]VMe0APsB-Ad))75@M<E$
-d$c&`Y\(Z&"Bl,=joI'8#@;3JXTVgKKbi7W>\jJD"Boku(=kiZC]^^A=q;,qXG=RC"Bl,=*YMXYF1U!,
-=p_PW#$P,M^"<Hk$+(`Z/Za5&C]^^A>-gR(COR(h5V%E:/C;8&pVeK+8t\$T['1<dYmIcMBOui4Q;$sD
-TTqbmMpT>X,p^i0TTrer@EHJ8cq9sr7;-,_MbTk05V$'c_X]?<JQ;iSX?[0ZpV0LsPs?kCd)*Z=-I>AX
-Q!J'3IJRXZXTVg1L)(Og=9>T->1nTFQ<\5-XTVg1KGOP[E0]AH;;ga>""jlB2u~>
+Gb"/L$YWi/Q1"?=ZJIX*omS';&Af8mN%dR8);@\O'"5'(/M%PQb?2akQEZ?[C_K$Pr5-asjP^TXmA,tN
+VKCOfgnqPl\=G)9D'sEr>OEamjYl@fRA;bM1J):B%q^R.f)!ttg?2#8UgmVlGPEnMFO!)InX[)=^Xfm.
+'h-N=2,Rdj<)sdbe3m#*;-R83@7.D9;q0>4p%1Y#IF6t\1c,mU%nECidBR3/`'cF>'hqIo(GA6ZY=:Hg
+6nc1ah7FK:rd+3j0191D;Y66X7">'2d@5&DDnd<@pUeiI^))4tqpCIR'YX*5o^9?=c[R"Ls*jULIiJ@W
+QdN!c(&e*g7j!-nrT6&d5Q50b:]D.-o05a;I2;eLGL7N3&H0ee70!+edD,Wao^Df$rPsCUs7r;7J,NH'
+7DGb8dVJ'3oQkg"]pFcKgY_SLka6I&3r[/Ao4QGuIddAf3h6AD$(]C<I_t:AK-0T.db3&/^\&A75@"Fu
+$XM0Yqp?ptn29(8ak'0e:"OjZ']0/,)g"jc*p!2cGDYb<eua>WkjHh]Uc[8bb]gJ-SF:Dl:)(h+/h#Yi
+?!Y^!]<sN+gV(;:h*--A\D()fnD1g*=7>kG59IT/#+t)1^8?,O45\/!\)2O.n+MMY7_er1hX+*&=jZ!%
+jkoI_s.8]QVk<N7Z03s<"Bl,=Z3Ms4]%@-h$+-uD/M+K?"Bl,=Z3W$5]%@-h$+-uD/M+K'"Bl,=Z3W$5
+]%@-h$+-uD/M(.C!j)T/fn(!*^"<Hk$+-u>/M-p2'5/]=aqhAJKG/#Fd)mQ>YioO0BI2$J,.+RnYmIcM
+BOqu`p0n\K-.'dY[-5F@BI2$J3je+8&njE8B\g09?+_.O?\hHQ7oN2*ZuE8V[,qUqDnHtDI<FY>/#u,e
+fBaL%mG,Bu_sW--JYImMigR\_c0k0!"7,6-/"/pX>"6Y=&$Kaf8SoG!h)&BHGpok30W2O$eWsbR/c.\'
+T_1"cqUs2hYQ)q6(LP<&34cPHTV-C:IT]b"\t5)-hU:]*ZFZ`P%3lUIUQnQK<=L1<oY4E)WHDE<kV]?a
+KrN?aqOr:0EQ.Y"Wh$-SJ[4Qle@M72b-$?mcJ4^[X4o^://r9M#pdlD+LL#&`JXP2kDe7KD*)"Zpe2tf
+;mWN`?m>phdkk=WI&spH9`=f<9cIt,[pNlbH+(/!h`=)0ai8q,p:S99]]'CrV4E;TgIg]&NJB!Qa/YVi
+<YGu/p9+S<8iuSo2rn#KY,\X3WmJVWO%u?*'=@c,j64ZN/j/dfRZ:Usl`W4S:=^$^CA3rop6?6paS6<;
+8iIL3,'-/,Lp01DCR_KqGd1i/rRMFeRTkg(<;!'n=+tL,$X2-pY0+A7CPU%=EX]_;c&BI$)I'-)#[e)H
+/*Kc>a6<;tc@Uqu"Vp?EMGd(U>$0F`,g_E7lc4L]qU3tg[X=d&YgGL77t-FK%i_I]'NlB,&;+^r@<"ed
+dJCMm2Hjn\?\/^fN6k"4U,Qt;]p5Z7fcp!;nsV\X@En5Gf$ea^0=>Wm>V!XorBb#cGYS-f$?DmEVi'jf
+Zmp:(USNqqR+:RSYMN,]e?ihe5RYbQLD+@K.t@;Kkj(IW4`IlH_p)e6;SWq(K\'TL6%Y%qm9X,[aFFD6
+F/dDQn8r3'BG&YuFVM*E+X2h4YTY"70*ub8L69k.372K1DBOF$8"^[IgZbn1lZpkgoY1MtH5F8d5*:dL
+fsd9()?ObNhI;6U(4B!\/c%WDnr)DNm@#FLdf_U"O&Z;QJMI9D3On5AC9h,u#6G=E`V%j83O0G_>u,qo
+S&>5@EtKXm4ccg5`f4>TVOh(%7mU:%;:CZ-op;03ob=![6R6_C7LWt+76^m'oO@SrH4,H*A@q%.#j6'f
+)qI72<8CbV=LraNKuKIGV]/h3bHHA=p#b9`HMZ^##S1`(2QOA2)b#9k3aC3UU8IT_?/)oEp.LBu-o,HT
+m]bBtGct]=X0!=JCYebXCWG6H%bE(CaFDUlkr=>l[X7'B2]%Y=BfT<hL`up)lU86,B<"&9*P+ff$ctkY
+OR4=e"a"5G"7J/d>ubtV*I""=G*\Ap>E$qGU4Y\Td/)T\X*TdAdaP+l9`$\&(B>1gs8,FQq%=+WUJXER
+MfsL?1]<%>6?mR4^0gCqrfLMPDMu^TGqSZ<j=UaHoNmEtk[+hD\r5dnoJ5,_;P;QhZ#Ta6$;h/Aptllk
+.%$p2T(#,0NXeLTP*!eW=&K_(d<$f5;u:Zbou>e+"t_Aem*c9CO$AIr>feST;H,&a&Ye\kM/$:E$-8fB
+ICk?d`Lt&rR;gt5Jn9:t([IciQ-^,%#qEi$3E4a;:2$=4Mju$2q6VF^A(\0fH8G"'n$LHVoJ;n*nt]eJ
+3?9i]Nd$CC8eKh,0aX7j]uAN].i&Z&YitU?D:#$MjYp8KlmsFJUkn<W[l+SZLE8TEMZBXM"PrpZ9s_Gr
+TSO^Y0-G=(Da=_g/."aA/JGPQ5Ue`<%'[.m<CX/86V!/qg_p&aOh#_S4B]ZOFr/Ql>srnDR_1*jMZ2^2
+f-/DHdbF#O'[-#:D_GfaYc`.JDWB`,()EoR:CjhR9HBR.9+M3A+QGhM#2aiTA-;nh"7@f)B=GR=C_T#o
+HJBK^Fi_EpXda/Gfc5=bjR9>A,8WiKMeid6*kdJ<aZpcJ(3Gg>TLD)l!U5rT:1U6CC(YPFES>"+GX\]_
+&Aa;,2D,:VW.75\"%_mt4qqX0\%fS!CLL_rPD9p>/XS^2d/*@K>hQB[!1&E,$o44h&WKeQ59^b,s%@l^
+H)bbj$1MU:5Dj;I.`a-fer6i?nb#pX6bV8Acm%,hdE(_f,`r$Oe?tjLVZS,W5iEJgN)8$??mYl_:"R;9
+Oboj"Ol_-+ZQ@\b7'U7VG[nfYPZ&YpE=fJal"Fo'g=balD_H!A?hIs'L#pqGQT)9Xr6h&!*GcTA7O#I\
+Q'BZgE\XrEUF:h>C?37iB\3W39LWA`WMV(fQ]i..<,e8f=u-?7KIGOSP(B@:PPZRq&5Ws\dIUr81gWn]
+2]\4`,_!1X5V)?)P&qILO+9Od(&a:*7>kN&K(kGn,s.49@P>hX>GjbgTB+H*'`:LO8U?\raDSI3k6XH_
+Mr(u1U%Jp<7H;_W<VCHRM%Ct!%dh7#3Fd$9M$)f&H?*Y/YK5,<?hoiW9@[qs9$*7,U:o<X7\gj1pi:r!
+)#]^08;ORf5Q/h%p62n#LorQHjN+.D6RS?j#)^=hX%d\$!Wsp,oQl)o6(2tNN7HNakp$J7oGU[;l0\*]
+r]4jN/f;rui#c;,cHR7pa,/LC]]r4,T+nZ:kUjss>4;J8)E>o;$JVLbAHX(J4u\qtNh-hL`bMT40L4$G
+mb.k*[14"pS$c1;jS7F^2U[MoQ8_i5YN-h+;hKRqfa5,mVO=GO7_NrMQFmrqT*,Q`B%qD0ffD/(!KmEb
+1r<tTDo`llqSTc-Gt&Tu3ZSco*kUI8,'p*1em_-@Mb]Or._US`CGmDQ.m*?+g7A;OYWtrfY0d%8].:H?
+9'P<_D+Dm,c,)X6@eV.l52SW.OLO^!Y%p3.3?jPk#X[UA#^F"Bo4FVd-94TAD0FtZ1W@uh-UiM/0VIW'
+`erVJ0S"qQ(Xm*F5r_I/EXTR>?q)iS(5<r(0;.>=p'=s:$b/WmDkrpHfe.<`W#kLF@%5!_&:8&ejW(GO
+X^YXp51/]ung_6Z+$[-:/FRTS60l-I>hO+MEC(f,2"gYK1/RV]3RWAUL%u%QlY5rcAr6]`SLHl5Y?n@,
+19Si"'0[.p%FcrEl,^3KVNQB7K@=hLA^_a/_H>3\\&b8p'->6pP+/3[i;2K=C4_=>*V-E>Pl,n8*JYhd
+0%jK@Vo]]p&jCU^cBH`G'#6<+/FoWf82$_k#Wt:ciXDs_'os#3=S.2V$*A,oDe6uZEdXi83hk8oCG'.p
+?>UE=csZ5@U0gh1jQHbM/93B8N&\XKNb0pdMZ$CrZ)'1JQ:LsJ2MAl]e<fLd`Q6M*PYQuH-`@FkNRBI;
+nnVQI-!Ne;9CHG*[6&'D/laYD'=G3<,kE>8YSr,&L4>Ag<DPb__.cnqjdCFH,#\(*)u:3QIM2S1oTqa:
+BOT;\Q63Kjr6EHF'C5.IAl)cHj?a/5+K=6qr'SedNK6K?82)7.M!.;!m2QrnDaAE>-1oe'o'IHf`fu>k
+V^:G'C)"5n)I79Y#>J![N_FCYoYj*1fsH1n#QR+LZa3EXC*g,P4VnGsoL:l#_D>]aK]GQte<$eB52e\0
+cma%jMIY2t=A]^j'`E*4KJ#S<fkPmHC3keBg)lMG`1gTk1MFJpm1l+NEK#S32LX\t9T4k`R<j/^A:f',
+-1kRVoB^?f9#+?Fku2I.mgZtKHccoqFP":@e:#L4B#6.?ChN(U=O@^k-^\hO=nI#l"BceaGXB,Z+QUm>
+d%;RbODerC!T=&))&GSu<mo;H%c"&&BL4$b\)T?U;E>$rRl/Q:$Mt2lo>[J'lXPJ](B*]BK%=/`MRlT8
+)dGj>AF`IIa)NG7U5&*NCp-H-RNX24*2XXH:/pj*[/b>Ue-FZ(FpkZbfsW"t>-9=K$Ooe!\],QhZ<_!1
+OE).B#m7_jECDQHUrSVnh3R`#RB$aJNO#cLiqt<2qrVGd^3,kKkt=U5:nkdTrW[A878Xr2\hCBQUjqWV
+-oN;WM>Vb]5fmM,51m8ZT_7tr7(ndhj.gtH^1j[;mOC4&jJM.7n9.BtDTPasm?j6kk1HY)dCD[@._AE,
+W'<_3:L^O@`*d-AnAOQobGRnQp]@.uJNf!R7dn3s*u/NcCr3gWVs(>FLf%Lp/s_5Z%dei;e6n=;/0kRF
+b&i2V%X]VcA@O[G5R@'r)-Z*]Bm2g>*+s.bZVNu:fXR^G;*t`7[P'37BH94K(10b<c4':XkL'Zl,o,!)
+JW4'[a*EC$Tpr&hM.G3a2)M\#^r]ANqBGuAc+ltUd`+1u,u3/-J1!GZRg:)_&[%+BcVK%\I?nE])X3rR
+CTcUY^<Hk/KkqL9NDk#]$3tTQ@mX9'qVMht[-3lr[1"W4>#3ak.Vr0(f<9Pl+"=S$r6Deu%B\+2<`b,:
+6+76uXZ3Af:R\DQ/Zbd*=5HB9/0tpZMPDrc:bgpD6o\6Q(gRd&B_RLlX`c5<Kq9NqXcD!E=u[HD=UW*<
+%J!f4H4/J*HM#DoS>`9^:[oJC<cf>X>Roft0_A[X>Jq<E.(+aJKN2iiH=R\o)=_,Yr<m,9Y'IC;$oJni
+hB9JNR5urdSmnb>e=+M5VN#@4*ON%a9=PD'Fo?L5cs$Y@,s=?+L-T3D\b1B@*:PrjW9SQe"'"n\5fdJ&
+eDVlHb8@.ZkZMk41UIWUaDSp5=$tba8hZj(fshq023&&QSi_)uHu=ao`iAus*q8X`P1qtlW=9PR#GLLT
+I`7RS2ViHT\k5-A=sC4_"dp^o#iCj\lQ+[b2_oMgQl@kcN`J'G4t>[seusP1jIp_^G1<cI%q,c-42eDZ
+g9@W:>fMC^Abj?`bVplTUQhYi9L#3-nEsU\=<J5YBQ8VsW&908V35laZJY!j`D=#Q`mtdaT^I$fAJ0^O
+k`oYI^co62eC'Bi>hN]u9mUX'dNMk4XPnb;_j&Yj%_("rjaK\qQ[WOE1m8#?'Z3-Z^(qL\H'^@p#"EYF
+2:6gV.1Yl+5ioPk]U8TF8'o;j:Eu^"ih"HHZ\P!Lj(Li>$(F+1*Ju@HD\tCspi3\Xk@8409EI"]MSdo(
+0YLV/CUhXSomj!7Ee1BVYLk;m&sCJi&ta,Vp)oC*"eWus(2X^;E3BLb.l\Kl-As!J[k[VSYY;;cqIjS1
+lc@#%eAcl?9Yp/=d$%_-?BcM0$UGK3Xq52[R,K1^T@\c$B)b&!X";MDC5DfOS\Tm#UP47.XkDk/iftgu
+-.'<W5]Ok]%E&eq:k_=!II(\To,K:/i`>@PFJ$tNQ%,(-'7o*D?]bhmFJ.+"@\p3sBGF]d)[To5JA@-:
+S)5c*BUtZP>.,SK/]MO0$%hFb4W^C5oU[jIVMAN[3UN$<D<Dfcct.+j%8K:\\,.^tM<Xo_;%qQ$`!UK.
+bA?Zp&-Zc>&KgBldnR/)1iX:^K,.#3HkDf5'>H]J"F.5KA79_B<@dlaQg>3`Q]E(rKpM43NAVL7:Au%k
+<o2bN/'<1m"Vt&CQ70,Km9,GGRDE!B%?d=h5EMcu_6$*Jj<c4q9f+W"mKdk<oIB)4A-0Y))H!hhfGZG7
+Fj&>\k,;>jQ\>!7!:lH5]bNAC_6!Gj:]bdU'lP9-nhDCL(H5KP2BSn5nlaAPkY*tY;NnM3#&'FgENGUU
+\+f20\S8.F]QmM#TnR%]/s[Ka%NLGM2JD=a2IEG$SeE[B%&iEVE_3GH:fVT'nXOKcR'_."TuA<9@1b1B
+l[\%*"K3[)cG]C?D!d@0#CYFf6(6[C&S]peoAiGrR7+)IR$U?i1GF?fM;Ahe-DXj9C=$hHouq<E:kjU7
+]p(8jmrHse%]MBY(74b'-o)-DOPa0h=-C^@M^t*sS[,Vq[:.5sDucQX!hL@RrJIXnPk.`!/*'`09i@7U
+V6ZbW_M;$Imr3Q+K<+$;pH_u>Xe5%I[;cp-6Ecg#.4WF!j8=NG'NK0m/l`b5Z>*cSm&)eq#+D%s120F2
+*^d5+@_YQ1]MOnT.66&Z>3j[ErkKHkH9Co64'Y>_rF1!f-hc;9Ze.F#p"<tN&m@H3.uN*Wer_+Bqh)Rl
+Y3Wom(LpRogObfMbRpas9Jm9Yl&M)MK+r;2*EgkL`q1^J_&>QhBdNQafE?F=%Z6:O&s7?J$s2ZWBd#Ro
+!#ER0&p,s%U=Kn$\U"4#%f^@sW^;VqV4GJ*mW:Nte(#:O;K,>.p;qFXNV%9X;:ZZWZ$uGZ,mg]nc<Opp
+Fqm<W!#Am^TdGE1%h;(%#=a5"T+kZe@;3<(*YTqP"KG2j`E:sY51%kZFisI5AMTdA*b.PpM>p9dI'F_t
+4;We+j,sEFbB0IZb"5./8se+(fB?s$Wb2E.R?E(]`,]'UKGHI0Igb[:&9qDpgq(6>ir'nC;e,TG]D9]m
+SVbeBK*[QYjVP@oF0[)>Jd#;KV$3u\RobhFDLl[M3>?Ai7&/=AAT`$LAMQe7BOT42PS/;bnsGl59Rb<4
+^fOZEJWkl<dTh/jFfmP'B(]L.I:Yp";ci18Oop?&6"TXqB/psk:^t87E.rjk8ZXr"ft^<s"-K]s=*R^.
+<R3OSQI"`AO1Ad0/P/M?:SSoKUU7&4^BJ6I,M1)m>Br@51HM-c\_0i[_6Sqo9*e^DRrZ>pj5ufDjm4FV
+f5Q'6W0K-bU;-D:op12i-,jP]<=l0nWcfLiJ)49-m)4m:,Bd;:#djCY#VDUoa%:<:0u1gGp*Nk,.2Fu5
+;INf8*&>%h2Ma5uBkIXh]cq=1#*pl<#X;#Q6HRQ&&O7fbB2(9d=5G!A`co7"ai(JBO>\hq(;-!XX]h81
+I4[!W9Pd9cX/.Bl@n$-LSdY;EN)hBuJG.nK4L-S18pslMj$&:tcl1p+)GVhc[1+RWdJku6@'YgP,,h$b
+BB4=R:Q!!Wkqen!Hnm(2?Z"k?QnYhe0G5Y`[uO,46HU\Wq_YO1VB"V!D%*o=/1XEbGMtF*ESiNlIq.+P
+C.D^3cYMoeMLq`(;#,t]\ncp8]d52WD-/N`]#>2^b4Zh1G.Ko^gcNW?P-YHc@h,2uB:<V?9cH!26`1)h
+;Dk646Mj&tqA1EY!js/q",<cuLT?ZqC.X!_N%[)D=3SL!)=<Hj_GMDo%SfPV^1!.167`c^\NChE7It=3
+H2#GaR/="Tr^\pc061*H@sI5f6>)''j`Ui:S(V/%:")0r5ue*)IVii]_P)[K/qLO"Tp7*cauTol=J3:N
+)l<.r-YJof:,5T2CNS;7CTk;7I2Yt`N7I_.1o3fOWq<roY!X.p'@oGAD*sE-[^`VDKo85p@<@XdF!e\O
+;(9=$[[f3[MOMk5\;JCb"I(SjflsBXS+ih7C&C;2Z?WS#"<JA+_qjE,bp$j)9so,Up^2^#6jrWZl%3Fe
+I`_H!Kkm)cAQ78d[*U:??3>KdIGJ#?mMq!%CiGt9-F5>?eY'%PH+9T^eYGU_kF(;NFhh^7;T=L'q?WUU
+H0B$l>kpuI**aWoZJ/'YKQjpt0MJhl-Yp2Z?Ar_c,-t1,c/QTNh2k,*f/2IK"n3-BmPiYsPK0nq0l8cd
+<7W8]'"sH&<X1/@dOP\A/<buLPAojIKN=N%2X+6R8AL,Tg6N[(6a!H+`a4o6[C/qsa_F49M!M:tX:a(j
+Er<p?cB%b+ZkcV9X\h&987a:V(si/4fsSNIMLI2'M;=CEk`dqRA[/ofN)eZZg*fT2AXm^!+]6g%(/eaX
+]tu%<`YEGS--%)^e]]%;G]MSR2-*o+7]I41;VS]ed^4=OindeDBEBhFB]U!t."&7lipdq-A9`JmB'NFb
+Lhj:P8pVqeUo,*R@tmo0]pqd%3`6,3k>Cg0qIqZoPps'u)@j6.>Uqa6hibA!BuFp)YS([`4#38C=eI8a
+_eZ?e7UIS;Za[nY?Yjhegtr]r+rHW$:sN\0QWuEDEGe@3<l`^E[0tKDa-p:OH;Qu/X>L5^'A!1D;pX-p
+f/-(E.0AS$SoL89k/I!rh0r=*Qug+n-5#>%A@U,tQ$ad4H7dgoUrsR4X*Z,00GGFh4)@J">&stF\<?RN
+nJ]5D\`8EUG-ulO$pNct\F6r,l$#tceXIMO$!5_:j_QVbH!`[7`HP^k$I-+^CP&%1)HJBl>$);711*/j
+WnCPY*\Y!kP-K=)qZ;"<FL_]LEqhE`!jOWg#;%C]4l[:G%TYhU6[_I#W;#MPXU>"`USGbo`I]U8"TVU`
+]pE6=Eg$Z'7PX,O&Ai!Tco'Y(R`_;*`td09k%tL#6t:RLS"Y;A!_tplr#c(i+WiaI3Qc*_X);:NO?k?u
+%jR7P(nfF7&g:1J2h?*QDDYj!jSIl4U7n(m,EW"l$q=<jKGM0.=meNY!XpA`RW!BS*Dr;/18+3-_GJJ,
+a8N)M(aNd=Bm^k,W?84h(5Y5O'=aiR>DCKf"L(]6%p<4S]el)GU*$076aQX/r#10fQ.8=/`E!*ar.QK-
+TlkID+Eg_pC$e6!oO'iCr.QL.Xk'Wpn0I8,5irOeNh,+9Ai)8QQgNKt!tK8V=u[P5GDPK6bh*%!GeiX;
+o(.`.Y!:!5G8b&c4u4'hXBO*J=%lF"nSPl[]]eItp'/,2>BU><`E!%!p/qV#%+AJ$>7\(;5fI0](:ZLo
+rh.D.W3JZJcoK5F$%3BpL+)@eDD,^0_"]:YLEGpRA>.O3:^Ci(p`UHh^?/E/\m/q0DGZgKg)fn;):aFM
+aSU3FVohQ^*j2&O"6CmFr?@0]0Ee62]r&P61:/$.h2mFroS?cOl?n6;Y6hB.".Fma\:/VNX6FTgaVu+0
+aF5<X_n-H9dP>f/\ia59Rb'g#)W8qtR):2A.VJ7R1a-MTFSC2mZ6\LHgUM:\PJscg1c=D%6E=\-%$:te
+">;eV&%XP:[iEl0O:@:\j:c)rD6lCrRWEWZr-c/'![^X"<WUiRG'TUY&s'rGPI]<VSi(>M>>c`XCULI;
+3(l/t<[*Lse2W5!$Tb,uC.(N@c8[^)&5u3i9(TIP-.ATRX9QaHaQPA(;:(rfA4abE[6&$=I-2Y^c#k/V
+PC_;nW;/t1R)@\p-fkd'Y>lG,R3625k^3Q\-$J[nYZcGre_KkF)Z%%6/4ilX"/%3;,Dnf,Dqk"(>^>Zt
+8!J=kS)krgDqOX'\4Ba;^3#u_c(f-S[j;kY*L(/nB;BZiZjIh`?5IH^l]<JY-q/\J<tomFZSX3`+XW+2
+Y.:a_7CI8j(=kT[>s3XMD&HG-S`\^\:/QZZg#/N7$C,)<aR+.'bgDL=e*2nAd=WJFb73lZT%%ki/#%DL
+(HUticuMH/q#W/$XDrfj;03beYM!Jo785:K0+CI)5%hm-04;1+<!d*F+rH!<cS[`Rf0l&=]uk]4X1TCR
+</q&LfnNMhVBFp7D7g;[V89$C0$qJ(h\`cA%'?\+[HPet?:uo76/2HV@?jFV1-u$5Ua+b[+Cf/JI*`?A
+'85$;/42KP7a6_iet(A?_2gPjmr"4hRYsT5:@2j\U`3ES=b:D-<GsFY.h!E#Z*Z,IZlcm&[#+0SVp"Hk
+Jn?iR1"1:h?Vj)B>aBgc]EgPuEmmi-BfoY2Ac%A\5mqJb'D`atZo/C/^j0p2s!Tff8GbZc<lAHP.3#=h
+GF8K(1E;2lQmg,]>!)+m.5B&^@b]Lbq%;cVVXc,J<KJ),BMI'3412X:AQ3Z'A;HF6&t`t4(;.`8[UpXd
+K(]amK&5O6%l:V'pj/_bW+ie'j3;2sfoQ<#7XL_[#SqXY_!:`T29/nAnAiQRXn;ouNJG6D.[kpKVk[S/
+c'1YEg5/Um'U*+\j8SO!o70Zs=$I>iQFccfmDa1m(G<g&j,\OU,4*gT+.kiQ\d<D]7Z'K)Gc!_7jZrLL
+?(lr\D62VS2NsspDqBk&>50[BOE5sH<,e,16*<)G.idXIffbQmOmP9(Kse_,U5oO_/UL)$\E[2WA"qk$
+X;Wq+=brX-/>NhYrA-DIY9D*.>p`TLfn>p!HW9mt9ij*6gMN'DRO5OD";-B-ZfZE<0dISufQqPi/ff&K
+U(:*p?`?2KT4@EHBW2X,+moTXNM6)V`W=$nXH4l?.:"/%fJLhf>$).S=o5.kFaPC5l7YSo%'tqdR)-&M
+J_=eJ2Sg53:>7[R!,Q-&!+9,7ZIcPO3oVH@09Q^.[Rd2U2<j^qc!#gUf"8=@*]REj\NKoRb[[:>\Zri&
+!N3EY.+Ffh+^_56H_97=JhV[G8cu8c#.GOVA$s/rSOZ<=IXFo;_TL"Xj@9QZnRkqE*,Us46"1D[C>H+4
+o8H[r"qI5FL,XDRbY5^!(']0U&M<O?OLRCioO\t#VRr7cVdT7X7YfQO/5Z(R15:VHS@:A/Hn52(D.CTR
+HaS+$&R0<$Rp>)-f&OZe+B1-c]2GV5Y=]CjERd<4(6$h)dF*XPUNo*4laOW7m*HZA==)'M&[DsGMA=mq
+:1UPYS'JkAETQk(E=aWhfS[31Ot&]^=kS8P#GEXJQl,nK&@-)T':c<N>Th4oe$1Q88e,Qpq+_4=k&R/P
+A3a-K;kG:.Q3_GL[Xi)iT^)0DBcEJC='Q3#D)bifOmP9(KgfBOjNoqEYo5e9U=Rj=ac<'kN\9uIDPpjk
+Z\))rigF2d7Y>P,nXE(]g7Ts8@<%]h^cA9>Ykab_IFhjF/8$_gHQ5#]m0ppGG$.,e#Lo>]q8p!jQb%A/
+8^fm*P.qEs`meB;\T4bQS#3__$Oa;D(,N<-Nj"0hi]17,7fUraZdIEg:?[[5iq==^Zl/ua;DlIYcrLGF
+I;S@3);iIXjGnL?(Xi&HjbNSYJXDCO]i5!-Qnq/sgrd%Dr96Bu<Rp:/VGVRFoCcKRaD5pW&]QN-=pA1f
+@\s/#NU7BZG!A/<B]20;7W$O>C]F/JgaGi)"@Lq(Z9jR7,He*]oYttLeQ\jnYtiL,H?'%V_o.`!R)qDr
+Zn+qp90^E0&_k1ak9[uiab^V_/B<j9re'&GLO>C5(5r%_Kp`9jJmtggD(mVQVF@Ih41sd*ZAo=>k]<8s
+G87C^<6KOZjJcf6d),?$oIWgO*>i,m)@<4>`KH^N?0DlCcSTguZ']-2RkUdG&*]o[&_:pGUa"L4H1Epj
+@)-@\9)[PEA`gKRJ_SjllJ&-Cb]_DXb3gBOi)G<AUD]40BOl/d$S3sJB_T&2MqJ\HP9l2*-@/1+')Jm]
+%K0W*!1V!.:/+6VjpiuEO$?t;cl+pL)E/"57Y?`W^/F0AA7V0?dUq*KHG<?/4^UOg][#:7XqY@oiHZ`m
+ENX*dUJu)#7Qb7XjdrVoRF2UdS!o3!%>@0_oTo]-64_XlcO9Q/CWL.PWt6Lu77N>o=P04b&i=)LcqViG
+Bi[E!P0BS;3N8504BZLs!q41m$8!fTgl!.U'Y!+La!2P7bW&dE&qgiX#h^OBW$Y987EbON"T7l9+@olI
+]T_[a\Tae!o&\@tA.fg/$?`9,kG2+Yj5h+6g<!.B$_0uG@Z^LL--okT6.Lj3>@`]Q.W;c?b@[YTV"[0<
+bjsSh[bQ3jcc/<e(G9L'B26gj_XPUb%'@oKi+fABe,$R0AA"KBCm0BaZIt0Sh.^Y8L*_;2UK6fUOkpl9
+FM4W9IF='^g8L&m>^:lp7Rg+'\"Khj.BrX?67ZG*&sa?3l87@e[dfqkc;R36cSF.TJ8G]rD)3PDI&2-,
+1T)FG8#fPSHU'ILRmtt7pTfSc%kXjn5$70u)OjoI8,-4ll-:="gMIh8=jg2,:.beW+:K?3oZidLo*c'>
+gH6c3UV[u5[N.k,kR/5X!?7`M>8n%'`=Tgie_B#>NQ*,5TRdS-AU7teGRljHe+M"253#3UD=]#@B!>A,
+rQA5XX-Flb9`aAqU3Ju-Bc/Cs:".@VF+tGG4krI9XiZL%@^lJ*7CW0sW=21l=K36K4ud"Q.3[:pFfcP2
+;f*UGVh8j[]EIL6isK?BD;0nG>eF%sL6/.YiLgq0U$L0)>^j7/TPn+Q_U(5J+s+V6TX0BnAX^.raeJoE
+U1?/eosc9=VD<g9@4SI%[Mq\.?[3rd#IL]hZ?@rilb`=[BS02fD-+hL90*Eg7Fic=\cc2Z'kKhc.L",Y
+$e"MSFg]P`k&g5l>Q1kd8k_X&Cj2N.@H!qBa,1BFH4F"iOMR#!h*a(L6hlt#I((D9Gs0//Q!&d'BEFMF
+]`hnH>SZQMh`[D\6V!<9Kb-X2NgAJ8+3amk=EYVRU4q1#HRghicg&u2V5]YN_B$*+jlT$4DK->n!\X>V
+8?8/MGL/c6iC`IeYs;GBedc<2VAqlb7T5@&MQKX*$u!YB$dO"<0IAWH>1jH%$Fj[FEpS0sRF&W_VIW>'
+GE5hLd^hG<:GLI-.Ur%mY0fSi1sH,+=T4u\`<iY*rd,oj'Y5B>^'Zd\>/-7,eqnQf.8HX^3mOts^C+uq
+ZWHl`5BrJ/@bl-V?"GY!@3RbeB'<le$H&1ITTR:Qb3DI%'==7XlRL,tABn7[<J9<7h+Bq)Md>;?RJ<</
+UV5NRK94YZX+&DLKhu`A&Otj`[WgYS*qnW8Kbi68I^7V"p%Gj>\f4)Z?XZ4%`83W%gCBQ)d'A<"Cg%H#
+,D9T9UQ\RAI)0SC[@O*i>.Z1^BD">1i%XA3mDBW^@@EI#/=gllTnb-udQT6G109oDo_Y3rnj.of[aF?V
+\E>)+<AGP\j/:Zg[F5oV$(,U&QXT<eU<8G=dBgAAeMARd@F=+>r6T3E.tG>@;e>f(:^NH`$dpjj=qs<'
+f;korS7,J4KY=ZS=gsC4o(Rbq2:%qi#=lG+'0FuChB9e.^:X,VKpV<8rNaCB]rE^?EcNudEoie;k:G+)
+VR=HtGp*h?#1F('J>q/J'cXNpqon^jIMVJ4TnW/l+"RG+oc2D`Rn.:pPcG-$9*p[F/-h/lFh].Yq4(k@
+H#_@,A3j<nK:/'"rp$p(fp`aOX`6<@.leP4`6_V?MFK5,Z0"B"&*(1"<Eqg<7eWa[*"ieXS83;AHZ+:P
+g^K_uiJ)HiPqB3L[)3(2Ephdkp"!?p4J7BsemS#8lbI4nJR`[^1.i+]j20B85],.?bNW;74dfS.=en2`
+;c7Xac>:4VCqmk"Z;kRHbA^@3jE-5p0=ZmXm:3YHjeU0^ilVf-/?Yj+KR=Vl&[^$,EbJmrQnqc@4&?D+
+D("F3kWJkZo<RNh/M,+b?f]SFn59`g,]reEiGnu,JN%nS:briei^'Wh@n(1M09Y(m-VH9'(g:"X:=:Y[
+l$ssQ%E*Y`"Ei^S9uD-*!*;K4MoSoM%q7&/5:r`*S?Z/9"BYKF*!@bt^H%VUO6'S<X9&&#AZGJ$#+^Fq
+^8oWKa6*d]/:-@9LXmDO?\OSrSgcZESea%,=j8HdV8png%\)a&XH@mklI8,uM2Ph>AXO<"853uk:==3H
+.68>K6Cj4De_:M0"mp;7[En1E%Bb*/ds1ll2'X.DSVLum.q&\8mFRSk%d16BV9QG<l*jEt%Ram#qE)Mf
+^_NJes3\6-L\X4DMr(c7U%Q;F75Y1D:paj!O0NF7p:k%S7I_sA4_-L+12WbXOp>g8T0c3KWJW0t\,7bO
+d#q_uh)[odiSiei33FNV`VG#Yj\'JATunN3HR6kYAh,U0=6bSN[LV.7f/uWo$rpo-W-GM'k\_l#'I9f%
+\(2*'jp*IhHL[/Kes=EUUs4H@<lVbKGoiltD?T8Zee[L6bOSXGSaD[Z2']j`$t&Y6=]<0RSZ&g;.jr!\
+)alHL-r40@Tmc&c")t["#uYJD</`Nj4btIN49U:YeM9qN$/kaq.uX"B12/R*UMU3pl(B"Pd%j4^[cukf
+qUQ"j_#0jZ75%jXcoUu#!P"I+=4];>iEh]%Ou&VGYQ:kpXBjBlHC\2cQ1BSR=O9b,o::o<btI=4.YI8%
+]2]_p:gPuoeH)GB)iOHnCV7]D]&)dAq+cRm:p'S.#$5ENL1qO[)Gd]L(>=BnV/3$!#InO(<q+S1o$a3Q
+['8`t9*/:Hr2grd.p3*tXGV?rY+,6)YAkL@n!-;Q9QSV!:)2IT]_$QUQ?3VB:H[\MlMP8B_j8uicI&fS
+)HgeMU7d=+QWY3G1ba5jT;M&CaK&$k*h@P3KRD',qpWOiA$QNWVJ+-0Z`jSW@I?%*W"JZ`'j%sabhI1o
+cUPA7J//q!Bh:SUVuJ,Z4^8"'1#3KXfm[)X_!cVk"4(^73lj>RR>dHta:$@kh9+&W(SOe,M=J]3HCB;V
+7[D:8=`M3$h:W'H"h:jI<_(A1e0u4#@CPR@6Te40_i+6"Vu'aALYn6]moK3^NdC;EV39+k$8=.D\8'?:
+l&2V@:"*@@Kgia].aT*E!JV$GYNQH0MTAHp'0WKUS$<IRQMHh4?cD>&[m??M*N&?e&H=JB;P$?Y.+XNC
+-e"dW0,%.$i@6H!JpFt'2Pf3:#R-rMm-'3T>]5X>q<nh@7%7R^%.[9cp!65cq,ruakD&M4*j4)W<V."*
+r&oMOo7e"rrU3X8f'D5;KAE2).OnQ%g8F5DAl=T5caC=I5pp.`P?:Z_+%J241ZC462&K2iQro-908bV`
+3=]04lgoo*,3CVo3))<l=cN0c@WfmQSS>Pa!:TY<qVD+!;C,_F>3b@>R0$t)>gh5tJ"cpeHf!,TCT0Sb
+kO1pcUD;^7]$NSU@UWMtO]uq]a?;S0+ct2-UBtEn182QY+>RFA(%d#O#Gs0iMYgtN)[`r#b96bcW=OP\
+>W0Oh^E0dD%l<odX81T;V,ND#OkVlX\g?RSZ+)!Aosq9.TkCqJBOR%F>!gRsE'k^1QZ>jP1,86@1\`4*
+=&pAc.$QAXl^+k352+</Rm@<./dLI:@qBJrZ.(G-23dohG.LXN&E=c<2+(iY+V3(\0Y:TqWX6eWU1+;>
+pWGTc5_g'?.^K0m9tO%_r&_XI$\9'/KigtR>(?J;>bkWGaO<lD>p4qB\La&9^1:og52S"?Zk?K(Qm.Wo
+TZ&3^N*$;d2EOalfu&bh6To//f/G?MR05mi*bP_URItEKRXu'MF.VIW9iFqS,=;eJ<Zl;#p@cG\!dhE>
+%4s-b&hY>@dC6+Hj>mRd&or4lS4l,Sj#i_&2Haf#:WtXefa'0U_,"-0#2?OA>oh"[bAK,,n=%H>q9(Xl
+mVmTR*j.8s0fZS&4_\"Rp%4n]^Ya=eG\u:/L?K2p(Kqs#!*g*;X,S_^XZq/F[=>[K#;%LNN*AWq](/<S
+mOD#j*NdaM7$h2Q;"oTc7R5&^bbP\`OoV()D$Im8R'qC$A^kJY%<NPZ@REgA7aYe5kBUPQ1+$WJmVR(_
+TOK8.EUG%5f!ud+9N$BZ0JY$S(J<qSd97["YYL`m@aOu)hlLK08tk!t^#<(YWn^7=7n#q%9*nj+NiqJA
+`g>,;$A)R<9[\iMA<;Z5j'])/rg?eV4dhOqdL\s;K\(N*A^oO($.Ekc]GY5X]$X<ce"Un;761Vn4`mVe
+q=@kHm0,faCLUc;60m2?$fJ7^]T$&)>2#IQh!YTFNYTi$[Z\)dnZEba(D`?ph&4-tnQ^ah8-Jq8\ZkW5
+L1i7SQMNp!D0p6_ju6+(d7]>I8!Um9*q5K"\LdCf'07c:X@BcoR+k9+fJQt1]0Eg;]b"jc*BU_%T_7?;
+Y,pDb$lokSZOflFW^hB!]j?s`\'lFr*0c0eZt:5)iW[sLRR%r#=%l;.^T;iY]#mV)L@LGMghqK.2D`pR
+n&l``M%W`J;8NbYq]dml#kO]bW'34:i/<)N(VAGnL)/A(k`UVMaCU?e\4ot84sHiIl0'@PL?EN`.?mHu
+1hY6=#6e/m4]"n68^or!_CtP$_)bg9e!!1W+OhqoY6e3qXY(&V;bZ[hL9t(8`Fa)NAtr]iP?U=9]e?_<
+UtWd_n7X\Bm;riodhVoRY8Qd%r1JadnDKI_emJCKMWudI3WXMQM5jYtnjWtthO-3*AX"i%XA7ASd-]sf
+"GJb'^slO,P98F\@NCfjppeFY*XPK!q[KpFW=T855,&B_1["8V$U[tJP$'a!Fit\a)R8%R^p!UPlZiIY
+np>ImDuNbn9Qth)d)$\>>,oq1I6/5a3^AVfiqp*u#6oeGam)d_[>_VIXC!YJ/(S161S!Ol(L3PsEo(>t
+b5G%#qZZUD./qc4KY%#<0=YY19JHhc:[MT!hL%gr(L6A#,YcRqmRZ1@JoM.?#ELOiplj!3i*,r+r9%m?
+H`k`4_T]Nd#d%H](c?.^!"oE<auhs4Xc;9M+h&(+,oI7UM_2*u=Ca"m5rS#8aE72\ImQ(oqS?-#4\70L
+((,`?7Zb\an'/>[RgcgDA?ede9]?\6+R#[b]A1Vt#&B-GrlYgn*dG0W">-^h^*O2ic[U'pm^=e1B*SfJ
+Tu^%G,Ha<nCP.6H4.,h97S@/6XLLD@F=A6;j=1'g4\;2>Xuq@\6QV8I1'p6X8%"(UN!tnQ*3Mat$)XcG
+%qMj-7BPCm3N*0&8=f^"ksO=pLPHYreu_R^>'-_1UXE0Op!IXZ"1+bHOrtXrrFX!5f5GPH'hh(t8^d5#
+?62W*]I$nUM]iu,BLp,N-a]aBLu];i)Y;Fe(c130%B5j=iuCJ9.CN1[<,=$G-7_=VCrO<Lm>$?1<`do$
+L=Wtd*L1cKKdoW-Vi&l9L\QB5esi?h/)1m9rT;++iFji$1_s,40bjVQiM*)D,#*lR4?T0c4D]$!ZVN_b
+F)ZGn)_jH[C#&-#pIlKS+9keRQB8)6dd-.<^A>aTF1p<=""c(JN*F`W]);+;`82\K<!X'W;`.;f9g9@7
+b:"8KkQ]'GB6Js-+X8DRfqHS`)Sh`mR%+*CR1>\??@V9DVc/IbLS-Zn+hE"Umk7#L3)?*B>5<`57cNm@
+.mP5h54Ns@r9j7\TnR'u&M@@&Yr<ZEjkC9ij=V2I[sd7USTFB*drit7@>2N5h@6`T<;%3)V/XoLp%+D8
+>fWIo$T6Q`Re3IAVkZ+b2kl).r*[s(f/9F!L+uDQk^EO6O+V#Pa09WtoTOcrrtfs(BOS<V/I,t&s*pfT
+:;6<4BGK5d9=oN!`e'Q2Ea_J8/UZ_4%9_4VW!^D;?>m,bH[jS%dU9TV3SQS81m?4\^-6o<F9WHlUS_V%
+Vja2?<9[p>9H[EG/+nOeX]hBYQj$Yqc-=E7>6!W4XXn51KhReW6e0,]765qu2:H)TD*6^GWH#r99!r?\
+EV2=fVSdMiX#Sl#\EXFDiYh,`Yd9,jm7.%mY:TumP2Apll)2mSj\Kp'&q8%-/ZbD0jTDWcYNJ0O*.(%r
+@=tGUB14'Bj#o8cl0"9/_T)3>7R'\,#(H&!A$YMAq%mD)k$1:#9Y/R8raj*7Vhu7Rd`N+%]$0O_<tP+:
+%%Y*qXmp1PFLOL3/3Au27VH4qQS0FodG)\pjg(fJE!j).P@FB(OHU(UfF:>6d.?--$I&@+IWdr#8V\'a
+G*=Ch]u!O+NR^`t*!LE$7k3N.no[R<5/c*F@R`r2?E:_O3;L1fS?LMJi9ks4o)IZY^"\SX>$-K4b6hFF
+IN%T;+ZY<P19[oXZd@JjB=\.=gR[LF_tJ/dV8<rPpY//%,8bIXRji<sj;Dd6!Q#G8KYj`%,&moK?Z+Ka
+SrRY9de=Ge1CU:lid3#[i_jrhp?'-iMr8J;,%tEHj=E6'rP*i@[N*Mt`?"dj6N`a'>K4@>MT\d"_f!,d
+8VVUM(iT&1"Hbr":$+tadFWLXMNq%Z&gG5ukr'hoZ9;a*`X@A!o2&lQkO\1K;?\k/XR(+GDuPgsMXU7/
++$FXX@F9SJ%pC(SIFPf7U\ALE[q@Op-I"(YVs.WeFI@u7N_%qA+(PJi&Cd8A((FgP9f9sino*#<&S<Y_
+)r@sRFLgh,D:E8('#)\'m>[*P[cnM$4u_T0AR#/+rPaY$r_i4YUP9Q8RPi8(>+6&f>WM@:3lPDVN)]3j
+#Cb*]"n?2IV=tJ?,TZ6-eROon+9gsbob`Y,lV(E)p*E-)Y5B:r%,#XDc#3s/l^2Q[.m0:5<4%d(hO=34
+G?<^?59=KH'bi3+B`1<JF0q#MS2B]%0of.Z&LXF8DcB1]5Z_-5T&1)rB=^7dajD*3#o./hQ&Be/8;J6@
+'+@l`.R%Q!"52<6%;k^K%YNnH-i1(m"I7'r[;K4GNON!aGPa*[$`g@F3CA^6XaSY%OQP[8MplfV];_%Y
+9f"0hZjp.MQ'I:[l4.)ca5=+j6)iPYFQ2LXUctD%RV==MeV&d'qYP./HNH6iC@6qTg,Q>1S)<A?rQ[LP
+j+J1KFnIMFeu,-/'6j"-aq@\Znq5)Z][u-g[4aIQMWoB@E4Ja,cnis$mF:co\tp*b2jubX%(J*q)/s4l
+f;d@H),]WJ#3rE-^Im0&f,U_^9[tr3p7't!]D_]s5Ak.C2)Qt8B[PRQHmu7BGDa)mZdO8O7q\0%%eFRr
+Okb0692Cu#4T13jJIh)PS?WqZj3Vb[rRlF"?ag(.k#&=2mEH_%>0jgGr?lX"nI9]O+#C:.>$IU+B[M1A
+rP)FC%@8QO/i@[Eb%mlKpF<5=X-hrs1C.C,&Z$=D4(d^:95eS%Ok,?"1X4^#%>ebAp)IkEmL,&D0pg%+
+jopSbXTqETfr<8?jOa&=9OD"X]D^l]:Bk!)"IQ(l>46sFU492)m"!.s2/KeQN7&aMd^`&!<?1"odqnd.
+4%l)+;>SAiE9aTAmL,NJIDrO#,@KG?,u:4dPsJ7@<1TTC`FLH.XEXfuT)@=r#']s$5RRrUj.7<*d;c>f
+\(mjS1)B1>?+9f*'3"HE4)>&JK)mfCK.KC7X3AFK<_OiV+>!o,)>=ua:TJi>dbf1:qRajD+Tqi=JdsMd
+,apSk2$9\eO6,0-b@B+1J,K[@$d4PTI!VI)/CX>ooM$$]TciC23a,A"\.P(o[c2+;K.Jf+`bfT5"dcac
+K@cT/1cd,1YZ/@qe;2h?)\r+!RG[<%Kq,DO^TVnAbY#J$2fA-@IcA_klKNRdTgab5r)Zt/mO@:7r-5U^
+_Ct*iH@Ja^L2d4"C=S(#4P-(+]uc/4T\pZ+\o'UtNLMSuK$Ro-7WiHnj5/;$Ok_DSDD)3-@J0=X^!PbN
+Yn*R-f5p6R9B[h"UQ[Lp-]R9X+mm=*IRn&tF$OD1CS78)$/#qfOg)Oe1cglGFl.":YDS4I!>PceRtpQ(
+%dVrBRT`,+_BMN5jj9`s^%6-Kn(CqeB!J6R'gPN1]"PbGOZM[13#cJ!BUO-$cE!Y8]#b@5Efk%_WnUV3
+^8nJVmn11G_o(n[0/dKPAm>Bh3p'fI-ou`&Ve191=BhfZ@=.r((Oal>K43e63,(]u"]77Mgj2pH!rHeZ
+'2rTmW<hgPnKc:Y]=Y.UH[aT?Q1Um=h-RJ8U(^1mjbk7pqm5MaXjufk"^nb`X2ugb5*%<BoM40)Q[+1>
+f0Geq)Z=1jYU:hU@5`WP[COhJSi9"@/#mcWe9C&`GIY8upn:-SPX$a)(%@P36na$ueW(l"Q.nt0\Y;A;
+BmP-s$kiXs$,?8q!+[lF=fXo8K`4Khf=GfF.>lB==0J[c]1pVg^Y=Yd>"=W#d$d[[q;%Z507Ip6d&Hr?
+4XmdEK8.Ac%L>V%WsOJOL4F^;NN1CCoW[nMbIS$Z)qO.QYDQBNh55NoGFS%#dXi7*7KT^FTnR1s5C#3a
+gn1[>\<Gf+Q"i?Z@<L)K`m_jR++`Da8Apu!U8:V]2A]>9k1+@jWG>dB>K:rQmP`m0h!LpD/NSFc=q:ok
+gFE3c5E*>O<mINp'c_ZK20c0rlV\2i=)8q2Q0F29(Ea)d^V-j_>CLopDTA'nS_Yg[VV/RUGEVCfdY/GP
+I<5OmGsKOpCJO'gc*sH$I:Le8?WhaKNVr%e'hl8FFSnnmf_'jD9DKgqnd_28)kP7kR92U-^?Y3mBP^@4
+f%R`1pWC8*9,^u9Ql25UCZ3Wl\gBQe?R26b,!AQ07XD.Z66GXhEeP:[Pq*0J&nkhi>$1D_$+(=YAJ&*J
+GOHm*8t_GDBOT<)'5/]=as+3sE3T_V&nkha>$.EsHigDQ>1nQEef/NQcq9sr9k[t_5n[iWd)mQ>YeKh=
+"Bl,=Z3`*6H=I#Y"Bnr]()AM\JQ;iSCdAHp45WW&Ps?jhd))ND-.#8WPso@piF3I6-.'dM['8o9-I>AX
+Pndt@q%oMc.tQ9gTnO5nfE>@aZk`p!]+Sd'd)mQ>Yhj^[JQ;iSCdJMf/iJ8]!j+"?$O[c?5V%Cd[\/?I
+iJ.`H&nkhi>$/Q=FTSZJ>1nQE(0t_XXTVg1KGG=U2M"m1X_^92l]Y*WBI2$J-FC#@@M<E$d)mQ>Y]-iR
+Zk@%`$X-[+@M<E$d)l^&Yl'DRTTqcXiR#H!?#0SE"Bl1d(0::N-I>AX[1I"[A\?Xu=p_Ru%5"ZL/iJ8]
+!j28a$Yu&d9q[b:CECj>Rf-\/BI2#o/$uN%Gd.R^&noMr>$);VYmIcMBK\JbYTE@E'5/]=H:V^X4oE8G
+cq9u(0[R\*e&<Z\8tbiBBOT0Y@M<E$d$btY=S'&T"Bl,=Aq:`Kr%9mY<W]CkTS58lMbTk05V"(dYSM8a
+$+(=YV*bUue)D!R-.'dM['8a,&niT<as+3sE3T_V&nkha>$1K-'5/]=apPM[r/4:BPsB-Dd),YXmh9@\
+d)m]BYioO0BI2$J,.+R<rA9(+!j-9*$]@b2JQ;iS/4'aE-+HQdQ/F..ePa66rs)D8hq.~>
 
 %AXGEndBitmap
 GR
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 36.5 M
-93.5 36.5 L
-93.5 36.5 L
+57.75 21.75 M
+57.75 21.75 L
+57.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 51.5 M
-93.5 51.5 L
-93.5 51.5 L
+57.75 29.25 M
+57.75 29.25 L
+57.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 66.5 M
-93.5 66.5 L
-93.5 66.5 L
+57.75 36.75 M
+57.75 36.75 L
+57.75 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 81.5 M
-93.5 81.5 L
-93.5 81.5 L
+57.75 44.25 M
+57.75 44.25 L
+57.75 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 96.5 M
-93.5 96.5 L
-93.5 96.5 L
+57.75 51.75 M
+57.75 51.75 L
+57.75 51.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 111.5 M
-93.5 111.5 L
-93.5 111.5 L
+57.75 59.25 M
+57.75 59.25 L
+57.75 59.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 126.5 M
-93.5 126.5 L
-93.5 126.5 L
+57.75 66.75 M
+57.75 66.75 L
+57.75 66.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 141.5 M
-93.5 141.5 L
-93.5 141.5 L
+57.75 74.25 M
+57.75 74.25 L
+57.75 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 156.5 M
-93.5 156.5 L
-93.5 156.5 L
+57.75 81.75 M
+57.75 81.75 L
+57.75 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 171.5 M
-93.5 171.5 L
-93.5 171.5 L
+57.75 89.25 M
+57.75 89.25 L
+57.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 186.5 M
-93.5 186.5 L
-93.5 186.5 L
+57.75 96.75 M
+57.75 96.75 L
+57.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 201.5 M
-93.5 201.5 L
-93.5 201.5 L
+57.75 104.25 M
+57.75 104.25 L
+57.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 216.5 M
-93.5 216.5 L
-93.5 216.5 L
+57.75 111.75 M
+57.75 111.75 L
+57.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 36.5 M
-108.5 36.5 L
-108.5 36.5 L
+65.25 21.75 M
+65.25 21.75 L
+65.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 51.5 M
-108.5 51.5 L
-108.5 51.5 L
+65.25 29.25 M
+65.25 29.25 L
+65.25 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 66.5 M
-108.5 66.5 L
-108.5 66.5 L
+65.25 36.75 M
+65.25 36.75 L
+65.25 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 81.5 M
-108.5 81.5 L
-108.5 81.5 L
+65.25 44.25 M
+65.25 44.25 L
+65.25 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 96.5 M
-108.5 96.5 L
-108.5 96.5 L
+65.25 51.75 M
+65.25 51.75 L
+65.25 51.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 111.5 M
-108.5 111.5 L
-108.5 111.5 L
+65.25 59.25 M
+65.25 59.25 L
+65.25 59.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 126.5 M
-108.5 126.5 L
-108.5 126.5 L
+65.25 66.75 M
+65.25 66.75 L
+65.25 66.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 141.5 M
-108.5 141.5 L
-108.5 141.5 L
+65.25 74.25 M
+65.25 74.25 L
+65.25 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 156.5 M
-108.5 156.5 L
-108.5 156.5 L
+65.25 81.75 M
+65.25 81.75 L
+65.25 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 171.5 M
-108.5 171.5 L
-108.5 171.5 L
+65.25 89.25 M
+65.25 89.25 L
+65.25 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 186.5 M
-108.5 186.5 L
-108.5 186.5 L
+65.25 96.75 M
+65.25 96.75 L
+65.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 201.5 M
-108.5 201.5 L
-108.5 201.5 L
+65.25 104.25 M
+65.25 104.25 L
+65.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 216.5 M
-108.5 216.5 L
-108.5 216.5 L
+65.25 111.75 M
+65.25 111.75 L
+65.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 36.5 M
-123.5 36.5 L
-123.5 36.5 L
+72.75 21.75 M
+72.75 21.75 L
+72.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 51.5 M
-123.5 51.5 L
-123.5 51.5 L
+72.75 29.25 M
+72.75 29.25 L
+72.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 66.5 M
-123.5 66.5 L
-123.5 66.5 L
+72.75 36.75 M
+72.75 36.75 L
+72.75 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 81.5 M
-123.5 81.5 L
-123.5 81.5 L
+72.75 44.25 M
+72.75 44.25 L
+72.75 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 96.5 M
-123.5 96.5 L
-123.5 96.5 L
+72.75 51.75 M
+72.75 51.75 L
+72.75 51.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 111.5 M
-123.5 111.5 L
-123.5 111.5 L
+72.75 59.25 M
+72.75 59.25 L
+72.75 59.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 126.5 M
-123.5 126.5 L
-123.5 126.5 L
+72.75 66.75 M
+72.75 66.75 L
+72.75 66.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 141.5 M
-123.5 141.5 L
-123.5 141.5 L
+72.75 74.25 M
+72.75 74.25 L
+72.75 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 156.5 M
-123.5 156.5 L
-123.5 156.5 L
+72.75 81.75 M
+72.75 81.75 L
+72.75 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 171.5 M
-123.5 171.5 L
-123.5 171.5 L
+72.75 89.25 M
+72.75 89.25 L
+72.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 186.5 M
-123.5 186.5 L
-123.5 186.5 L
+72.75 96.75 M
+72.75 96.75 L
+72.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 201.5 M
-123.5 201.5 L
-123.5 201.5 L
+72.75 104.25 M
+72.75 104.25 L
+72.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 216.5 M
-123.5 216.5 L
-123.5 216.5 L
+72.75 111.75 M
+72.75 111.75 L
+72.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 36.5 M
-138.5 36.5 L
-138.5 36.5 L
+80.25 21.75 M
+80.25 21.75 L
+80.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 51.5 M
-138.5 51.5 L
-138.5 51.5 L
+80.25 29.25 M
+80.25 29.25 L
+80.25 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 66.5 M
-138.5 66.5 L
-138.5 66.5 L
+80.25 36.75 M
+80.25 36.75 L
+80.25 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 81.5 M
-138.5 81.5 L
-138.5 81.5 L
+80.25 44.25 M
+80.25 44.25 L
+80.25 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.794 96.832 M
-138.992 96.935 L
-138.866 96.751 L
+80.397 51.916 M
+80.496 51.967 L
+80.433 51.875 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.611 112.219 M
-138.793 112.537 L
-138.782 112.17 L
+80.305 59.609 M
+80.397 59.768 L
+80.391 59.585 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.631 127.073 M
-138.796 127.319 L
-138.766 127.024 L
+80.315 67.037 M
+80.398 67.16 L
+80.383 67.012 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 141.5 M
-138.5 141.5 L
-138.5 141.5 L
+80.25 74.25 M
+80.25 74.25 L
+80.25 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 156.5 M
-138.5 156.5 L
-138.5 156.5 L
+80.25 81.75 M
+80.25 81.75 L
+80.25 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 171.5 M
-138.5 171.5 L
-138.5 171.5 L
+80.25 89.25 M
+80.25 89.25 L
+80.25 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 186.5 M
-138.5 186.5 L
-138.5 186.5 L
+80.25 96.75 M
+80.25 96.75 L
+80.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 201.5 M
-138.5 201.5 L
-138.5 201.5 L
+80.25 104.25 M
+80.25 104.25 L
+80.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 216.5 M
-138.5 216.5 L
-138.5 216.5 L
+80.25 111.75 M
+80.25 111.75 L
+80.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 36.5 M
-153.5 36.5 L
-153.5 36.5 L
+87.75 21.75 M
+87.75 21.75 L
+87.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 51.5 M
-153.5 51.5 L
-153.5 51.5 L
+87.75 29.25 M
+87.75 29.25 L
+87.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.669 66.658 M
-153.777 66.702 L
-153.702 66.612 L
+87.834 36.829 M
+87.888 36.851 L
+87.851 36.806 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.812 82.753 M
-154.186 83.285 L
-154.107 82.64 L
+87.906 44.876 M
+88.093 45.143 L
+88.053 44.82 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-154.09 101.844 M
-155.336 104.25 L
-155.369 101.541 L
+88.045 54.422 M
+88.668 55.625 L
+88.685 54.271 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-156.098 116.086 M
-158.15 117.773 L
-157.133 115.319 L
+89.049 61.543 M
+90.075 62.386 L
+89.566 61.16 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-155.812 133.486 M
-158.163 136.353 L
-157.437 132.717 L
+88.906 70.243 M
+90.082 71.677 L
+89.719 69.858 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-154.64 143.87 M
-155.605 144.778 L
-155.181 143.523 L
+88.32 75.435 M
+88.802 75.889 L
+88.59 75.261 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-155.944 160.049 M
-157.736 161.276 L
-156.732 159.35 L
+88.972 83.525 M
+89.868 84.138 L
+89.366 83.175 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 171.5 M
-153.5 171.5 L
-153.5 171.5 L
+87.75 89.25 M
+87.75 89.25 L
+87.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 186.5 M
-153.5 186.5 L
-153.5 186.5 L
+87.75 96.75 M
+87.75 96.75 L
+87.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 201.5 M
-153.5 201.5 L
-153.5 201.5 L
+87.75 104.25 M
+87.75 104.25 L
+87.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 216.5 M
-153.5 216.5 L
-153.5 216.5 L
+87.75 111.75 M
+87.75 111.75 L
+87.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 36.5 M
-168.5 36.5 L
-168.5 36.5 L
+95.25 21.75 M
+95.25 21.75 L
+95.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-167.333 52.115 M
-166.895 52.615 L
-167.517 52.38 L
+94.666 29.557 M
+94.448 29.808 L
+94.758 29.69 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-164.807 69.22 M
-163.562 71.167 L
-165.577 70.034 L
+93.403 38.11 M
+92.781 39.083 L
+93.788 38.517 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-172.291 83.304 M
-174.4 83.465 L
-172.615 82.33 L
+97.145 45.152 M
+98.2 45.233 L
+97.308 44.665 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-171.921 100.76 M
-174.301 102.144 L
-172.852 99.803 L
+96.96 53.88 M
+98.15 54.572 L
+97.426 53.401 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-174.571 115.065 M
-178.071 115.642 L
-175.255 113.485 L
+98.286 61.032 M
+100.036 61.321 L
+98.627 60.243 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-175.744 130.515 M
-179.877 131.091 L
-176.501 128.637 L
+98.872 68.757 M
+100.939 69.045 L
+99.251 67.819 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-175.756 146.22 M
-180.022 147.126 L
-176.684 144.319 L
+98.878 76.61 M
+101.011 77.063 L
+99.342 75.659 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-171.579 159.413 M
-173.555 160.225 L
-172.194 158.579 L
+96.79 83.206 M
+97.777 83.613 L
+97.097 82.789 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.47 171.471 M
-168.451 171.463 L
-168.464 171.479 L
+95.235 89.235 M
+95.226 89.231 L
+95.232 89.24 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 186.5 M
-168.5 186.5 L
-168.5 186.5 L
+95.25 96.75 M
+95.25 96.75 L
+95.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 201.5 M
-168.5 201.5 L
-168.5 201.5 L
+95.25 104.25 M
+95.25 104.25 L
+95.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 216.5 M
-168.5 216.5 L
-168.5 216.5 L
+95.25 111.75 M
+95.25 111.75 L
+95.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 36.5 M
-183.5 36.5 L
-183.5 36.5 L
+102.75 21.75 M
+102.75 21.75 L
+102.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-182.688 51.944 M
-182.387 52.299 L
-182.82 52.127 L
+102.344 29.472 M
+102.193 29.65 L
+102.41 29.564 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-184.445 68.324 M
-185.22 69.011 L
-184.86 68.041 L
+103.223 37.662 M
+103.61 38.006 L
+103.43 37.52 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-185.141 86.436 M
-186.806 88.46 L
-186.289 85.89 L
+103.57 46.718 M
+104.403 47.73 L
+104.145 46.445 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-188.338 98.764 M
-191.023 98.953 L
-188.743 97.523 L
+105.169 52.882 M
+106.512 52.977 L
+105.371 52.262 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-189.51 117.943 M
-193.502 119.884 L
-190.893 116.292 L
+105.755 62.471 M
+107.751 63.442 L
+106.447 61.646 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-192.935 128.523 M
-197.737 127.766 L
-193.144 126.173 L
+107.467 67.761 M
+109.869 67.383 L
+107.572 66.587 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-191.623 145.823 M
-196.225 146.385 L
-192.429 143.723 L
+106.811 76.412 M
+109.112 76.693 L
+107.214 75.362 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-192.623 159.884 M
-197.526 159.823 L
-193.172 157.569 L
+107.312 83.442 M
+109.763 83.411 L
+107.586 82.285 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-185.411 172.565 M
-186.502 172.72 L
-185.612 172.07 L
+103.705 89.783 M
+104.251 89.86 L
+103.806 89.535 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 186.5 M
-183.5 186.5 L
-183.5 186.5 L
+102.75 96.75 M
+102.75 96.75 L
+102.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 201.5 M
-183.5 201.5 L
-183.5 201.5 L
+102.75 104.25 M
+102.75 104.25 L
+102.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 216.5 M
-183.5 216.5 L
-183.5 216.5 L
+102.75 111.75 M
+102.75 111.75 L
+102.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 36.5 M
-198.5 36.5 L
-198.5 36.5 L
+110.25 21.75 M
+110.25 21.75 L
+110.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-196.668 52.014 M
-195.899 52.587 L
-196.847 52.443 L
+109.334 29.507 M
+108.95 29.794 L
+109.424 29.722 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-200.609 67.31 M
-201.748 67.31 L
-200.743 66.774 L
+111.305 37.155 M
+111.874 37.155 L
+111.371 36.887 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-202.488 84.273 M
-204.866 84.854 L
-203.042 83.222 L
+112.244 45.636 M
+113.433 45.927 L
+112.521 45.111 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-204.672 95.742 M
-207.438 94.269 L
-204.304 94.268 L
+113.336 51.371 M
+114.719 50.634 L
+113.152 50.634 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-206.663 114.813 M
-211.102 114.893 L
-207.223 112.734 L
+114.332 60.906 M
+116.551 60.946 L
+114.612 59.867 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-206.19 126.905 M
-209.879 125.703 L
-206.058 125.027 L
+114.095 66.952 M
+115.94 66.351 L
+114.029 66.014 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-207.062 145.378 M
-211.79 145.652 L
-207.747 143.185 L
+114.531 76.189 M
+116.895 76.326 L
+114.874 75.093 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-206.705 157.862 M
-210.81 157.018 L
-206.79 155.831 L
+114.352 82.431 M
+116.405 82.009 L
+114.395 81.416 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-199.702 171.837 M
-200.329 171.778 L
-199.748 171.536 L
+110.851 89.419 M
+111.164 89.389 L
+110.874 89.268 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 186.5 M
-198.5 186.5 L
-198.5 186.5 L
+110.25 96.75 M
+110.25 96.75 L
+110.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 201.5 M
-198.5 201.5 L
-198.5 201.5 L
+110.25 104.25 M
+110.25 104.25 L
+110.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 216.5 M
-198.5 216.5 L
-198.5 216.5 L
+110.25 111.75 M
+110.25 111.75 L
+110.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 36.5 M
-213.5 36.5 L
-213.5 36.5 L
+117.75 21.75 M
+117.75 21.75 L
+117.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-212.234 50.435 M
-211.446 50.164 L
-212.014 50.774 L
+117.117 28.718 M
+116.723 28.582 L
+117.007 28.887 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-215.465 66.231 M
-216.34 65.748 L
-215.341 65.762 L
+118.732 36.615 M
+119.17 36.374 L
+118.67 36.381 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-218.947 82.505 M
-221.69 81.992 L
-219.028 81.154 L
+120.474 44.753 M
+121.845 44.496 L
+120.514 44.077 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-220.882 94.751 M
-224.036 92.592 L
-220.237 93.012 L
+121.441 50.875 M
+123.018 49.796 L
+121.118 50.006 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-221.367 113.375 M
-225.406 112.832 L
-221.587 111.41 L
+121.684 60.187 M
+123.703 59.916 L
+121.793 59.205 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-222.37 124.572 M
-226.192 122.06 L
-221.637 122.478 L
+122.185 65.786 M
+124.096 64.53 L
+121.819 64.739 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-225.291 142.836 M
-231.078 141.329 L
-225.263 139.935 L
+123.646 74.918 M
+126.539 74.164 L
+123.632 73.468 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-225.394 156.773 M
-231.036 154.749 L
-225.105 153.88 L
+123.697 81.887 M
+126.518 80.874 L
+123.552 80.44 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-216.58 171.91 M
-218.102 171.545 L
-216.587 171.15 L
+119.29 89.455 M
+120.051 89.272 L
+119.294 89.075 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 186.5 M
-213.5 186.5 L
-213.5 186.5 L
+117.75 96.75 M
+117.75 96.75 L
+117.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 201.5 M
-213.5 201.5 L
-213.5 201.5 L
+117.75 104.25 M
+117.75 104.25 L
+117.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 216.5 M
-213.5 216.5 L
-213.5 216.5 L
+117.75 111.75 M
+117.75 111.75 L
+117.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 36.5 M
-228.5 36.5 L
-228.5 36.5 L
+125.25 21.75 M
+125.25 21.75 L
+125.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-226.854 49.878 M
-225.786 49.413 L
-226.51 50.325 L
+124.427 28.439 M
+123.893 28.206 L
+124.255 28.663 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-229.293 64.923 M
-229.381 64.038 L
-228.887 64.778 L
+125.647 35.961 M
+125.69 35.519 L
+125.443 35.889 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-233.37 82.063 M
-235.762 81.446 L
-233.361 80.865 L
+127.685 44.531 M
+128.881 44.223 L
+127.681 43.932 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-233.241 93.421 M
-234.913 91.114 L
-232.352 92.363 L
+127.62 50.21 M
+128.456 49.057 L
+127.176 49.681 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-236.742 113.634 M
-241.004 113.146 L
-237.013 111.571 L
+129.371 60.317 M
+131.502 60.073 L
+129.507 59.286 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-236.359 124.232 M
-239.644 121.743 L
-235.574 122.393 L
+129.18 65.616 M
+130.822 64.372 L
+128.787 64.697 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-235.32 141.867 M
-238.594 140.805 L
-235.205 140.202 L
+128.66 74.434 M
+130.297 73.903 L
+128.603 73.601 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-236.44 156.228 M
-240.125 154.662 L
-236.137 154.31 L
+129.22 81.614 M
+131.062 80.831 L
+129.068 80.655 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-229.14 171.772 M
-229.491 171.784 L
-229.187 171.608 L
+125.57 89.386 M
+125.745 89.392 L
+125.594 89.304 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 186.5 M
-228.5 186.5 L
-228.5 186.5 L
+125.25 96.75 M
+125.25 96.75 L
+125.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 201.5 M
-228.5 201.5 L
-228.5 201.5 L
+125.25 104.25 M
+125.25 104.25 L
+125.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 216.5 M
-228.5 216.5 L
-228.5 216.5 L
+125.25 111.75 M
+125.25 111.75 L
+125.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 36.5 M
-243.5 36.5 L
-243.5 36.5 L
+132.75 21.75 M
+132.75 21.75 L
+132.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-242.057 50.144 M
-241.133 49.768 L
-241.771 50.535 L
+132.029 28.572 M
+131.567 28.384 L
+131.886 28.767 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-244.887 64.797 M
-245.231 63.744 L
-244.433 64.511 L
+133.444 35.898 M
+133.616 35.372 L
+133.216 35.755 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-247.176 79.967 M
-248.626 78.581 L
-246.694 79.121 L
+134.588 43.484 M
+135.313 42.791 L
+134.347 43.061 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-247.551 94.027 M
-249.009 92.131 L
-246.83 93.118 L
+134.776 50.514 M
+135.504 49.565 L
+134.415 50.059 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-250.512 112.112 M
-253.92 111.13 L
-250.451 110.393 L
+136.256 59.556 M
+137.96 59.065 L
+136.225 58.696 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-252.762 123.586 M
-256.589 120.539 L
-251.778 121.426 L
+137.381 65.293 M
+139.295 63.769 L
+136.889 64.213 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-252.051 137.573 M
-255.362 134.179 L
-250.843 135.616 L
+137.026 72.287 M
+138.681 70.589 L
+136.422 71.308 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-244.286 156.026 M
-244.57 155.661 L
-244.148 155.85 L
+133.143 81.513 M
+133.285 81.331 L
+133.074 81.425 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 171.5 M
-243.5 171.5 L
-243.5 171.5 L
+132.75 89.25 M
+132.75 89.25 L
+132.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 186.5 M
-243.5 186.5 L
-243.5 186.5 L
+132.75 96.75 M
+132.75 96.75 L
+132.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 201.5 M
-243.5 201.5 L
-243.5 201.5 L
+132.75 104.25 M
+132.75 104.25 L
+132.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 216.5 M
-243.5 216.5 L
-243.5 216.5 L
+132.75 111.75 M
+132.75 111.75 L
+132.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 36.5 M
-258.5 36.5 L
-258.5 36.5 L
+140.25 21.75 M
+140.25 21.75 L
+140.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 51.5 M
-258.5 51.5 L
-258.5 51.5 L
+140.25 29.25 M
+140.25 29.25 L
+140.25 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-257.293 64.59 M
-256.379 63.91 L
-256.865 64.94 L
+139.646 35.795 M
+139.19 35.455 L
+139.433 35.97 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-257.905 79.79 M
-257.315 79.093 L
-257.508 79.985 L
+139.952 43.395 M
+139.658 43.047 L
+139.754 43.493 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-261.981 94.925 M
-263.332 93.555 L
-261.495 94.128 L
+141.99 50.963 M
+142.666 50.277 L
+141.747 50.564 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-262.365 105.717 M
-263.136 102.298 L
-260.847 104.952 L
+142.183 56.359 M
+142.568 54.649 L
+141.423 55.976 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-261.071 121.487 M
-261.372 118.665 L
-259.778 121.013 L
+141.535 64.244 M
+141.686 62.832 L
+140.889 64.007 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-260.557 139.056 M
-261.081 137.535 L
-259.902 138.631 L
+141.278 73.028 M
+141.541 72.268 L
+140.951 72.815 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.622 156.658 M
-258.707 156.71 L
-258.656 156.624 L
+140.311 81.829 M
+140.354 81.855 L
+140.328 81.812 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 171.5 M
-258.5 171.5 L
-258.5 171.5 L
+140.25 89.25 M
+140.25 89.25 L
+140.25 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 186.5 M
-258.5 186.5 L
-258.5 186.5 L
+140.25 96.75 M
+140.25 96.75 L
+140.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 201.5 M
-258.5 201.5 L
-258.5 201.5 L
+140.25 104.25 M
+140.25 104.25 L
+140.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 216.5 M
-258.5 216.5 L
-258.5 216.5 L
+140.25 111.75 M
+140.25 111.75 L
+140.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 36.5 M
-273.5 36.5 L
-273.5 36.5 L
+147.75 21.75 M
+147.75 21.75 L
+147.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 51.5 M
-273.5 51.5 L
-273.5 51.5 L
+147.75 29.25 M
+147.75 29.25 L
+147.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 66.5 M
-273.5 66.5 L
-273.5 66.5 L
+147.75 36.75 M
+147.75 36.75 L
+147.75 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 81.5 M
-273.5 81.5 L
-273.5 81.5 L
+147.75 44.25 M
+147.75 44.25 L
+147.75 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.376 96.355 M
-273.291 96.309 L
-273.344 96.389 L
+147.688 51.677 M
+147.646 51.654 L
+147.672 51.695 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-274.05 112.027 M
-274.404 112.175 L
-274.161 111.877 L
+148.025 59.513 M
+148.202 59.587 L
+148.081 59.439 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.622 126.565 M
-273.691 126.573 L
-273.634 126.533 L
+147.811 66.782 M
+147.846 66.786 L
+147.817 66.766 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 141.5 M
-273.5 141.5 L
-273.5 141.5 L
+147.75 74.25 M
+147.75 74.25 L
+147.75 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 156.5 M
-273.5 156.5 L
-273.5 156.5 L
+147.75 81.75 M
+147.75 81.75 L
+147.75 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 171.5 M
-273.5 171.5 L
-273.5 171.5 L
+147.75 89.25 M
+147.75 89.25 L
+147.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 186.5 M
-273.5 186.5 L
-273.5 186.5 L
+147.75 96.75 M
+147.75 96.75 L
+147.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 201.5 M
-273.5 201.5 L
-273.5 201.5 L
+147.75 104.25 M
+147.75 104.25 L
+147.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 216.5 M
-273.5 216.5 L
-273.5 216.5 L
+147.75 111.75 M
+147.75 111.75 L
+147.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 36.5 M
-93.5 36.5 L
+57.75 21.75 M
+57.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 51.5 M
-93.5 51.5 L
+57.75 29.25 M
+57.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 66.5 M
-93.5 66.5 L
+57.75 36.75 M
+57.75 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 81.5 M
-93.5 81.5 L
+57.75 44.25 M
+57.75 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 96.5 M
-93.5 96.5 L
+57.75 51.75 M
+57.75 51.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 111.5 M
-93.5 111.5 L
+57.75 59.25 M
+57.75 59.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 126.5 M
-93.5 126.5 L
+57.75 66.75 M
+57.75 66.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 141.5 M
-93.5 141.5 L
+57.75 74.25 M
+57.75 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 156.5 M
-93.5 156.5 L
+57.75 81.75 M
+57.75 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 171.5 M
-93.5 171.5 L
+57.75 89.25 M
+57.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 186.5 M
-93.5 186.5 L
+57.75 96.75 M
+57.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 201.5 M
-93.5 201.5 L
+57.75 104.25 M
+57.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-93.5 216.5 M
-93.5 216.5 L
+57.75 111.75 M
+57.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 36.5 M
-108.5 36.5 L
+65.25 21.75 M
+65.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 51.5 M
-108.5 51.5 L
+65.25 29.25 M
+65.25 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 66.5 M
-108.5 66.5 L
+65.25 36.75 M
+65.25 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 81.5 M
-108.5 81.5 L
+65.25 44.25 M
+65.25 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 96.5 M
-108.5 96.5 L
+65.25 51.75 M
+65.25 51.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 111.5 M
-108.5 111.5 L
+65.25 59.25 M
+65.25 59.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 126.5 M
-108.5 126.5 L
+65.25 66.75 M
+65.25 66.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 141.5 M
-108.5 141.5 L
+65.25 74.25 M
+65.25 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 156.5 M
-108.5 156.5 L
+65.25 81.75 M
+65.25 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 171.5 M
-108.5 171.5 L
+65.25 89.25 M
+65.25 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 186.5 M
-108.5 186.5 L
+65.25 96.75 M
+65.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 201.5 M
-108.5 201.5 L
+65.25 104.25 M
+65.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-108.5 216.5 M
-108.5 216.5 L
+65.25 111.75 M
+65.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 36.5 M
-123.5 36.5 L
+72.75 21.75 M
+72.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 51.5 M
-123.5 51.5 L
+72.75 29.25 M
+72.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 66.5 M
-123.5 66.5 L
+72.75 36.75 M
+72.75 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 81.5 M
-123.5 81.5 L
+72.75 44.25 M
+72.75 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 96.5 M
-123.5 96.5 L
+72.75 51.75 M
+72.75 51.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 111.5 M
-123.5 111.5 L
+72.75 59.25 M
+72.75 59.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 126.5 M
-123.5 126.5 L
+72.75 66.75 M
+72.75 66.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 141.5 M
-123.5 141.5 L
+72.75 74.25 M
+72.75 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 156.5 M
-123.5 156.5 L
+72.75 81.75 M
+72.75 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 171.5 M
-123.5 171.5 L
+72.75 89.25 M
+72.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 186.5 M
-123.5 186.5 L
+72.75 96.75 M
+72.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 201.5 M
-123.5 201.5 L
+72.75 104.25 M
+72.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-123.5 216.5 M
-123.5 216.5 L
+72.75 111.75 M
+72.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 36.5 M
-138.5 36.5 L
+80.25 21.75 M
+80.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 51.5 M
-138.5 51.5 L
+80.25 29.25 M
+80.25 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 66.5 M
-138.5 66.5 L
+80.25 36.75 M
+80.25 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 81.5 M
-138.5 81.5 L
+80.25 44.25 M
+80.25 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 96.5 M
-138.992 96.935 L
+80.25 51.75 M
+80.496 51.967 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 111.5 M
-138.793 112.537 L
+80.25 59.25 M
+80.397 59.768 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 126.5 M
-138.796 127.319 L
+80.25 66.75 M
+80.398 67.16 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 141.5 M
-138.5 141.5 L
+80.25 74.25 M
+80.25 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 156.5 M
-138.5 156.5 L
+80.25 81.75 M
+80.25 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 171.5 M
-138.5 171.5 L
+80.25 89.25 M
+80.25 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 186.5 M
-138.5 186.5 L
+80.25 96.75 M
+80.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 201.5 M
-138.5 201.5 L
+80.25 104.25 M
+80.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-138.5 216.5 M
-138.5 216.5 L
+80.25 111.75 M
+80.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 36.5 M
-153.5 36.5 L
+87.75 21.75 M
+87.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 51.5 M
-153.5 51.5 L
+87.75 29.25 M
+87.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 66.5 M
-153.777 66.702 L
+87.75 36.75 M
+87.888 36.851 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 81.5 M
-154.186 83.285 L
+87.75 44.25 M
+88.093 45.143 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 96.5 M
-155.336 104.25 L
+87.75 51.75 M
+88.668 55.625 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 111.5 M
-158.15 117.773 L
+87.75 59.25 M
+90.075 62.386 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 126.5 M
-158.163 136.353 L
+87.75 66.75 M
+90.082 71.677 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 141.5 M
-155.605 144.778 L
+87.75 74.25 M
+88.802 75.889 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 156.5 M
-157.736 161.276 L
+87.75 81.75 M
+89.868 84.138 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 171.5 M
-153.5 171.5 L
+87.75 89.25 M
+87.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 186.5 M
-153.5 186.5 L
+87.75 96.75 M
+87.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 201.5 M
-153.5 201.5 L
+87.75 104.25 M
+87.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-153.5 216.5 M
-153.5 216.5 L
+87.75 111.75 M
+87.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 36.5 M
-168.5 36.5 L
+95.25 21.75 M
+95.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 51.5 M
-166.895 52.615 L
+95.25 29.25 M
+94.448 29.808 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 66.5 M
-163.562 71.167 L
+95.25 36.75 M
+92.781 39.083 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 81.5 M
-174.4 83.465 L
+95.25 44.25 M
+98.2 45.233 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 96.5 M
-174.301 102.144 L
+95.25 51.75 M
+98.15 54.572 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 111.5 M
-178.071 115.642 L
+95.25 59.25 M
+100.036 61.321 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 126.5 M
-179.877 131.091 L
+95.25 66.75 M
+100.939 69.045 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 141.5 M
-180.022 147.126 L
+95.25 74.25 M
+101.011 77.063 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 156.5 M
-173.555 160.225 L
+95.25 81.75 M
+97.777 83.613 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 171.5 M
-168.451 171.463 L
+95.25 89.25 M
+95.226 89.231 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 186.5 M
-168.5 186.5 L
+95.25 96.75 M
+95.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 201.5 M
-168.5 201.5 L
+95.25 104.25 M
+95.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-168.5 216.5 M
-168.5 216.5 L
+95.25 111.75 M
+95.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 36.5 M
-183.5 36.5 L
+102.75 21.75 M
+102.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 51.5 M
-182.387 52.299 L
+102.75 29.25 M
+102.193 29.65 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 66.5 M
-185.22 69.011 L
+102.75 36.75 M
+103.61 38.006 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 81.5 M
-186.806 88.46 L
+102.75 44.25 M
+104.403 47.73 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 96.5 M
-191.023 98.953 L
+102.75 51.75 M
+106.512 52.977 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 111.5 M
-193.502 119.884 L
+102.75 59.25 M
+107.751 63.442 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 126.5 M
-197.737 127.766 L
+102.75 66.75 M
+109.869 67.383 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 141.5 M
-196.225 146.385 L
+102.75 74.25 M
+109.112 76.693 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 156.5 M
-197.526 159.823 L
+102.75 81.75 M
+109.763 83.411 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 171.5 M
-186.502 172.72 L
+102.75 89.25 M
+104.251 89.86 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 186.5 M
-183.5 186.5 L
+102.75 96.75 M
+102.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 201.5 M
-183.5 201.5 L
+102.75 104.25 M
+102.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-183.5 216.5 M
-183.5 216.5 L
+102.75 111.75 M
+102.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 36.5 M
-198.5 36.5 L
+110.25 21.75 M
+110.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 51.5 M
-195.899 52.587 L
+110.25 29.25 M
+108.95 29.794 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 66.5 M
-201.748 67.31 L
+110.25 36.75 M
+111.874 37.155 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 81.5 M
-204.866 84.854 L
+110.25 44.25 M
+113.433 45.927 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 96.5 M
-207.438 94.269 L
+110.25 51.75 M
+114.719 50.634 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 111.5 M
-211.102 114.893 L
+110.25 59.25 M
+116.551 60.946 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 126.5 M
-209.879 125.703 L
+110.25 66.75 M
+115.94 66.351 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 141.5 M
-211.79 145.652 L
+110.25 74.25 M
+116.895 76.326 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 156.5 M
-210.81 157.018 L
+110.25 81.75 M
+116.405 82.009 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 171.5 M
-200.329 171.778 L
+110.25 89.25 M
+111.164 89.389 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 186.5 M
-198.5 186.5 L
+110.25 96.75 M
+110.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 201.5 M
-198.5 201.5 L
+110.25 104.25 M
+110.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-198.5 216.5 M
-198.5 216.5 L
+110.25 111.75 M
+110.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 36.5 M
-213.5 36.5 L
+117.75 21.75 M
+117.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 51.5 M
-211.446 50.164 L
+117.75 29.25 M
+116.723 28.582 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 66.5 M
-216.34 65.748 L
+117.75 36.75 M
+119.17 36.374 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 81.5 M
-221.69 81.992 L
+117.75 44.25 M
+121.845 44.496 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 96.5 M
-224.036 92.592 L
+117.75 51.75 M
+123.018 49.796 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 111.5 M
-225.406 112.832 L
+117.75 59.25 M
+123.703 59.916 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 126.5 M
-226.192 122.06 L
+117.75 66.75 M
+124.096 64.53 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 141.5 M
-231.078 141.329 L
+117.75 74.25 M
+126.539 74.164 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 156.5 M
-231.036 154.749 L
+117.75 81.75 M
+126.518 80.874 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 171.5 M
-218.102 171.545 L
+117.75 89.25 M
+120.051 89.272 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 186.5 M
-213.5 186.5 L
+117.75 96.75 M
+117.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 201.5 M
-213.5 201.5 L
+117.75 104.25 M
+117.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-213.5 216.5 M
-213.5 216.5 L
+117.75 111.75 M
+117.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 36.5 M
-228.5 36.5 L
+125.25 21.75 M
+125.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 51.5 M
-225.786 49.413 L
+125.25 29.25 M
+123.893 28.206 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 66.5 M
-229.381 64.038 L
+125.25 36.75 M
+125.69 35.519 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 81.5 M
-235.762 81.446 L
+125.25 44.25 M
+128.881 44.223 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 96.5 M
-234.913 91.114 L
+125.25 51.75 M
+128.456 49.057 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 111.5 M
-241.004 113.146 L
+125.25 59.25 M
+131.502 60.073 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 126.5 M
-239.644 121.743 L
+125.25 66.75 M
+130.822 64.372 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 141.5 M
-238.594 140.805 L
+125.25 74.25 M
+130.297 73.903 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 156.5 M
-240.125 154.662 L
+125.25 81.75 M
+131.062 80.831 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 171.5 M
-229.491 171.784 L
+125.25 89.25 M
+125.745 89.392 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 186.5 M
-228.5 186.5 L
+125.25 96.75 M
+125.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 201.5 M
-228.5 201.5 L
+125.25 104.25 M
+125.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-228.5 216.5 M
-228.5 216.5 L
+125.25 111.75 M
+125.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 36.5 M
-243.5 36.5 L
+132.75 21.75 M
+132.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 51.5 M
-241.133 49.768 L
+132.75 29.25 M
+131.567 28.384 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 66.5 M
-245.231 63.744 L
+132.75 36.75 M
+133.616 35.372 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 81.5 M
-248.626 78.581 L
+132.75 44.25 M
+135.313 42.791 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 96.5 M
-249.009 92.131 L
+132.75 51.75 M
+135.504 49.565 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 111.5 M
-253.92 111.13 L
+132.75 59.25 M
+137.96 59.065 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 126.5 M
-256.589 120.539 L
+132.75 66.75 M
+139.295 63.769 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 141.5 M
-255.362 134.179 L
+132.75 74.25 M
+138.681 70.589 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 156.5 M
-244.57 155.661 L
+132.75 81.75 M
+133.285 81.331 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 171.5 M
-243.5 171.5 L
+132.75 89.25 M
+132.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 186.5 M
-243.5 186.5 L
+132.75 96.75 M
+132.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 201.5 M
-243.5 201.5 L
+132.75 104.25 M
+132.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-243.5 216.5 M
-243.5 216.5 L
+132.75 111.75 M
+132.75 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 36.5 M
-258.5 36.5 L
+140.25 21.75 M
+140.25 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 51.5 M
-258.5 51.5 L
+140.25 29.25 M
+140.25 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 66.5 M
-256.379 63.91 L
+140.25 36.75 M
+139.19 35.455 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 81.5 M
-257.315 79.093 L
+140.25 44.25 M
+139.658 43.047 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 96.5 M
-263.332 93.555 L
+140.25 51.75 M
+142.666 50.277 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 111.5 M
-263.136 102.298 L
+140.25 59.25 M
+142.568 54.649 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 126.5 M
-261.372 118.665 L
+140.25 66.75 M
+141.686 62.832 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 141.5 M
-261.081 137.535 L
+140.25 74.25 M
+141.541 72.268 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 156.5 M
-258.707 156.71 L
+140.25 81.75 M
+140.354 81.855 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 171.5 M
-258.5 171.5 L
+140.25 89.25 M
+140.25 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 186.5 M
-258.5 186.5 L
+140.25 96.75 M
+140.25 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 201.5 M
-258.5 201.5 L
+140.25 104.25 M
+140.25 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-258.5 216.5 M
-258.5 216.5 L
+140.25 111.75 M
+140.25 111.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 36.5 M
-273.5 36.5 L
+147.75 21.75 M
+147.75 21.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 51.5 M
-273.5 51.5 L
+147.75 29.25 M
+147.75 29.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 66.5 M
-273.5 66.5 L
+147.75 36.75 M
+147.75 36.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 81.5 M
-273.5 81.5 L
+147.75 44.25 M
+147.75 44.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 96.5 M
-273.291 96.309 L
+147.75 51.75 M
+147.646 51.654 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 111.5 M
-274.404 112.175 L
+147.75 59.25 M
+148.202 59.587 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 126.5 M
-273.691 126.573 L
+147.75 66.75 M
+147.846 66.786 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 141.5 M
-273.5 141.5 L
+147.75 74.25 M
+147.75 74.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 156.5 M
-273.5 156.5 L
+147.75 81.75 M
+147.75 81.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 171.5 M
-273.5 171.5 L
+147.75 89.25 M
+147.75 89.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 186.5 M
-273.5 186.5 L
+147.75 96.75 M
+147.75 96.75 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 201.5 M
-273.5 201.5 L
+147.75 104.25 M
+147.75 104.25 L
 S
 GR
 GS
-[0.75 0 0 0.75 0 0.25] CT
 0 0.447 0.741 RC
 1 LJ
-0.667 LW
+0.5 LW
 N
-273.5 216.5 M
-273.5 216.5 L
+147.75 111.75 M
+147.75 111.75 L
 S
 GR
 %%Trailer
