@@ -30,4 +30,4 @@ for i=1:n_set
     line([p1(1), p2(1)], [p1(2), p2(2)], 'LineWidth', 2.5, 'color',rand(1,3))
 end
 hold off
-saveas(fig, 'results/q1_2.eps', 'epsc');
+saveas(fig, './results/q1_2.eps', 'epsc');
