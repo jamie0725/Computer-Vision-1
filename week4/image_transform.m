@@ -8,7 +8,7 @@ function result_img = image_transform(prev_img, T)
 
 [x_grid, y_grid] = meshgrid(1:W, 1:H);
 % apply the affine transformation on the grid
-[new_x_grid,new_y_grid] = transformPointsForward(T,x_grid,y_grid);
+[new_x_grid,new_y_grid] = transformPointsForward(T, x_grid, y_grid);
 % new_x_grid = T(1,1).*x_grid+T(1, 2).*y_grid+T(3,1);
 % new_y_grid = T(2,1).*x_grid+T(2, 2).*y_grid+T(3,2);
 
@@ -18,8 +18,8 @@ min_new_y = min(min(new_y_grid));
 
 % get the new grid by setting the leftmost and upmost point to be 
 % at the left and up side of the image grid
-new_x_grid = new_x_grid-min_new_x+1;
-new_y_grid = new_y_grid-min_new_y+1;
+new_x_grid = new_x_grid - min_new_x + 1;
+new_y_grid = new_y_grid - min_new_y + 1;
 
 % set the rightmost and downmost coordinate to be W and H respectively
 new_H = max(max(new_x_grid));

@@ -1,12 +1,12 @@
-function [x] = RANSAC( f1,f2,matches,N)
+function [x] = RANSAC(f1, f2, matches, N)
 % N is the number of loop
 sample_number = 10;
 max_inliers = 0;
 for i = 1:N
-    a = randperm(size(matches,2),sample_number);
-    points = (matches(:,a));
-    x1 = f1(1,points(1,:)); y1 = f1(2,points(1,:));
-    x2 = f2(1,points(2,:)); y2 = f2(2,points(2,:));
+    a = randperm(size(matches, 2),sample_number);
+    points = (matches(:, a));
+    x1 = f1(1,points(1, :)); y1 = f1(2,points(1, :));
+    x2 = f2(1,points(2, :)); y2 = f2(2,points(2, :));
     
     A = zeros(2*sample_number, 6);
     b = zeros(2*sample_number, 1);
@@ -24,7 +24,7 @@ for i = 1:N
     x12 = xy12(1,:);
     y12 = xy12(2,:);
     
-    count = compute_lnliers(x2,y2,x12,y12);
+    count = compute_lnliers(x2, y2, x12, y12);
     if count>max_inliers
         x = temp_x;
         max_inliers = count;
@@ -35,7 +35,7 @@ end
 end
 
 %here we use the Euclidean distance
-function count = compute_lnliers(x2,y2,x12,y12)
+function count = compute_lnliers(x2, y2, x12, y12)
 count = 0;
 length = size(x2);
 for i = 1:length
