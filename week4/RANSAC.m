@@ -1,9 +1,10 @@
-function [x, matching_points] = RANSAC(f1, f2, matches, N)
+function [x, matching_points] = RANSAC(f1, f2, matches, p)
 %% RANSAC function can get the affine matrix and matching points
 % There are 4 input arguements:closest matches in img2 to feature points in img1 
 % N is the number of loop
 %% sample_number is the number of sampling
 sample_number = 10;
+N = log(1-p)/log(1 - 0.5^sample_number);
 % record the number of max inliers
 max_inliers = 0;
 for i = 1:N
