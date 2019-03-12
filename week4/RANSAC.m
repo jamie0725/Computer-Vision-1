@@ -1,4 +1,4 @@
-function [x] = RANSAC(f1, f2, matches, N)
+function [x, points] = RANSAC(f1, f2, matches, N)
 % N is the number of loop
 sample_number = 10;
 max_inliers = 0;

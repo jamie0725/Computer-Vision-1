@@ -3,7 +3,7 @@ I2 = im2single(imread('boat2.pgm'));
 
 [f1, f2, matches, scores] = keypoint_matching(I1, I2);
 
-[x] = RANSAC(f1, f2, matches, 11);
+[x, ~] = RANSAC(f1, f2, matches, 11);
 
 T = affine2d([x(1) x(2) 0; x(3) x(4) 0; x(5) x(6) 1]);
 
