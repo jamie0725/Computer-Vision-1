@@ -53,4 +53,3 @@ im_new(1:size(new_im_1, 1), 1:size(new_im_1, 2)) = new_im_1;
 % im_new(t_2:H, t_1:W) = transform_im2;
 % im_new(1:h_1, 1:w_1) = im_1;
 end
-
