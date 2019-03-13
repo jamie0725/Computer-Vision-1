@@ -3,16 +3,12 @@ I2 = im2single(imread('boat2.pgm'));
 
 % img_1 to img_2
 [f1_1, f2_1, matches_1, ~] = keypoint_matching(I1, I2);
-
 [x, matching_points_1] = RANSAC(f1_1, f2_1, matches_1, 0.999);
-
 T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);
 
 % img_2 to img_1
 [f1_2, f2_2, matches_2, ~] = keypoint_matching(I2, I1);
-
 [x, matching_points_2] = RANSAC(f1_2, f2_2, matches_2, 0.999);
-
 inv_T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);
 
 % comparison of using imwarp and image_transform.m.
@@ -39,22 +35,23 @@ out_image3 = [out_image3; zeros(size_image2(1)-680, size_image2(2))];
 fig2 = figure();
 Is = cat(4, out_image3, out_image2 );
 mnt = montage(Is, 'Size', [1 2]);
-title('Comparison of before and after image transformation of boat2');
 hold on
-%p1_image = matching_points([1 2],:);
-%p2_image = matching_points([3 4],:);
-% x_offset = size(out_image1, 2);
-% for i=1:size(matching_points,2)
-%     p1 = p1_image(:,i);
-%     p2 = p2_image(:,i);
-%     p2(1) = p2(1) + x_offset;
-%     p2(2) = p2(2);
-%     % Visualize keypoints and the connections between matches.
-%     plot(p1(1), p1(2), 'bo', 'LineWidth', 2.5, 'MarkerSize', 15)
-%     plot(p2(1), p2(2), 'rx', 'LineWidth', 2.5, 'MarkerSize', 15)
-%     line([p1(1), p2(1)], [p1(2), p2(2)], 'LineWidth', 2.5, 'color',rand(1,3))
-% end
-% hold off
+p1_image = matching_points_2([1 2],:);
+m = [x(1) x(2);x(3) x(4)];
+t = [190 ; 0];
+x_offset = size(out_image1, 2);
+for i=1:10
+    p1 = p1_image(:,i);
+    p2 = m * [p1(1); p1(2)] + t;
+    p2(1) = p2(1) + x_offset;
+    p2(2) = p2(2);
+    % Visualize keypoints and the connections between matches.
+    plot(p1(1), p1(2), 'bo', 'LineWidth', 2.5, 'MarkerSize', 15)
+    plot(p2(1), p2(2), 'rx', 'LineWidth', 2.5, 'MarkerSize', 15)
+    line([p1(1), p2(1)], [p1(2), p2(2)], 'LineWidth', 2.5, 'color',rand(1,3))
+    hold on;
+end
+hold off
 saveas(fig2,'./results/q1_3_beforeafter.eps','epsc');
 
 % transform from boat1 to boat2 and boat2 to boat 1.
@@ -69,4 +66,4 @@ subplot(1,2,2);
 imshow(out_image2);
 title('boat2 to boat1');
 %sgtitle('Image transformation from boat2 to boat1');
-saveas(fig1,'./results/q1_3_b1b2b2b1.eps','epsc');
+saveas(fig3,'./results/q1_3_b1b2b2b1.eps','epsc');
