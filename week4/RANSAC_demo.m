@@ -4,12 +4,11 @@ I2 = im2single(imread('boat2.pgm'));
 %I1 = im2single(rgb2gray(imread('left.jpg')));
 %I2 = im2single(rgb2gray(imread('right.jpg')));
 
-[f1, f2, matches, scores] = keypoint_matching(I1, I2);
+[f1, f2, matches, scores] = keypoint_matching(I2, I1);
 
 [x, matching_points] = RANSAC(f1, f2, matches, 0.999);
 
-%T = affine2d([x(1) x(2) 0; x(3) x(4) 0; x(5) x(6) 1]);
-T = affine2d([x(1) x(3) 0; x(2) x(4) 0; -x(5) -x(6) 1]);
+T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);  % T is transformation from I2 to I1
 
 % image transform from boat 2 to boat 1.
 fig1 = figure();
@@ -26,8 +25,8 @@ title('Transformation with image\_transform');
 title('Image transformation from boat2 to boat1');
 saveas(fig1,'./results/boat2toboat1.eps','epsc');
 
-out_image1 = im2uint8(I2);
-out_image2 = im2uint8(image_transform(I1, T));
+out_image1 = im2uint8(I1);
+out_image2 = im2uint8(image_transform(I2, T));
 size_image2 = size(out_image2);
 out_image1 = [out_image1 zeros(680,size_image2(2)-850)];
 out_image1 = [out_image1;zeros(size_image2(1)-680,size_image2(2))];
@@ -51,7 +50,7 @@ p2_image = matching_points([3 4],:);
 %     line([p1(1), p2(1)], [p1(2), p2(2)], 'LineWidth', 2.5, 'color',rand(1,3))
 % end
 % hold off
-saveas(fig2,'./results/boat1_and_boat2_to_boat1.eps','epsc');
+% saveas(fig2,'./results/boat1_and_boat2_to_boat1.eps','epsc');
 
 %f = figure();
 %imshow(im2uint8(I1));

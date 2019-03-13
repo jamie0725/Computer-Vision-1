@@ -1,10 +1,11 @@
 function [im_new] = stitch(im_1, im_2)
 %STITCH a function that takes an image pair as input, and return the stitched version.
 
-[f1, f2, matches, ~] = keypoint_matching(im_2, im_1);
-[x, ~] = RANSAC(f1, f2, matches, 0.999);
-T = affine2d([x(1) x(3) 0; x(2) x(4) 0; -x(5) -x(6) 1]);
-transform_im2 = image_transform(im_2, T);
+[f1, f2, matches, ~] = keypoint_matching(im_2, im_1); 
+[x, ~] = RANSAC(f1, f2, matches, 0.999); 
+T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);
+% transform_im2 = image_transform(im_2, T);
+transform_im2 = imwarp(im_2, T);
 [h_1, w_1] = size(im_1);
 [h_2, w_2] = size(transform_im2);
 t_1 = x(5);
