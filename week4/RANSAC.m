@@ -42,7 +42,7 @@ end
 
 end
 
-%here we use the Euclidean distance
+%%here we use the Euclidean distance
 function [count, transformed_matching_points] = compute_lnliers(x1, y1, x2, y2, x12, y12)
 count = 0;
 length = size(x2,2);
@@ -54,11 +54,12 @@ for i = 1:length
     end 
 end
 
+% return matching points
 transformed_matching_points = zeros(4,count);
 j = 1;
 for i = 1:length
     if (((x12(i)-x2(i))^2+(y12(i)-y2(i))^2) < radius^2)
-        c = [x2(i);y2(i);x12(i);y12(i)];
+        c = [x1(i);y1(i);x2(i);y2(i)];
         transformed_matching_points(:,j) = c;
         j = j + 1;
     end 
