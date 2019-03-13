@@ -3,12 +3,12 @@ I2 = im2single(imread('boat2.pgm'));
 
 % img_1 to img_2
 [f1_1, f2_1, matches_1, ~] = keypoint_matching(I1, I2);
-[x, matching_points_1] = RANSAC(f1_1, f2_1, matches_1, 0.999);
+[x, matching_points_1] = RANSAC(f1_1, f2_1, matches_1, 0.8);
 T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);
 
 % img_2 to img_1
 [f1_2, f2_2, matches_2, ~] = keypoint_matching(I2, I1);
-[x, matching_points_2] = RANSAC(f1_2, f2_2, matches_2, 0.999);
+[x, matching_points_2] = RANSAC(f1_2, f2_2, matches_2, 0.8);
 inv_T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);
 
 % comparison of using imwarp and image_transform.m.

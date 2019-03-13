@@ -2,7 +2,7 @@ function [im_new] = stitch(im_1, im_2)
 %STITCH a function that takes an image pair as input, and return the stitched version.
 % Find the transformation from img2 to img1.
 [f1, f2, matches, ~] = keypoint_matching(im_2, im_1); 
-[x, ~] = RANSAC(f1, f2, matches, 0.999); 
+[x, ~] = RANSAC(f1, f2, matches, 0.8); 
 T = affine2d([x(1) x(3) 0; x(2) x(4) 0; x(5) x(6) 1]);
 
 % Find the locations of the original corners of image2.
