@@ -1,9 +1,9 @@
-function [ descriptor ] = feature_extractor( image, sample_method, colorspace  )
+function [ descriptor ] = feature_extractor( image, sample_method, colorspace )
 %FEATURE_EXTRACTOR Extract features of the given image.
 %   image: original image.
 %   sample_method: 'dense' or 'key'.
 %   colorspace: 'rgb', 'orgb', 'grey'.
-%   descriptor: the extracted descriptor of the given image.
+%   descriptor: the extracted descriptors of the given image.
 
 greyImage = single(rgb2gray(image)); % convert image to singal-precison grey-scale image.
 RImage = single(image(:, :, 1)); % separate the R channel for RGB colorspace.
