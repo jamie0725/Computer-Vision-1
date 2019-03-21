@@ -17,7 +17,6 @@ num_class = numel(train_labels);
 image_per_class = numel(train_labels_tot) / num_class;
 vocab_image_size_per_class = round(image_per_class * 0.25);
 dict_image_size_per_class = image_per_class - vocab_image_size_per_class;
-train_features = zeros(num_class, dict_image_size_per_class, feature_size);
 [~, w, h, c] = size(train_images_tot);
 vocab_images = zeros(vocab_image_size_per_class * num_class, w, h, c, 'uint8');
 dict_images = zeros(dict_image_size_per_class * num_class, w, h, c, 'uint8');
@@ -35,7 +34,6 @@ end
 vocabulary = build_vocabulary(vocab_images, feature_size, sample_method, colorspace);
 visual_dict = encode_features(vocabulary, dict_images, sample_method, colorspace);
 % Summarize the visual features into a tensor for further training.
-for i_class = 1:num_class
-    train_features(i_class, :, :) = visual_dict(1 + (i_class - 1) * dict_image_size_per_class: i_class * dict_image_size_per_class, :);
-end
+train_features = reshape(visual_dict, dict_image_size_per_class, num_class, []);
+train_features = permute(train_features, [2 1 3]);
 end
