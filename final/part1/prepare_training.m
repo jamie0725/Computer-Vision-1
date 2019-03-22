@@ -8,7 +8,7 @@ function [train_features, train_labels, vocabulary] = prepare_training(train_ima
 %   colorspace: 'rgb', 'orgb', 'grey'.
 %   train_features: The encoded visual features per image per class
 %   [num_class, dict_image_size_per_class, feature_size].
-%   train_classes: labels per classes.
+%   train_classes: Labels per classes.
 %   vocabulary: coordinates of the centroids (visual words) [feature_size, (128 for grayscale-SIFT, 128 * 3 for RGB-SIFT and opponent-SIFT)].
 % Pick the labels for the chosen classes.
 train_labels = unique(train_labels_tot);

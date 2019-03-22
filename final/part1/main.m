@@ -9,7 +9,8 @@ sample_method = {'key', 'dense'};
 colorspace = {'grey', 'rgb', 'orgb'};
 % Prepare the training features, labels and vocabulary for training the SVM
 % classifier and for later evaluation.
-[train_feature, train_labels, vocabulary]= prepare_training(train_images_tot, train_labels_tot, 100, sample_method{1}, colorspace{2});
+[train_features, train_labels, vocabulary]= prepare_training(train_images_tot, train_labels_tot, 100, sample_method{1}, colorspace{1});
 
 % Load the whole set of evaluation images.
-[test_images, test_labels, ~] = load_images('test5.mat');
+[test_images_tot, test_labels_tot, ~] = load_images('test5.mat');
+[test_features, test_labels] = prepare_evaluation(test_images_tot, test_labels_tot, vocabulary, sample_method{1}, colorspace{1});
