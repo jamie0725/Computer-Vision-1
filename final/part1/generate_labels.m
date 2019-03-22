@@ -1,6 +1,6 @@
-function [ labels ] = genLabels(nc, ni, i)
+function [ labels ] = generate_labels(nc, ni, i)
     index = 1:nc*ni;
     labels = zeros(nc*ni, 1);
-    pos_index = index>(i-1)*ni & index <i*ni;
+    pos_index = index>(i-1)*ni & index <=i*ni;
     labels(pos_index) = 1;
 end
