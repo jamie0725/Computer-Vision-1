@@ -4,8 +4,8 @@ close all
 CHECKPOINT=false;
 % CHECKPOINT=true;
 
-addpath('./')
-run('../../vlfeat/toolbox/vl_setup');
+% addpath('./')
+% run('../../vlfeat/toolbox/vl_setup');
 
 % Load the whole set of training images.
 [train_images_tot, train_labels_tot, class_names] = load_images('train5.mat');
