@@ -17,7 +17,7 @@ colorspace = {'grey', 'rgb', 'orgb'};
 % classifier and for later evaluation.
 sm = sample_method{1};
 cs = colorspace{1};
-nc = 100;
+nc = feature_size(3);
 
 if CHECKPOINT
     load(sprintf('%s/data/%d_%s_%s_data_f.mat', '.', nc, sm, cs), 'train_features')
@@ -64,4 +64,4 @@ disp('finish evaluation')
 
 disp(sprintf('%f', map));
 
-exit
+% exit

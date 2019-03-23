@@ -17,7 +17,7 @@ function [ classifiers ] = train_classifiers(trainSet)
         rand_indices = randperm(size(nc*ni, 1));
         X = dataInstances(rand_indices, :); 
         Y = labels(rand_indices, :);
-        c = [0, 1; 5, 0];
+        c = [0, 1; 4, 0];
         SVMModel = fitcsvm(dataInstances, labels, 'KernelFunction','rbf', 'cost', c);
         % SVMModel = fitcsvm(dataInstances, labels, 'KernelFunction','rbf',...
         % 'Standardize',true, 'cost', c);
