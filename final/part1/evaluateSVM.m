@@ -15,7 +15,7 @@ function [ indexes, map ] = evaluateSVM(testSet, classifiers)
         [~,I] = sort(score, 'descend');
         predicted_label_li{i} = predicted_label;
         sum(predicted_label)
-        score(1:500,:)
+        % score(1:500,:)
         cp = classperf(labels, predicted_label);
         accuracy_li{i} = cp.ErrorRate
         score_li{i} = score(:, 2);
