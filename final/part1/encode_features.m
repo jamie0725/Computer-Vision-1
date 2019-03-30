@@ -17,8 +17,10 @@ visual_dict = zeros(num_image, feature_size);
         % Assign each extracted features/descriptors to the closest feature
         % in the vocabulary and normalize the histogram.
         [~, indices] = min(distance_matrix, [], 2);
-%         visual_dict(i_image, indices) = visual_dict(i_image, indices) + 1;
         visual_dict(i_image, :) = hist(indices, feature_size);
-        visual_dict(i_image, :) = visual_dict(i_image, :) ./ sum(visual_dict(i_image, :));
+%         % L1-normalization.
+%         visual_dict(i_image, :) = visual_dict(i_image, :) ./ sum(visual_dict(i_image, :));
+        % L2-normalization.
+        visual_dict(i_image, :) = visual_dict(i_image, :) ./ sqrt(sum(visual_dict(i_image, :) .^ 2));
     end
 end
