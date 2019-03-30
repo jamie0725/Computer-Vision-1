@@ -13,7 +13,9 @@ addpath('./')
 
 data=twospirals();
 features = data(:,1:2);
-features = reshape(features, 2,1000,1, []);
+% size(features)
+features = reshape(features, 1000 ,2, []);
+features = permute(features, [2,1,3]);
 % train_labels = data
 train_features=features(:,1:800,:);
 classifiers = train_classifiers(train_features);
