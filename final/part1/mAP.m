@@ -1,4 +1,4 @@
-function [ indexes, map] = mAP(labels, score_li)
+function [ indexes, map, APs] = mAP(labels, score_li)
     nc = size(labels, 1);
     ni = size(labels{1}, 1)/nc;
     assert(nc==size(score_li, 1));

@@ -1,8 +1,8 @@
-function [ indexes, map ] = evaluateSVM(testSet, classifiers)
+function [ indexes, map, APs] = evaluateSVM(testSet, classifiers)
 
     [nc, ni, nf] = size(testSet);    
     testSet = permute(testSet, [2 1 3]);    
-    testSet = reshape(testSet, nc*ni, nf, []);   
+    testSet = reshape(testSet, nc*ni, nf, []); 
     predicted_label_li = cell(nc, 1);
     accuracy_li = cell(nc, 1);
     score_li = cell(nc, 1);
@@ -21,6 +21,6 @@ function [ indexes, map ] = evaluateSVM(testSet, classifiers)
         accuracy_li{i} = cp.ErrorRate
         score_li{i} = score(:, 2);
     end
-    [indexes, map] = mAP(labels_li, score_li);
+    [indexes, map, APs] = mAP(labels_li, score_li);
     % accuracy = mean(accuracy_li)
 end
