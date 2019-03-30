@@ -1,7 +1,8 @@
 function [ indexes, map ] = evaluateSVM(testSet, classifiers)
 
-    [nc, ni, nf] = size(testSet);
-    testSet = reshape(testSet, nc*ni, nf, []);
+    [nc, ni, nf] = size(testSet);    
+    testSet = permute(testSet, [2 1 3]);    
+    testSet = reshape(testSet, nc*ni, nf, []);   
     predicted_label_li = cell(nc, 1);
     accuracy_li = cell(nc, 1);
     score_li = cell(nc, 1);

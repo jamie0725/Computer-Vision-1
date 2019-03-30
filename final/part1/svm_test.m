@@ -29,4 +29,4 @@ disp('finish evaluation')
 
 fprintf('%f', map);
 
-exit
+% exit

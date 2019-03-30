@@ -3,8 +3,9 @@ function [ classifiers ] = train_classifiers(trainSet)
 
     [nc, ni, nf] = size(trainSet);
     classifiers = {};
-    index = 1:nc*ni;
-    dataInstances = reshape(trainSet, nc*ni, nf);
+    index = 1:nc*ni;    
+    dataInstances = permute(trainSet, [2 1 3]);    
+    dataInstances = reshape(dataInstances, nc*ni, nf);
     size(dataInstances)
     for i = 1:nc
         % labels = zeros(nc*ni, 1);

@@ -16,8 +16,9 @@ colorspace = {'grey', 'rgb', 'orgb'};
 % Prepare the training features, labels and vocabulary for training the SVM
 % classifier and for later evaluation.
 sm = sample_method{1};
-cs = colorspace{1};
-nc = feature_size(3);
+cs = colorspace{2};
+% nc = feature_size(1);
+nc = 100;
 
 if CHECKPOINT
     load(sprintf('%s/data/%d_%s_%s_data_f.mat', '.', nc, sm, cs), 'train_features')
