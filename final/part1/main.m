@@ -16,9 +16,12 @@ colorspace = {'grey', 'rgb', 'orgb'};
 % Prepare the training features, labels and vocabulary for training the SVM
 % classifier and for later evaluation.
 sm = sample_method{1};
-cs = colorspace{2};
-% nc = feature_size(1);
-nc = 100;
+cs = colorspace{1};
+nc = feature_size(1);
+% nc = 100;
+
+log_file = fopen(sprintf('%s/log/%d_%s_%s_log.txt', '.', nc, sm, cs), 'w')
+
 
 if CHECKPOINT
     load(sprintf('%s/data/%d_%s_%s_data_f.mat', '.', nc, sm, cs), 'train_features')
@@ -60,9 +63,27 @@ else
     save(sprintf('%s/data/%d_%s_%s_test_data_l.mat', '.', nc, sm, cs), 'test_labels');
 end
 
-[inds, map] = evaluateSVM(test_features, classifiers);
+[inds, map, APs] = evaluateSVM(test_features, classifiers);
 disp('finish evaluation')
+fprintf(log_file, '%.2f\n', map);
+fprintf(log_file, "APs:\n");
+for i = 1:size(APs,1)
+    fprintf(log_file, ".2f\n", APs(i,1));
+end
 
 disp(sprintf('%f', map));
 
+for i = 1:size(inds,1)
+    ind=inds{i};
+    length=size(ind,1);
+    front_ind=ind(1:5);
+    end_ind=ind(length-5:length);
+    for j = 1:5
+        tmp_img = squeeze(test_images_tot(front_ind(j),:,:,:));
+        saveas(tmp_img, sprintf('%s/images/%d_%s_%s_img_front_%d.png', '.', nc, sm, cs, j));
+        tmp_img = squeeze(test_images_tot(end_ind(j),:,:,:));
+        saveas(tmp_img, sprintf('%s/images/%d_%s_%s_img_end_%d.png', '.', nc, sm, cs, j));
+    end
+end
+fclose(log_file);
 % exit
