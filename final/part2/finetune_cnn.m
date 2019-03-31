@@ -2,7 +2,7 @@ function [net, info, expdir] = finetune_cnn(varargin)
 
 %% Define options
 run(fullfile(fileparts(mfilename('fullpath')), ...
-  '..', '..', '..', 'matlab', 'vl_setupnn.m')) ;
+  'matconvnet-1.0-beta25', 'matlab', 'vl_setupnn.m')) ;
 
 opts.modelType = 'lenet' ;
 [opts, varargin] = vl_argparse(opts, varargin) ;
@@ -85,7 +85,62 @@ splits = {'train', 'test'};
 %% TODO: Implement your loop here, to create the data structure described in the assignment
 %% Use train.mat and test.mat we provided from STL-10 to fill in necessary data members for training below
 %% You will need to, in a loop function,  1) read the image, 2) resize the image to (32,32,3), 3) read the label of that image
-
+% Define parameters.
+mat_file = {'data/train.mat', 'data/test.mat'};
+h = 96;
+w = 96;
+c = 3;
+labels_i = [1 2 9 7 3];
+train_image_per_class = 500;
+test_image_per_class = 800;
+% Compute the total number of images including the train and test sets.
+tot_images = train_image_per_class * size(labels_i, 2) + test_image_per_class * size(labels_i, 2);
+% Initialize the final matrices.
+% data = zeros(tot_images, h * w * c, 'uint8'); 
+%TODO: Check whether data should be casted back to 'uint8'. Currently
+%'uint8' does not work for bsxfun.
+data = zeros(tot_images, h * w * c); 
+labels = zeros(tot_images, 1);
+sets = zeros(tot_images, 1);
+% Loop per mat_file.
+image_per_class = 0;
+for mat_i = 1:2        
+    last_image_per_class = image_per_class;
+    if mat_i == 1        
+        image_per_class = train_image_per_class;
+    else        
+        image_per_class = test_image_per_class;
+    end            
+    load(mat_file{mat_i});
+    % Concatenate the images with their labels for convenience.
+    tmp = [X y];
+    % Compute the number of images to read.
+    images = image_per_class * size(labels_i, 2);
+    % Initialize tmp matrices.
+%     data_tmp = zeros(images, size(X, 2), 'uint8');
+%TODO: Check whether data should be casted back to 'uint8'. Currently
+%'uint8' does not work for bsxfun.
+    data_tmp = zeros(images, size(X, 2));
+    labels_tmp = zeros(images, 1);
+    set_tmp = mat_i * ones(images, 1);
+    % Loop per classes.
+    for i_class = 1:size(labels_i,2)
+        % Find the indices of the images of the class.
+        indices = find(tmp(:, size(X, 2) + 1) == labels_i(i_class));
+        % Store the corresponding images of the class.
+        image_range = (i_class - 1) * image_per_class + 1: i_class * image_per_class;
+        data_tmp(image_range, :) = X(indices, :);
+        labels_tmp(image_range, :) = y(indices, :);
+    end
+    % Store the tmp matrices into the final matrices.
+    tot_image_range = last_image_per_class * size(labels_i, 2) + 1: last_image_per_class * size(labels_i, 2) + images;
+    data(tot_image_range, :)  = data_tmp(:, :);
+    labels(tot_image_range, :) = labels_tmp(:, :);
+    sets(tot_image_range, :) = set_tmp(:, :);    
+end
+% Reshape data 
+data = reshape(data, size(data, 1), h, w, c);
+data = permute(data, [2, 3, 4, 1]);
 %%
 % subtract mean
 dataMean = mean(data(:, :, :, sets == 1), 4);
