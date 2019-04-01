@@ -73,7 +73,7 @@ net.layers{end+1} = struct('type', 'relu') ;
 %% TODO: Define the structure here, so that the network outputs 5-class rather than 10 (as in the pretrained network)
 % Block 5
 
-NEW_INPUT_SIZE  = 96;
+NEW_INPUT_SIZE  = 64;
 NEW_OUTPUT_SIZE = 5; % prediction for 5 classes.
 
 net.layers{end+1} = struct('type', 'conv', ...

@@ -20,7 +20,7 @@ opts.train = struct() ;
 opts = vl_argparse(opts, varargin) ;
 if ~isfield(opts.train, 'gpus'), opts.train.gpus = []; end;
 
-opts.train.gpus = [0];
+opts.train.gpus = [];
 
 
 
@@ -99,8 +99,8 @@ tot_images = train_image_per_class * size(labels_i, 2) + test_image_per_class * 
 % data = zeros(tot_images, h * w * c, 'uint8'); 
 %TODO: Check whether data should be casted back to 'uint8'. Currently
 %'uint8' does not work for bsxfun.
-data = zeros(tot_images, h * w * c); 
-labels = zeros(tot_images, 1);
+data = zeros(tot_images, h * w * c, 'single'); 
+labels = zeros(tot_images, 1, 'single');
 sets = zeros(tot_images, 1);
 % Loop per mat_file.
 image_per_class = 0;
@@ -120,8 +120,8 @@ for mat_i = 1:2
 %     data_tmp = zeros(images, size(X, 2), 'uint8');
 %TODO: Check whether data should be casted back to 'uint8'. Currently
 %'uint8' does not work for bsxfun.
-    data_tmp = zeros(images, size(X, 2));
-    labels_tmp = zeros(images, 1);
+    data_tmp = zeros(images, size(X, 2), 'single');
+    labels_tmp = zeros(images, 1, 'single');
     set_tmp = mat_i * ones(images, 1);
     % Loop per classes.
     for i_class = 1:size(labels_i,2)
@@ -130,7 +130,8 @@ for mat_i = 1:2
         % Store the corresponding images of the class.
         image_range = (i_class - 1) * image_per_class + 1: i_class * image_per_class;
         data_tmp(image_range, :) = X(indices, :);
-        labels_tmp(image_range, :) = y(indices, :);
+%         labels_tmp(image_range, :) = y(indices, :);
+        labels_tmp(image_range, :) = i_class;
     end
     % Store the tmp matrices into the final matrices.
     tot_image_range = last_image_per_class * size(labels_i, 2) + 1: last_image_per_class * size(labels_i, 2) + images;
@@ -147,8 +148,8 @@ dataMean = mean(data(:, :, :, sets == 1), 4);
 data = bsxfun(@minus, data, dataMean);
 
 imdb.images.data = data ;
-imdb.images.labels = single(labels) ;
-imdb.images.set = sets;
+imdb.images.labels = labels' ;
+imdb.images.set = sets';
 imdb.meta.sets = {'train', 'val'} ;
 imdb.meta.classes = classes;
 
