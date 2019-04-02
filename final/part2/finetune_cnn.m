@@ -20,7 +20,7 @@ opts.train = struct() ;
 opts = vl_argparse(opts, varargin) ;
 if ~isfield(opts.train, 'gpus'), opts.train.gpus = []; end;
 
-opts.train.gpus = [];
+opts.train.gpus = [1];
 
 
 
@@ -118,8 +118,8 @@ for mat_i = 1:2
     images = image_per_class * size(labels_i, 2);
     % Initialize tmp matrices.
 %     data_tmp = zeros(images, size(X, 2), 'uint8');
-%TODO: Check whether data should be casted back to 'uint8'. Currently
-%'uint8' does not work for bsxfun.
+    %TODO: Check whether data should be casted back to 'uint8'. Currently
+    %'uint8' does not work for bsxfun.
     data_tmp = zeros(images, size(X, 2), 'single');
     labels_tmp = zeros(images, 1, 'single');
     set_tmp = mat_i * ones(images, 1);
@@ -129,7 +129,7 @@ for mat_i = 1:2
         indices = find(tmp(:, size(X, 2) + 1) == labels_i(i_class));
         % Store the corresponding images of the class.
         image_range = (i_class - 1) * image_per_class + 1: i_class * image_per_class;
-        data_tmp(image_range, :) = X(indices, :);
+        data_tmp(image_range, :) = single(X(indices, :)) / 255;
 %         labels_tmp(image_range, :) = y(indices, :);
         labels_tmp(image_range, :) = i_class;
     end
