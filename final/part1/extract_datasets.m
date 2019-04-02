@@ -6,7 +6,7 @@ load('stl10_matlab/train.mat');
 class_names = class_names(classes);
 tmp = [X y];
 images = zeros(500 * 5, size(X, 2), 'uint8');
-labels = zeros(500 * 5, 1);
+labels = zeros(500 * 5, 1, 'uint8');
 for i_class = 1:size(classes,2)
     indices = find(tmp(:, size(X, 2) + 1) == classes(i_class));
     images((i_class - 1) * 500 + 1: i_class * 500, :) = X(indices, :);
@@ -21,7 +21,7 @@ load('stl10_matlab/test.mat');
 class_names = class_names(classes);
 tmp = [X y];
 images = zeros(800 * 5, size(X, 2), 'uint8');
-labels = zeros(800 * 5, 1);
+labels = zeros(800 * 5, 1, 'uint8');
 for i_class = 1:size(classes,2)
     indices = find(tmp(:, size(X, 2) + 1) == classes(i_class));
     images((i_class - 1) * 800 + 1: i_class * 800, :) = X(indices, :);
