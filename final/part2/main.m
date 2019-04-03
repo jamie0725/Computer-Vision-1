@@ -4,7 +4,7 @@
 %% fine-tune cnn
 
 [net, info, expdir] = finetune_cnn();
-saveas(gcf, sprintf('results/BS%d-EN%d.eps', net.meta.trainOpts.batchSize, net.meta.trainOpts.numEpochs), 'epsc');
+%saveas(gcf, sprintf('results/BS%d-EN%d.eps', net.meta.trainOpts.batchSize, net.meta.trainOpts.numEpochs), 'epsc');
 %% extract features and train svm
 
 % TODO: Replace the name with the name of your fine-tuned model
@@ -33,8 +33,8 @@ subplot(1,2,2);
 gscatter(tsne_ft(:, 1), tsne_ft(:, 2), data.images.labels);
 legend(data.meta.classes);
 title('fine\_tuned')
-saveas(tsne_plot, sprintf('results/tsne/BS%d-EN%d.eps', net.meta.trainOpts.batchSize, net.meta.trainOpts.numEpochs), 'epsc');
+%saveas(tsne_plot, sprintf('results/tsne/BS%d-EN%d.eps', net.meta.trainOpts.batchSize, net.meta.trainOpts.numEpochs), 'epsc');
 %%
-% addpath liblinear-2.1
-% addpath liblinear-2.1/matlab
-% train_svm(nets, data);
+addpath liblinear-2.1
+addpath liblinear-2.1/matlab
+train_svm(nets, data);
