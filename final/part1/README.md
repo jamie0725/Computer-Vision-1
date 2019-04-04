@@ -5,4 +5,4 @@
 2. Please make sure that vlfleat is in the path root.
 3. Please adjust the paths in imread(), saveas(), run(), etc. if your paths are different as in our setting.
 4. The main.m script can be executed to run the program.
-5. The ./data folder is used to store caches.
+5. The ./data, ./log and ./images folders are used to store caches and results.

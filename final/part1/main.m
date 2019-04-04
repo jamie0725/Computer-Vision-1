@@ -91,7 +91,5 @@ for i = 1:size(inds,1)
     end
 end
 fclose(log_file);
-
-exit
     
 end
