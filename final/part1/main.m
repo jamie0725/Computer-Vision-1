@@ -1,14 +1,10 @@
 function main(sm_i, cs_i, nc_i, checkpoint)
-%myFun - Description
-%
-% Syntax: main(sm_i, cs_i, nc_i)
-%
-% Long description
+%MAIN Main file.
+%   sm_i: index for sampling method, 1 for keypoint and 2 for dense.
+%   cs_i: index for colorspace, 1 for greyscale, 2 for RGB and 3 for ORGB.
+%   nc_i: index for feature size, 1 for 400, 2 for 1000, 3 for 4000.
+%   checkpoint: flag for reading checkpoint.
 
-% clear all
-% close all
-
-% CHECKPOINT=false;
 CHECKPOINT=checkpoint;
 
 addpath('./')
@@ -25,7 +21,6 @@ colorspace = {'grey', 'rgb', 'orgb'};
 sm = sample_method{sm_i};
 cs = colorspace{cs_i};
 nc = feature_size(nc_i);
-% nc = 100;
 
 log_file = fopen(sprintf('%s/log/%d_%s_%s_log.txt', '.', nc, sm, cs), 'w');
 
