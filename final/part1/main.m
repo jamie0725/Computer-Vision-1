@@ -8,7 +8,7 @@ function main(sm_i, cs_i, nc_i, checkpoint)
 CHECKPOINT=checkpoint;
 
 addpath('./')
-run('../../vlfeat/toolbox/vl_setup');
+run('./vlfeat/toolbox/vl_setup');
 
 % Load the whole set of training images.
 [train_images_tot, train_labels_tot, class_names] = load_images('train5.mat');
