@@ -20,7 +20,7 @@ opts.train = struct() ;
 opts = vl_argparse(opts, varargin) ;
 if ~isfield(opts.train, 'gpus'), opts.train.gpus = []; end;
 
-opts.train.gpus = [1];
+opts.train.gpus = [];
 
 
 
@@ -96,9 +96,6 @@ test_image_per_class = 800;
 % Compute the total number of images including the train and test sets.
 tot_images = train_image_per_class * size(labels_i, 2) + test_image_per_class * size(labels_i, 2);
 % Initialize the final matrices.
-% data = zeros(tot_images, h * w * c, 'uint8'); 
-%TODO: Check whether data should be casted back to 'uint8'. Currently
-%'uint8' does not work for bsxfun.
 data = zeros(tot_images, h * w * c, 'single'); 
 labels = zeros(tot_images, 1, 'single');
 sets = zeros(tot_images, 1);
@@ -117,9 +114,6 @@ for mat_i = 1:2
     % Compute the number of images to read.
     images = image_per_class * size(labels_i, 2);
     % Initialize tmp matrices.
-%     data_tmp = zeros(images, size(X, 2), 'uint8');
-    %TODO: Check whether data should be casted back to 'uint8'. Currently
-    %'uint8' does not work for bsxfun.
     data_tmp = zeros(images, size(X, 2), 'single');
     labels_tmp = zeros(images, 1, 'single');
     set_tmp = mat_i * ones(images, 1);
@@ -138,10 +132,10 @@ for mat_i = 1:2
     labels(tot_image_range, :) = labels_tmp(:, :);
     sets(tot_image_range, :) = set_tmp(:, :);    
 end
-% Reshape data 
+% Reshape data.
 data = reshape(data, size(data, 1), h, w, c);
 data = permute(data, [2, 3, 4, 1]);
-
+% Resize images.
 new_data = zeros(32, 32, 3, tot_images, 'single'); 
 for image_i = 1:size(data, 4)
     new_data(:, :, :, image_i) = imresize(squeeze(data(:, :, :, image_i)), [32 32]);
