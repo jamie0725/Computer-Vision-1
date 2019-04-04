@@ -2,7 +2,7 @@ function [net, info, expdir] = finetune_cnn(varargin)
 
 %% Define options
 run(fullfile(fileparts(mfilename('fullpath')), ...
-  'matconvnet-1.0-beta25', 'matlab', 'vl_setupnn.m')) ;
+  'matconvnet-1.0-beta23', 'matlab', 'vl_setupnn.m')) ;
 
 opts.modelType = 'lenet' ;
 [opts, varargin] = vl_argparse(opts, varargin) ;
@@ -20,7 +20,7 @@ opts.train = struct() ;
 opts = vl_argparse(opts, varargin) ;
 if ~isfield(opts.train, 'gpus'), opts.train.gpus = []; end;
 
-opts.train.gpus = [1];
+opts.train.gpus = [];
 
 
 
@@ -129,8 +129,7 @@ for mat_i = 1:2
         indices = find(tmp(:, size(X, 2) + 1) == labels_i(i_class));
         % Store the corresponding images of the class.
         image_range = (i_class - 1) * image_per_class + 1: i_class * image_per_class;
-        data_tmp(image_range, :) = single(X(indices, :)) / 255;
-%         labels_tmp(image_range, :) = y(indices, :);
+        data_tmp(image_range, :) = X(indices, :);        
         labels_tmp(image_range, :) = i_class;
     end
     % Store the tmp matrices into the final matrices.
@@ -142,6 +141,13 @@ end
 % Reshape data 
 data = reshape(data, size(data, 1), h, w, c);
 data = permute(data, [2, 3, 4, 1]);
+
+new_data = zeros(32, 32, 3, tot_images, 'single'); 
+for image_i = 1:size(data, 4)
+    new_data(:, :, :, image_i) = imresize(squeeze(data(:, :, :, image_i)), [32 32]);
+end
+data = new_data;
+
 %%
 % subtract mean
 dataMean = mean(data(:, :, :, sets == 1), 4);
