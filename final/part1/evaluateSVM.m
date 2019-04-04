@@ -1,4 +1,4 @@
-function [ indexes, map, APs] = evaluateSVM(testSet, classifiers)
+function [ indexes, map, APs, accuracy_li] = evaluateSVM(testSet, classifiers)
 
     [nc, ni, nf] = size(testSet);    
     testSet = permute(testSet, [2 1 3]);    
@@ -15,10 +15,10 @@ function [ indexes, map, APs] = evaluateSVM(testSet, classifiers)
         [predicted_label, score] = predict(classifier, testSet);
         [~,I] = sort(score, 'descend');
         predicted_label_li{i} = predicted_label;
-        sum(predicted_label)
+        % sum(predicted_label);
         % score(1:500,:)
         cp = classperf(labels, predicted_label);
-        accuracy_li{i} = cp.ErrorRate
+        accuracy_li{i} = 1-cp.ErrorRate;
         score_li{i} = score(:, 2);
     end
     [indexes, map, APs] = mAP(labels_li, score_li);

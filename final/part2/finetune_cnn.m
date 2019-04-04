@@ -2,7 +2,7 @@ function [net, info, expdir] = finetune_cnn(varargin)
 
 %% Define options
 run(fullfile(fileparts(mfilename('fullpath')), ...
-  'matconvnet-1.0-beta25', 'matlab', 'vl_setupnn.m')) ;
+  'matconvnet-1.0-beta23', 'matlab', 'vl_setupnn.m')) ;
 
 opts.modelType = 'lenet' ;
 [opts, varargin] = vl_argparse(opts, varargin) ;

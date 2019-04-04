@@ -6,7 +6,7 @@ function [ classifiers ] = train_classifiers(trainSet)
     index = 1:nc*ni;    
     dataInstances = permute(trainSet, [2 1 3]);    
     dataInstances = reshape(dataInstances, nc*ni, nf);
-    size(dataInstances)
+    % size(dataInstances)
     for i = 1:nc
         % labels = zeros(nc*ni, 1);
         % pos_index = index>(i-1)*ni & index <i*ni;

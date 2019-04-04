@@ -1,11 +1,18 @@
-clear all
-close all
+function main(sm_i, cs_i, nc_i, checkpoint)
+%myFun - Description
+%
+% Syntax: main(sm_i, cs_i, nc_i)
+%
+% Long description
 
-CHECKPOINT=false;
-% CHECKPOINT=true;
+% clear all
+% close all
 
-% addpath('./')
-% run('../../vlfeat/toolbox/vl_setup');
+% CHECKPOINT=false;
+CHECKPOINT=checkpoint;
+
+addpath('./')
+run('../../vlfeat/toolbox/vl_setup');
 
 % Load the whole set of training images.
 [train_images_tot, train_labels_tot, class_names] = load_images('train5.mat');
@@ -15,12 +22,12 @@ sample_method = {'key', 'dense'};
 colorspace = {'grey', 'rgb', 'orgb'};
 % Prepare the training features, labels and vocabulary for training the SVM
 % classifier and for later evaluation.
-sm = sample_method{1};
-cs = colorspace{1};
-nc = feature_size(1);
+sm = sample_method{sm_i};
+cs = colorspace{cs_i};
+nc = feature_size(nc_i);
 % nc = 100;
 
-log_file = fopen(sprintf('%s/log/%d_%s_%s_log.txt', '.', nc, sm, cs), 'w')
+log_file = fopen(sprintf('%s/log/%d_%s_%s_log.txt', '.', nc, sm, cs), 'w');
 
 
 if CHECKPOINT
@@ -63,12 +70,15 @@ else
     save(sprintf('%s/data/%d_%s_%s_test_data_l.mat', '.', nc, sm, cs), 'test_labels');
 end
 
-[inds, map, APs] = evaluateSVM(test_features, classifiers);
+[inds, map, APs, accuracy_li] = evaluateSVM(test_features, classifiers);
 disp('finish evaluation')
 fprintf(log_file, '%.2f\n', map);
 fprintf(log_file, "APs:\n");
 for i = 1:size(APs,1)
-    fprintf(log_file, ".2f\n", APs(i,1));
+    fprintf(log_file, "%.2f\n", APs(i,1));
+    fprintf(log_file, "Accuracy:\n")
+for i = 1:size(accuracy_li,1)
+    fprintf(log_file, "%.2f\n", accuracy_li{i});
 end
 
 disp(sprintf('%f', map));
@@ -80,10 +90,13 @@ for i = 1:size(inds,1)
     end_ind=ind(length-5:length);
     for j = 1:5
         tmp_img = squeeze(test_images_tot(front_ind(j),:,:,:));
-        saveas(tmp_img, sprintf('%s/images/%d_%s_%s_img_front_%d.png', '.', nc, sm, cs, j));
+        imwrite(tmp_img, sprintf('%s/images/%d_%s_%s_img_class_%d_front_%d.png', '.', nc, sm, cs, i, j));
         tmp_img = squeeze(test_images_tot(end_ind(j),:,:,:));
-        saveas(tmp_img, sprintf('%s/images/%d_%s_%s_img_end_%d.png', '.', nc, sm, cs, j));
+        imwrite(tmp_img, sprintf('%s/images/%d_%s_%s_img_class_%d_end_%d.png', '.', nc, sm, cs, i, j));
     end
 end
 fclose(log_file);
-% exit
+
+exit
+    
+end

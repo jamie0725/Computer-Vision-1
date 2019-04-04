@@ -9,3 +9,6 @@ matconvnet-1.0-beta23
 matconvnet-1.0-beta25
 test.mat
 train.mat
+test5.mat
+train5.mat
+imdb-stl.mat
